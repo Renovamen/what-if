@@ -1,0 +1,44 @@
+{
+    "author": "Renovamen <renovamenzxh@gmail.com>",
+    "description": "My caos notes.",
+    "extension": null,
+    "generator": "site",
+    "links": {
+        "sharing": {
+            "all": null,
+            "facebook": null,
+            "google": null,
+            "twitter": null,
+            "weibo": null
+        }
+    },
+    "output": null,
+    "pdf": {
+        "fontSize": 12,
+        "footerTemplate": null,
+        "headerTemplate": null,
+        "margin": {
+            "bottom": 36,
+            "left": 62,
+            "right": 62,
+            "top": 36
+        },
+        "pageNumbers": false,
+        "paperSize": "a4"
+    },
+    "intro": {
+        "avatar": "https://renovamen.ink/img/header-avatar.jpeg",
+        "nickname": "Renovamen",
+        "content": "いつか、私がヒトじゃなくなっても",
+        "icons": {
+            "github": "https://github.com/Renovamen",
+            "website": "https://renovamen.ink"
+        }
+    }, 
+    "plugins": [
+        "multipart",
+        "theme-chaos"
+    ],
+    "title": "Caos Notes",
+    "variables": {}
+}
