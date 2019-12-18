@@ -1,6 +1,6 @@
 {
     "author": "Renovamen <renovamenzxh@gmail.com>",
-    "description": "My caos notes.",
+    "description": "My chaos notes.",
     "extension": null,
     "generator": "site",
     "links": {
@@ -32,13 +32,15 @@
         "content": "いつか、私がヒトじゃなくなっても",
         "icons": {
             "github": "https://github.com/Renovamen",
-            "website": "https://renovamen.ink"
+            "website": "https://renovamen.ink",
+            "email": "renovamenzxh@gmail.com"
         }
     }, 
     "plugins": [
         "multipart",
+        "mathjax",
         "theme-chaos"
     ],
-    "title": "Caos Notes",
+    "title": "Chaos Notes",
     "variables": {}
 }

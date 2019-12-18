@@ -1,1 +1,1 @@
-# Smoothed Estimation of Trigram Models
+# Trigram 模型的平滑估计（Smoothed Estimation）
