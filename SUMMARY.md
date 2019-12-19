@@ -4,7 +4,7 @@
 
 ## Statistical NLP
 * [语言模型](Statistical-NLP/Language-Modeling/README.md)
-    * [马尔可夫模型](Statistical-NLP/Language-Modeling/Markov-Models.md)
+    * [马尔科夫模型](Statistical-NLP/Language-Modeling/Markov-Models.md)
     * [Trigram 语言模型](Statistical-NLP/Language-Modeling/Trigram-Language-Models.md)
     * [Trigram 模型的平滑估计](Statistical-NLP/Language-Modeling/Smoothed-Estimation-of-Trigram-Models.md)
     * [Advanced Topics](Statistical-NLP/Language-Modeling/Advanced-Topics.md)
