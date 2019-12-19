@@ -1,2 +1,0 @@
-# Generative Tagging Models
-
