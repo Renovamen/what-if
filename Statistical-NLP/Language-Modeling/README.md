@@ -16,7 +16,7 @@ $$
 x_1x_2...x_n
 $$
 
-其中 $$x_i \in \mathcal{V}$$，$$i \in \{...(n-1)\}$$，$$n \geq 1$$。假设 $$x_n$$ 是一个特殊的符号 **STOP**（$$STOP \notin \mathcal{V}$$），如：
+其中 $$x_i \in \mathcal{V}$$，$$i \in \{1...(n-1)\}$$，$$n \geq 1$$。假设 $$x_n$$ 是一个特殊的符号 **STOP**（$$STOP \notin \mathcal{V}$$），如：
 
 - the cat saw the dog STOP
 - the STOP
