@@ -1,4 +1,4 @@
-# 语言模型（Language Modeling）
+# 语言模型
 
 现在有一个语料库，它是某种语言中一系列句子的集合，现在我们要从中构建出一个语言模型，并进行参数估计。
 
@@ -18,9 +18,9 @@ $$
 
 其中 $$x_i \in \mathcal{V}$$，$$i \in \{1...(n-1)\}$$，$$n \geq 1$$。假设 $$x_n$$ 是一个特殊的符号 **STOP**（$$STOP \notin \mathcal{V}$$），如：
 
-- the cat saw the dog STOP
-- the STOP
-- STOP
+* the cat saw the dog STOP
+* the STOP
+* STOP
 
 令 $$\mathcal{V}^+$$ 为由词典 $$\mathcal{V}$$ 产生的所有句子，这是一个无限集，因为句子可以是任意长度。
 
@@ -28,8 +28,8 @@ $$
 
 语言模型由一个有限集 $$\mathcal{V}$$ 和一个函数 $$p(x_1, x_2, ..., x_n)$$ 组成，其中：
 
-- 对任意的 $$\langle x_1, x_2, ..., x_n \rangle \in \mathcal{V}^{+}$$， $$p(x_1, x_2, ..., x_n) \geq 0$$
-- $$\sum_{\langle x_1, x_2, ..., x_n \rangle \in \mathcal{V}^{+}} p(x_1, x_2, ..., x_n)=1$$
+* 对任意的 $$\langle x_1, x_2, ..., x_n \rangle \in \mathcal{V}^{+}$$， $$p(x_1, x_2, ..., x_n) \geq 0$$
+* $$\sum_{\langle x_1, x_2, ..., x_n \rangle \in \mathcal{V}^{+}} p(x_1, x_2, ..., x_n)=1$$
 
 因此 $$p(x_1, x_2, ..., x_n)$$ 是 $$\mathcal{V}$$ 中的所有句子的概率分布。
 
@@ -40,3 +40,4 @@ p(x_1, x_2, ..., x_n)=\frac{c(x_1, x_2, ..., x_n)}{N}
 $$
 
 这个模型不怎么样，因为如果某个句子没有在训练数据里出现过，那么该模型会将它的概率设为 0。因此本章将讨论一些能处理训练数据中没出现过的句子的方法。
+
