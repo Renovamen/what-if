@@ -1,6 +1,6 @@
 # Chaos Notes
 
-* [Chaos Notes](README.md)
+* [Chaos NLP Notes](README.md)
 
 ## Statistical NLP
 * [语言模型](Statistical-NLP/Language-Modeling/README.md)

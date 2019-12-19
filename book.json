@@ -1,6 +1,6 @@
 {
     "author": "Renovamen <renovamenzxh@gmail.com>",
-    "description": "My chaos notes.",
+    "description": "My chaos notes of NLP.",
     "extension": null,
     "generator": "site",
     "links": {
@@ -41,6 +41,6 @@
         "mathjax",
         "theme-chaos"
     ],
-    "title": "Chaos Notes",
+    "title": "Chaos NLP Notes",
     "variables": {}
 }
