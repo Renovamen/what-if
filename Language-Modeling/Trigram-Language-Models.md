@@ -1,10 +1,10 @@
-# Trigram 语言模型
+# 三元（Trigram）语言模型
 
-**Trigram 语言模型**是马尔科夫模型在语言建模问题上的直接应用。本章讨论 Trigram 模型的基本定义、**极大似然估计**和优缺点。
+**三元（Trigram）语言模型**是马尔科夫模型在语言建模问题上的直接应用。本章讨论三元模型的基本定义、**极大似然估计**和优缺点。
 
 
 
-## Trigram 模型的定义
+## 三元模型的定义
 
 按照二阶马尔科夫模型：
 
@@ -24,9 +24,9 @@ $$
 p(x_1 ... x_n)=\prod_{i=1}^n q(x_i | x_{i-2}, x_{i-1})
 $$
 
-则**定义2（Trigram 语言模型）**：
+则**定义2（三元语言模型）**：
 
-Trigram 语言模型由一个有限集 $$\mathcal{V}$$ 和一个参数 $$q(w|u,v)$$ 组成，其中 $$w \in \mathcal{V} \cup \{STOP\}$$ ，$$u,v \in \mathcal{V} \cup \{*\}$$ 。$$q(w|u,v)$$ 可以理解为单词 $$w$$ 出现在在**二元组（Bigram）** $$(u,v)$$ 后的概率。Trigram 语言模型中任意句子 $$x_1 ... x_n$$ （$$x_0 = x_{-1} = *$$）出现的概率为：
+三元语言模型由一个有限集 $$\mathcal{V}$$ 和一个参数 $$q(w|u,v)$$ 组成，其中 $$w \in \mathcal{V} \cup \{STOP\}$$ ，$$u,v \in \mathcal{V} \cup \{*\}$$ 。$$q(w|u,v)$$ 可以理解为单词 $$w$$ 出现在在**二元组（Bigram）** $$(u,v)$$ 后的概率。三元语言模型中任意句子 $$x_1 ... x_n$$ （$$x_0 = x_{-1} = *$$）出现的概率为：
 
 $$
 p(x_1 ... x_n)=\prod_{i=1}^n q(x_i | x_{i-2}, x_{i-1})
@@ -35,7 +35,11 @@ $$
 例如，对于句子：***the dog barks STOP***，有：
 
 $$
-p(the \ dog \ barks \ STOP)=q(the|*,*) \times q(dog|*,the) \times q(barks|the,dog) \times q(STOP|dog,barks)
+p(the \ dog \ barks \ STOP)
+$$
+
+$$
+=q(the|*,*) \times q(dog|*,the) \times q(barks|the,dog) \times q(STOP|dog,barks)
 $$
 
 可以看到每个单词只依赖于它的前两个单词（**三元假设（Trigram Assumption）**）。
@@ -70,7 +74,7 @@ $$
 1. 如果一个三元组在训练集中没有出现，则 $$q(w|u,v)=0$$（分子为 0）。由于参数规模一般会很大，这种情况会经常出现，导致数据很稀疏。而且这是不合理的，一个三元组在训练集中没有不出现不等于它出现的概率为 0；
 2. 分母 $$c(u,v)$$ 也有可能为 0，这时这个估计的定义就不合法了。
 
-后面我们将会讨论该如何解决这些问题，但现在我们先讨论该如何评估一个语言模型的好坏和 Trigram 模型的优缺点。
+后面我们将会讨论该如何解决这些问题，但现在我们先讨论该如何评估一个语言模型的好坏和三元模型的优缺点。
 
 
 
@@ -84,7 +88,7 @@ $$
 
 模型在测试集上的 **perplexity** 是这个指标的变形。定义 $M$ 为测试集中的单词总数，$$M=\sum_{i=1}^m n_i$$。
 $$
-\frac{1}{M}log_2 \prod_{i=1}^m p(x^{(i)}) = \frac{1}{M} \sum_{i=1}^m log_2 p(x^{(i)})
+\frac{1}{M}\log_2 \prod_{i=1}^m p(x^{(i)}) = \frac{1}{M} \sum_{i=1}^m \log_2 p(x^{(i)})
 $$
 
 则 perplexity 为：
@@ -93,7 +97,7 @@ $$
 $$
 其中：
 $$
-l=\frac{1}{M} \sum_{i=1}^m log_2 p(x^{(i)})
+l=\frac{1}{M} \sum_{i=1}^m \log_2 p(x^{(i)})
 $$
 perplexity 是一个正数，perplexity **越小**，模型处理新句子的能力就越强。
 
@@ -115,7 +119,7 @@ perplexity 是一个正数，perplexity **越小**，模型处理新句子的能
 
 2. 如果模型对某个测试集中的三元组 $$u,v,w$$ 估计出的参数 $$q(w|u,v)=0$$，则它的 perplexity 就会为 $$\infty$$。所以如果我们要用 perplexity 来作为模型评估指标的话，就一定要避免把参数估计为 0。
 
-3. 论文 [A Bit of Progress in Language Modeling (Goodman, 2001)](http://www-labs.iro.umontreal.ca/~felipe/IFT6285-Automne2019/resources-2011/Articles/goodman2001.pdf) 是一篇写了几乎所有和 N 元模型（N-Gram）有关的东西的综述。它用 $$|\mathcal{V}|=50,000$$ 的英语数据集评估了 Unigram（一元）、Bigram（二元）和 Trigram（三元）模型。
+3. 论文 [A Bit of Progress in Language Modeling (Goodman, 2001)](http://www-labs.iro.umontreal.ca/~felipe/IFT6285-Automne2019/resources-2011/Articles/goodman2001.pdf) 是一篇写了几乎所有和 N 元模型（N-Gram）有关的东西的综述。它用 $$|\mathcal{V}|=50,000$$ 的英语数据集评估了一元（Unigram）、二元（Bigram）和 三元（Trigram）模型。
    
    其中 Bigram 模型中每个单词只依赖于它的前一个单词：
    $$
@@ -125,11 +129,10 @@ perplexity 是一个正数，perplexity **越小**，模型处理新句子的能
    $$
    p(x_1 ... x_n)=\prod_{i=1}^n q(x_i)
    $$
-   结果为 Trigram 模型的 perplexity 大概为 74，Bigram 模型为 137，Unigram 模型为 955。可以看到 Trigram 模型的效果比 Unigram 模型和 Bigram 模型高很多。
+   结果为三元模型的 perplexity 大概为 74，二元模型为 137，一元模型为 955。可以看到三元模型的效果比一元模型和二元模型高很多。
 
 
-## Trigram 模型的优缺点
+
+## 三元模型的优缺点
 
 三元假设太苛刻了，且在语义上过于简单，但它有较好实际应用效果。
-
-Unigram 模型估计出的参数的分子和分母都会大于 0（因为每个词在训练集中都至少出现了一次），但它完全忽视了上下文信息。而 Trigram 模型考虑了上下文信息，但很多参数会被估计为 0，数据更稀疏。Bigram 模型介于两者之间。
