@@ -3,10 +3,10 @@
 * [Chaos NLP Notes](README.md)
 
 ## Statistical NLP
-* [语言模型](Statistical-NLP/Language-Modeling/README.md)
-    * [马尔科夫模型](Statistical-NLP/Language-Modeling/Markov-Models.md)
+* [语言模型（Language Modeling）](Statistical-NLP/Language-Modeling/README.md)
+    * [马尔科夫模型（Markov Models）](Statistical-NLP/Language-Modeling/Markov-Models.md)
     * [Trigram 语言模型](Statistical-NLP/Language-Modeling/Trigram-Language-Models.md)
-    * [Trigram 模型的平滑估计](Statistical-NLP/Language-Modeling/Smoothed-Estimation-of-Trigram-Models.md)
+    * [Trigram 模型的平滑估计（Smoothed Estimation）](Statistical-NLP/Language-Modeling/Smoothed-Estimation-of-Trigram-Models.md)
     * [Advanced Topics](Statistical-NLP/Language-Modeling/Advanced-Topics.md)
 * [Tagging Problems & HMMs](Statistical-NLP/Tagging-Problems-HMMs/README.md)
     * [Two Example Tagging Problems](Statistical-NLP/Tagging-Problems-HMMs/POS-Tagging-Named-Entity-Recognition.md)

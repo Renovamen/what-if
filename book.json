@@ -38,7 +38,7 @@
     }, 
     "plugins": [
         "multipart",
-        "mathjax",
+        "katex@git+https://gitee.com/Renovamen/gitbook-plugin-katex.git",
         "theme-chaos"
     ],
     "title": "Chaos NLP Notes",
