@@ -1,6 +1,6 @@
 {
     "author": "Renovamen <renovamenzxh@gmail.com>",
-    "description": "My chaos notes of NLP.",
+    "description": "My chaos notes of Statistical NLP.",
     "extension": null,
     "generator": "site",
     "links": {
@@ -41,6 +41,6 @@
         "katex@git+https://gitee.com/Renovamen/gitbook-plugin-katex.git",
         "theme-chaos"
     ],
-    "title": "Chaos NLP Notes",
+    "title": "Statistical NLP",
     "variables": {}
 }

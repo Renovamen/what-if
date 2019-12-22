@@ -26,7 +26,7 @@ $$
 
 令 $$\mathcal{V}^+$$ 为由词典 $$\mathcal{V}$$ 产生的所有句子，这是一个无限集，因为句子可以是任意长度。
 
-则**定义1（语言模型）**：
+则**定义 1.1（语言模型）**：
 
 语言模型由一个有限集 $$\mathcal{V}$$ 和一个函数 $$p(x_1, x_2, ..., x_n)$$ 组成，其中：
 
@@ -42,3 +42,10 @@ p(x_1, x_2, ..., x_n)=\frac{c(x_1, x_2, ..., x_n)}{N}
 $$
 
 这个模型不怎么样，因为如果某个句子没有在训练数据里出现过，那么该模型会将它的概率设为 0。因此本章将讨论一些能处理训练数据中没出现过的句子的方法。
+
+
+
+## Reference
+
+- [Language Modeling (Notes) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf)
+- [Language Modeling (Slides) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/lmslides.pdf)
