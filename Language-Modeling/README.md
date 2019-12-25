@@ -47,5 +47,5 @@ $$
 
 ## Reference
 
-- [Language Modeling (Notes) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf)
-- [Language Modeling (Slides) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/lmslides.pdf)
+- [1.1] [Language Modeling (Notes) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf)
+- [1.2] [Language Modeling (Slides) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/lmslides.pdf)

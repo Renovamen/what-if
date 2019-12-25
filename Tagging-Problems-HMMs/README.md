@@ -12,7 +12,7 @@
 
 ## Reference
 
-- [Tagging Problems, and Hidden Markov Models (Notes) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/hmms-spring2013.pdf)
-- [Tagging Problems, and Hidden Markov Models (Slides) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/tagging.pdf)
-- [The Noisy Channel Model and Markov Models (Mark Johnson, Macquarie University)](http://web.science.mq.edu.au/~mjohnson/papers/Johnson14-04LM-talk.pdf)
-
+- [2.1] [Tagging Problems, and Hidden Markov Models (Notes) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/hmms-spring2013.pdf)
+- [2.2] [Tagging Problems, and Hidden Markov Models (Slides) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/tagging.pdf)
+- [2.3] [The Noisy Channel Model and Markov Models (Mark Johnson, Macquarie University)](http://web.science.mq.edu.au/~mjohnson/papers/Johnson14-04LM-talk.pdf)
+- [2.4] [Natural Language Processing for Online Applications: Text Retrieval, Extraction and Categorization](https://doc.lagout.org/science/Artificial%20Intelligence/Natural%20Language%20Processing/Natural%20Language%20Processing%20for%20Online%20Applications%20Text%20Retrieval%2CExtraction%20and%20Categorization%20-%20Peter%20Jackson%20%2C%20Isabelle%20Moulinier.pdf)

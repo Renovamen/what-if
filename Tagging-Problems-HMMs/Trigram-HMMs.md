@@ -229,3 +229,11 @@ $$
 <div align=center>
     <img src="img/viterbi-algorithm-backpointer.png" width="550"/>
 </div>
+
+
+
+## HMMs 的优缺点
+
+- 容易训练，只需要在训练集中统计出现次数
+- 效果比较好（在命名实体识别任务上准确率高于 90%）
+- 当单词很复杂时，对 $$e(word|tag)$$ 建模会很困难

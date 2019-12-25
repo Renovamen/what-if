@@ -11,5 +11,4 @@
     * [生成模型和噪声通道模型](Tagging-Problems-HMMs/Generative-Models-Noisy-Channel-Model.md)
     * [生成标注模型](Tagging-Problems-HMMs/Generative-Tagging-Models.md)
     * [三元隐马尔科夫模型](Tagging-Problems-HMMs/Trigram-HMMs.md)
-    * [Summary](Tagging-Problems-HMMs/Summary.md)
-    * [Advanced Material](Tagging-Problems-HMMs/Advanced-Material.md)
+    * [扩展](Tagging-Problems-HMMs/Advanced-Material.md)
