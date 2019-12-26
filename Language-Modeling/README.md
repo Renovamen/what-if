@@ -12,7 +12,7 @@ $$
 \mathcal{V} = \{the, dogs, laughs, saw, barks, cat, ...\}
 $$
 
-实际上 $$\mathcal{V}$$ 有可能非常大，毕竟它可能包含成千上万个单词，但它通常都是一个有限集。一个句子就是一个单词序列：
+$$\mathcal{V}$$ 有可能非常大，毕竟它可能包含成千上万个单词，但它通常都是一个有限集。一个句子就是一个单词序列：
 
 $$
 x_1x_2 ... x_n
@@ -35,8 +35,9 @@ $$
 
 因此 $$p(x_1, x_2, ..., x_n)$$ 是 $$\mathcal{V}$$ 中的所有句子的概率分布。
 
-一种简单（但不怎么样）的从训练语料库中构建语言模型的方法可以为：令 $$c(x_1, x_2, ..., x_n)$$ 为训练数据中句子 $$x_1x_2 ... x_n$$ 出现的次数，$$N$$ 为训练数据里句子总数，则：
+&nbsp;
 
+一种简单（但不怎么样）的从训练语料库中构建语言模型的方法可以为：令 $$c(x_1, x_2, ..., x_n)$$ 为训练数据中句子 $$x_1x_2 ... x_n$$ 出现的次数，$$N$$ 为训练数据里句子总数，则：
 $$
 p(x_1, x_2, ..., x_n)=\frac{c(x_1, x_2, ..., x_n)}{N}
 $$
@@ -49,3 +50,4 @@ $$
 
 - [1.1] [Language Modeling (Notes) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf)
 - [1.2] [Language Modeling (Slides) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/lmslides.pdf)
+- [1.3] [A Bit of Progress in Language Modeling. *Joshua T. Goodman*. Computer Speech & Language 2001.](http://www-labs.iro.umontreal.ca/~felipe/IFT6285-Automne2019/resources-2011/Articles/goodman2001.pdf)

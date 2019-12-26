@@ -1,6 +1,6 @@
 # 三元模型的平滑估计（Smoothed Estimation）
 
-极大似然估计会导致稀疏数据的问题，即使训练集非常大，很多 $$c(u,v,w)$$ 和 $$c(u,v)$$ 也会很小，甚至为 0。因此本章将讨论用于缓和数据稀疏问题的**平滑估计（Smoothed Estimation）**，它的核心思想依赖于 lower-order statistical estimates，即用一元和二元模型的估计去平滑三元模型的估计。本章将讨论两种常用方法：**线性插值（Linear Interpolation）**和**Discounting Methods**，以及与**装桶（Bucketing）**结合的线性插值。
+极大似然估计会导致稀疏数据的问题，即使训练集非常大，很多 $$c(u,v,w)$$ 和 $$c(u,v)$$ 也会很小，甚至为 0。因此本章将讨论用于缓和数据稀疏问题的**平滑估计（Smoothed Estimation）**，它的核心思想依赖于 lower-order statistical estimates，即用一元和二元模型的估计去平滑三元模型的估计。本章将讨论两种常用方法：**线性插值（Linear Interpolation）**和 **Discounting Methods**，以及与**装桶（Bucketing）**结合的线性插值。
 
 
 
