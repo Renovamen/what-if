@@ -10,13 +10,13 @@ trigram HMM 由有限集 $$\mathcal{V}$$、有限集 $$\mathcal{K}$$ 和以下�
 
 - $$q(s|u,v)$$
 
-  $$s \in \mathcal{K} \cup \{STOP\}$$，$$u, v \in \mathcal{K} \cup \{*\}$$。$$q(s|u,v)$$ 可以理解为标签 $$s$$ 跟在 $$(u,v)$$ 后的概率。
+  $$s \in \mathcal{K} \cup \{\text{STOP}\}$$，$$u, v \in \mathcal{K} \cup \{*\}$$。$$q(s|u,v)$$ 可以理解为标签 $$s$$ 跟在 $$(u,v)$$ 后的概率。
 
 - $$e(x|s)$$
 
   $$x \in \mathcal{K}$$，$$s \in \mathcal{K}$$。$$e(x|s)$$ 可以理解为在 $$s$$ 状态下观察结果为 $$x$$ 的概率。
 
-定义 $$\mathcal{S}$$ 为所有序列对 $$\langle x_1 ... x_n, y_1 ... y_{n+1} \rangle$$ 的集合（$$n \geq 0, x_i \in \mathcal{V}, y_i \in \mathcal{K}, i = 1...n, y_{n+1}=STOP$$）。
+定义 $$\mathcal{S}$$ 为所有序列对 $$\langle x_1 ... x_n, y_1 ... y_{n+1} \rangle$$ 的集合（$$n \geq 0, x_i \in \mathcal{V}, y_i \in \mathcal{K}, i = 1...n, y_{n+1}=\text{STOP}$$）。
 
 然后定义：
 $$
@@ -24,19 +24,19 @@ p(x_1 ... x_n, y_1 ... y_{n+1})=\prod_{i=1}^{n+1}q(y_i|y_{i-2},y_{i-1})\prod_{i=
 $$
 其中 $$y_0 = y_{-1} = *$$。
 
-如：$$n = 3$$，$$x_1 ... x_3$$ 为一个句子 $$the \ dog \ laughs$$，$$y_1...y_4$$ 为标签序列 $$D \ N \ V \ STOP$$。则：
+如：$$n = 3$$，$$x_1 ... x_3$$ 为一个句子 $$\text{the dog laughs}$$，$$y_1...y_4$$ 为标签序列 $$\text{D N V STOP}$$。则：
 $$
 p(x_1 ... x_n, y_1 ... y_{n+1})
 $$
 
 $$
-=q(D|*,*) \times q(N|*,D) \times q(V|D,N) \times q(STOP|N,V) \times e(the|D) \times e(dog|N) \times e(laughs|V)
+=q(\text{D}|*,*) \times q(\text{N}|*,\text{D}) \times q(\text{V}|\text{D,N}) \times q(\text{STOP}|\text{N,V}) \times e(\text{the}|\text{D}) \times e(\text{dog}|\text{N}) \times e(\text{laughs}|\text{V})
 $$
 
 从模型的形式来看，这是一个噪声通道模型：
 
-- $$q(D|*,*) \times q(N|*,D) \times q(V|D,N) \times q(STOP|N,V)$$ 是标签序列 $$D \ N \ V \ STOP$$ 的先验概率（而且这里用了二阶马尔科夫模型）
-- $$e(the|D) \times e(dog|N) \times e(laughs|V)$$ 是条件概率 $$p(the \ dog \ laughs|D \ N \ V \ STOP)$$
+- $$q(\text{D}|*,*) \times q(\text{N}|*,\text{D}) \times q(\text{V}|\text{D,N}) \times q(\text{STOP}|\text{N,V})$$ 是标签序列 $$\text{D N V STOP}$$ 的先验概率（而且这里用了二阶马尔科夫模型）
+- $$e(\text{the}|\text{D}) \times e(\text{dog}|\text{N}) \times e(\text{laughs}|\text{V})$$ 是条件概率 $$p(\text{the dog laugh}|\text{D N V STOP})$$
 
 
 
@@ -48,7 +48,7 @@ $$
 $$
 P(X_1 = x_1 ... X_n = x_n, Y_1 = y_1 ... Y_n = y_n)
 $$
-为了方便，加一个随机变量 $$Y_{n+1}=STOP$$。
+为了方便，加一个随机变量 $$Y_{n+1}=\text{STOP}$$。
 
 HMM 的核心思想是：
 $$
@@ -117,7 +117,7 @@ $$
 1. 初始化  $$i = 1$$，$$y_0 = y_{-1} = *$$
 
 2. 按分布 $$q(y_i |y_{i-2}, y_{i-1})$$ 生成 $$y_i$$
-3. 如果 $$y_i = STOP$$，则返回 $$y_1 ... y_i, x_1 ... x_{i-1}$$；否则按分布 $$e(x_i |y_i)$$ 生成 $$x_i$$，然后 $$i = i + 1$$，返回步骤 2
+3. 如果 $$y_i = \text{STOP}$$，则返回 $$y_1 ... y_i, x_1 ... x_{i-1}$$；否则按分布 $$e(x_i |y_i)$$ 生成 $$x_i$$，然后 $$i = i + 1$$，返回步骤 2
 
 
 
@@ -168,7 +168,7 @@ $$
 $$
 \begin{aligned}
 p(x_1 ... x_n, y_1 ... y_{n+1}) &= r(*,*,y_1,...y_n) \times q(y_{n+1}|y_{n-1},y_n) \\
-&=r(*,*,y_1,...y_n) \times q(STOP|y_{n-1},y_n)
+&=r(*,*,y_1,...y_n) \times q(\text{STOP}|y_{n-1},y_n)
 \end{aligned} \tag{2.6}
 $$
 为了方便，用 $$\mathcal{K}_k$$（$$k \in \{-1, ..., n\}$$）来表示第 $$k$$ 个元素的所有可能标签：
@@ -204,7 +204,7 @@ $$
 
 **命题 2：**
 $$
-\max_{y_1...y_{n+1}} p(x_1...x_n,y_1...y_{n+1}) = \max_{u \in \mathcal{K_{n-1}},v \in \mathcal{K}_n} (\pi(n,u,v) \times q(STOP|u,v)) \tag{2.8}
+\max_{y_1...y_{n+1}} p(x_1...x_n,y_1...y_{n+1}) = \max_{u \in \mathcal{K_{n-1}},v \in \mathcal{K}_n} (\pi(n,u,v) \times q(\text{STOP}|u,v)) \tag{2.8}
 $$
 公式 2.8 可由公式 2.6 推出。
 
@@ -236,4 +236,4 @@ $$
 
 - 容易训练，只需要在训练集中统计出现次数
 - 效果比较好（在命名实体识别任务上准确率高于 90%）
-- 当单词很复杂时，对 $$e(word|tag)$$ 建模会很困难
+- 当单词很复杂时，对 $$e(\text{word}|\text{tag})$$ 建模会很困难

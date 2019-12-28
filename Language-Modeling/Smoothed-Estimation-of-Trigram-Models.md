@@ -1,6 +1,6 @@
 # 三元模型的平滑估计（Smoothed Estimation）
 
-极大似然估计会导致稀疏数据的问题，即使训练集非常大，很多 $$c(u,v,w)$$ 和 $$c(u,v)$$ 也会很小，甚至为 0。因此本章将讨论用于缓和数据稀疏问题的**平滑估计（Smoothed Estimation）**，它的核心思想依赖于 lower-order statistical estimates，即用一元和二元模型的估计去平滑三元模型的估计。本章将讨论两种常用方法：**线性插值（Linear Interpolation）**和 **Discounting Methods**，以及与**装桶（Bucketing）**结合的线性插值。
+极大似然估计会导致稀疏数据的问题，即使训练集非常大，很多 $$c(u,v,w)$$ 和 $$c(u,v)$$ 也会很小，甚至为 0。因此本节将讨论用于缓和数据稀疏问题的**平滑估计（Smoothed Estimation）**，它的核心思想依赖于 lower-order statistical estimates，即用一元和二元模型的估计去平滑三元模型的估计。本节将讨论两种常用方法：**线性插值（Linear Interpolation）**和 **Discounting Methods**，以及与**装桶（Bucketing）**结合的线性插值。
 
 
 
@@ -77,7 +77,7 @@ $$\lambda_1$$ 会随着 $$c(u, v)$$ 的增大而增大，$$\lambda_2$$ 会随着
 
 ## Discounting Methods
 
-先考虑一下二元模型的估计，目标是对任意 $$w \in \mathcal{V} \cup \{STOP\}$$，$$v \in \mathcal{V} \cup \{*\}$$，估计出 $$q(w|v)$$。
+先考虑一下二元模型的估计，目标是对任意 $$w \in \mathcal{V} \cup \{\text{STOP}\}$$，$$v \in \mathcal{V} \cup \{*\}$$，估计出 $$q(w|v)$$。
 
 对任意 $$c(v,w)>0$$，定义 discounted counts 为：
 $$
@@ -125,7 +125,7 @@ $$
 
 如上例中，有：
 $$
-\mathcal{A}(v) = \{dog, woman, man, park, job, telescope, manual, afternoon, country, street\}
+\mathcal{A}(v) = \{\text{dog, woman, man, park, job, telescope, manual, afternoon, country, street}\}
 $$
 而 $$\mathcal{B}(v)$$ 包括词典中剩下额单词。
 

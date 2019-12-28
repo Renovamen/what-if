@@ -1,6 +1,6 @@
 # 三元（Trigram）语言模型
 
-**三元（Trigram）语言模型**是马尔科夫模型在语言建模问题上的直接应用。本章讨论三元模型的基本定义、**极大似然估计**和优缺点。
+**三元（Trigram）语言模型**是马尔科夫模型在语言建模问题上的直接应用。本节讨论三元模型的基本定义、**极大似然估计**和优缺点。
 
 
 
@@ -26,7 +26,7 @@ $$
 
 则**定义 1.2（三元语言模型）**：
 
-三元语言模型由一个有限集 $$\mathcal{V}$$ 和一个参数 $$q(w|u,v)$$ 组成，其中 $$w \in \mathcal{V} \cup \{STOP\}$$ ，$$u,v \in \mathcal{V} \cup \{*\}$$ 。$$q(w|u,v)$$ 可以理解为单词 $$w$$ 跟在**二元组（Bigram）** $$(u,v)$$ 后的概率。三元语言模型中任意句子 $$x_1 ... x_n$$ （$$x_0 = x_{-1} = *$$）出现的概率为：
+三元语言模型由一个有限集 $$\mathcal{V}$$ 和一个参数 $$q(w|u,v)$$ 组成，其中 $$w \in \mathcal{V} \cup \{\text{STOP}\}$$ ，$$u,v \in \mathcal{V} \cup \{*\}$$ 。$$q(w|u,v)$$ 可以理解为单词 $$w$$ 跟在**二元组（Bigram）** $$(u,v)$$ 后的概率。三元语言模型中任意句子 $$x_1 ... x_n$$ （$$x_0 = x_{-1} = *$$）出现的概率为：
 
 $$
 p(x_1 ... x_n)=\prod_{i=1}^n q(x_i | x_{i-2}, x_{i-1})
@@ -35,11 +35,11 @@ $$
 例如，对于句子：***the dog barks STOP***，有：
 
 $$
-p(the \ dog \ barks \ STOP)
+p(\text{the dog barks STOP})
 $$
 
 $$
-=q(the|*,*) \times q(dog|*,the) \times q(barks|the,dog) \times q(STOP|dog,barks)
+=q(\text{the}|*,*) \times q(\text{dog}|*,\text{the}) \times q(\text{barks}|\text{the,dog}) \times q(\text{STOP}|\text{dog,barks})
 $$
 
 可以看到每个单词只依赖于它的前两个单词（**三元假设（Trigram Assumption）**）。
@@ -48,7 +48,7 @@ $$
 
 - 对任意三元组 $$u,v,w$$，$$q(w|u,v) \geq 0$$；
 
-- 对任意二元组 $$u,v$$，$$\sum_{w \in \mathcal{V} \cup \{STOP\}} q(w|u,v) = 1$$；
+- 对任意二元组 $$u,v$$，$$\sum_{w \in \mathcal{V} \cup \{\text{STOP}\}} q(w|u,v) = 1$$；
 
 因此 $$q(w|u,v)$$ 也可以理解为在给定上文 $$u,v$$ 的条件下，单词 $$w$$ 的概率分布。
 
@@ -60,16 +60,16 @@ $$
 
 ## 极大似然估计（Maximum-likelihood Parameter Estimates）
 
-定义 $$c(u,v,w)$$ 为三元组  $$(u, v, w)$$ 在训练集中出现的次数，如 $$c(the,dog,barks)$$ 为由三个单词 *the dog barks* 组成的序列在训练集中出现的次数。定义 $$c(u,v)$$ 为二元组 $$(u,v)$$ 在训练集中出现的次数。对任意 $$w,u,v$$，它的极大似然估计为：
+定义 $$c(u,v,w)$$ 为三元组  $$(u, v, w)$$ 在训练集中出现的次数，如 $$c(\text{the,dog,barks})$$ 为由三个单词 *the dog barks* 组成的序列在训练集中出现的次数。定义 $$c(u,v)$$ 为二元组 $$(u,v)$$ 在训练集中出现的次数。对任意 $$w,u,v$$，它的极大似然估计为：
 $$
 q(w|u,v)=\frac{c(u,v,w)}{c(u,v)}
 $$
-比如我们要估计 $$q(barks \vert the, dog)$$：
+比如我们要估计 $$q(\text{barks} | \text{the, dog})$$：
 $$
-q(barks|the,dog)=\frac{c(the,dog,barks)}{c(the,dog)}
+q(\text{barks}|\text{the,dog})=\frac{c(\text{the,dog,barks})}{c(\text{the,dog})}
 $$
 
-这是一种很自然的估计方式：如果要估计 $$barks$$ 出现在 $$(the,dog)$$ 后的概率，那么计算一下 $$(the,dog)$$ 出现了多少次，再计算一下 $$(the, dog, barks)$$ 出现了多少次，然后算这两个数的比例就行。但最大似然估计有两个很严重的问题：
+这是一种很自然的估计方式：如果要估计 $$barks$$ 出现在 $$(\text{the,dog})$$ 后的概率，那么计算一下 $$(\text{the,dog})$$ 出现了多少次，再计算一下 $$(\text{the, dog, barks})$$ 出现了多少次，然后算这两个数的比例就行。但最大似然估计有两个很严重的问题：
 
 1. 如果一个三元组在训练集中没有出现，则 $$q(w|u,v)=0$$（分子为 0）。由于参数规模一般会很大，这种情况会经常出现，导致数据很稀疏。而且这是不合理的，一个三元组在训练集中没有不出现不等于它出现的概率为 0；
 2. 分母 $$c(u,v)$$ 也有可能为 0，这时这个估计的定义就不合法了。
@@ -113,7 +113,7 @@ perplexity 是一个正数，perplexity **越小**，模型处理新句子的能
 
     则有：
     $$
-    perplexity=\frac{1}{t}
+    \text{perplexity}=\frac{1}{t}
     $$
     可以看到 $$t$$ 为所有参数 $$q(x_j^{(i)}|x_j^{(i-2)},x_j^{(i-1)})$$ 的几何平均数（Geometric Mean）。例如一个模型的 perplexity 是 100，则 $$t=0.01$$，也就是它的所有参数的几何平均数为 0.01。
 

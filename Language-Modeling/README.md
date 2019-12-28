@@ -9,16 +9,17 @@
 令词典 $$\mathcal{V}$$ 为该语言中所有单词的集合。如：如果要为英语构建一个语言模型，则：
 
 $$
-\mathcal{V} = \{the, dogs, laughs, saw, barks, cat, ...\}
+\mathcal{V} = \{\text{the, dogs, laughs, saw, barks, cat, ...}\}
 $$
 
-$$\mathcal{V}$$ 有可能非常大，毕竟它可能包含成千上万个单词，但它通常都是一个有限集。一个句子就是一个单词序列：
+$$\mathcal{V}$$ 有可能非常大，毕竟它可能包含成千上万个单词，但它通常都是一个有限集。
 
+一个句子就是一个单词序列：
 $$
 x_1x_2 ... x_n
 $$
 
-其中 $$x_i \in \mathcal{V}$$，$$i \in \{1...(n-1)\}$$，$$n \geq 1$$。假设 $$x_n$$ 是一个特殊的符号 **STOP**（$$STOP \notin \mathcal{V}$$），如：
+其中 $$x_i \in \mathcal{V}$$，$$i \in \{1...(n-1)\}$$，$$n \geq 1$$。假设 $$x_n$$ 是一个特殊的符号 **STOP**（$$\text{STOP} \notin \mathcal{V}$$），如：
 
 - the cat saw the dog STOP
 - the STOP
@@ -48,6 +49,6 @@ $$
 
 ## Reference
 
-- [1.1] [Language Modeling (Notes) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf)
-- [1.2] [Language Modeling (Slides) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/lmslides.pdf)
-- [1.3] [A Bit of Progress in Language Modeling. *Joshua T. Goodman*. Computer Speech & Language 2001.](http://www-labs.iro.umontreal.ca/~felipe/IFT6285-Automne2019/resources-2011/Articles/goodman2001.pdf)
+- [1.1] [**Language Modeling (Notes)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf)
+- [1.2] [**Language Modeling (Slides)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/lmslides.pdf)
+- [1.3] [**A Bit of Progress in Language Modeling**. *Joshua T. Goodman*. Computer Speech & Language 2001.](http://www-labs.iro.umontreal.ca/~felipe/IFT6285-Automne2019/resources-2011/Articles/goodman2001.pdf)

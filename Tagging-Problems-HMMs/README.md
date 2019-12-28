@@ -1,8 +1,8 @@
 # 标注问题（Tagging Problems）和隐马尔科夫模型（Hidden Markov Models，HMMs）
 
-**词性标注（Part-of-speech (POS) tagging）**是序列对建模的一种，目标是构建一个模型，其输入为一个句子，如 $$the \ dog \ saw \ a \ cat$$；输出为一个标记序列（tag sequence）（也叫状态序列（state sequence）），如 $$D \ N \ V \ D \ N$$（这里 $$D$$ 为限定词， $$N$$ 为名词， $$V$$ 为动词）。
+**词性标注（Part-of-speech (POS) tagging）**是序列对建模的一种，目标是构建一个模型，其输入为一个句子，如 $$\text{the dog saw a cat}$$；输出为一个标记序列（tag sequence）（也叫状态序列（state sequence）），如 $$\text{D N V D N}$$（这里 $$\text{D}$$ 为限定词， $$\text{N}$$ 为名词， $$\text{V}$$ 为动词）。
 
-定义标注模型的输入为 $$x_1...x_n$$，如上例中 $$n=5$$，$$x_1 = the, x_2 = dog, x_3 = saw, x_4 = the, x_5 = cat$$；定义输出的序列为 $$y_1...y_n$$，如上例中 $$y_1 = D, y_2 = N, y_3 = V$$。
+定义标注模型的输入为 $$x_1...x_n$$，如上例中 $$n=5$$，$$x_1 = \text{the}, x_2 = \text{dog}, x_3 = \text{saw}, x_4 = \text{the}, x_5 = \text{cat}$$；定义输出的序列为 $$y_1...y_n$$，如上例中 $$y_1 = \text{D}, y_2 = \text{N}, y_3 = \text{V}$$。
 
 这种将源序列 $$x_1...x_n$$ 映射为标记序列 $$y_1...y_n$$ 的问题，被称为**序列标注问题（sequence labeling problem）**或**标注问题（tagging problem）**。
 
@@ -12,7 +12,7 @@
 
 ## Reference
 
-- [2.1] [Tagging Problems, and Hidden Markov Models (Notes) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/hmms-spring2013.pdf)
-- [2.2] [Tagging Problems, and Hidden Markov Models (Slides) (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/tagging.pdf)
-- [2.3] [The Noisy Channel Model and Markov Models (Mark Johnson, Macquarie University)](http://web.science.mq.edu.au/~mjohnson/papers/Johnson14-04LM-talk.pdf)
-- [2.4] [Natural Language Processing for Online Applications: Text Retrieval, Extraction and Categorization](https://doc.lagout.org/science/Artificial%20Intelligence/Natural%20Language%20Processing/Natural%20Language%20Processing%20for%20Online%20Applications%20Text%20Retrieval%2CExtraction%20and%20Categorization%20-%20Peter%20Jackson%20%2C%20Isabelle%20Moulinier.pdf)
+- [2.1] [**Tagging Problems, and Hidden Markov Models (Notes)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/hmms-spring2013.pdf)
+- [2.2] [**Tagging Problems, and Hidden Markov Models (Slides)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/tagging.pdf)
+- [2.3] [**The Noisy Channel Model and Markov Models**. *Mark Johnson*. Macquarie University.](http://web.science.mq.edu.au/~mjohnson/papers/Johnson14-04LM-talk.pdf)
+- [2.4] [**Natural Language Processing for Online Applications: Text Retrieval, Extraction and Categorization**](https://doc.lagout.org/science/Artificial%20Intelligence/Natural%20Language%20Processing/Natural%20Language%20Processing%20for%20Online%20Applications%20Text%20Retrieval%2CExtraction%20and%20Categorization%20-%20Peter%20Jackson%20%2C%20Isabelle%20Moulinier.pdf)

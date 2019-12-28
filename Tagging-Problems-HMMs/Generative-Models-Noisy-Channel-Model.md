@@ -1,6 +1,6 @@
 # 生成模型和噪声通道模型
 
-本章将标注问题视为监督学习（Supervised Learning）问题。
+本节将标注问题视为监督学习（Supervised Learning）问题。
 
 
 
