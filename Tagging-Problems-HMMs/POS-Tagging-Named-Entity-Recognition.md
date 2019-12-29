@@ -6,6 +6,10 @@
 
 ## 词性标注（POS Tagging）
 
+**词性标注（Part-of-speech (POS) tagging）**是序列对建模的一种。它的目标是构建一个模型，其输入为一个句子，如 $$\text{the dog saw a cat}$$；输出为一个标记序列（tag sequence）（也叫状态序列（state sequence）），如 $$\text{D N V D N}$$（$$\text{D}$$ 为限定词， $$\text{N}$$ 为名词， $$\text{V}$$ 为动词）。
+
+&nbsp;
+
 用于词性标注的训练集包含一系列句子与它们对应的标注，如 [Penn Treebank](https://catalog.ldc.upenn.edu/LDC99T42) 数据集包含大概一百万个单词（40000 个句子）和其对应的标注。
 
 词性标注一个主要难点是处理**歧义（ambiguity）**，因为同一个单词在不同语境下可能需要被划分为不同的词性。另一个难点是会有很多测试数据中的单词，在训练集中出现频率很低甚至没有出现。

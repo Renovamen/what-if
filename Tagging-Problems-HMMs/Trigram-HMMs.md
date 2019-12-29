@@ -20,9 +20,9 @@ trigram HMM 由有限集 $$\mathcal{V}$$、有限集 $$\mathcal{K}$$ 和以下�
 
 然后定义：
 $$
-p(x_1 ... x_n, y_1 ... y_{n+1})=\prod_{i=1}^{n+1}q(y_i|y_{i-2},y_{i-1})\prod_{i=1}^n e(x_i|y_i)
+p(x_1 ... x_n, y_1 ... y_{n+1})=\prod_{i=1}^{n+1}q(y_i|y_{i-2},y_{i-1})\prod_{i=1}^n e(x_i|y_i) \tag{2.3}
 $$
-其中 $$y_0 = y_{-1} = *$$。
+其中 $$y_0 = y_{-1} = *$$，$$*$$ 是一个特殊的开始符号。
 
 如：$$n = 3$$，$$x_1 ... x_3$$ 为一个句子 $$\text{the dog laughs}$$，$$y_1...y_4$$ 为标签序列 $$\text{D N V STOP}$$。则：
 $$
@@ -42,26 +42,18 @@ $$
 
 ## Trigram HMMs 中的独立性假设（Independence Assumptions）
 
-考虑一对有随机变量组成的序列 $$X_1 ... X_n$$ 和 $$Y_1 ... Y_n$$，其中 $$X_i$$ 可以为 $$\mathcal{V}$$ 中的任何单词， $$Y_i$$ 可以为 $$\mathcal{K}$$ 中的任何标签。因为 $$n$$ 也是一个随机变量，句子可以为任意长度，所用这里用与[变长序列的马尔科夫模型](../Language-Modeling/Markov-Models.md)中所用方法类似的方法来处理这个问题。
+考虑一对有随机变量组成的序列 $$X_1 ... X_n$$ 和 $$Y_1 ... Y_n$$，其中 $$X_i$$ 可以为 $$\mathcal{V}$$ 中的任何单词， $$Y_i$$ 可以为 $$\mathcal{K}$$ 中的任何标签。因为 $$n$$ 是一个随机变量，句子可以为任意长度，所以这里用与[变长序列的马尔科夫模型](../Language-Modeling/Markov-Models.md)中所用方法类似的方法来处理这个问题。
 
-我们的任务是对联合概率进行建模（$$x_i \in \mathcal{V}, y_i \in \mathcal{K}$$）：
-$$
-P(X_1 = x_1 ... X_n = x_n, Y_1 = y_1 ... Y_n = y_n)
-$$
-为了方便，加一个随机变量 $$Y_{n+1}=\text{STOP}$$。
-
-HMM 的核心思想是：
+HMM 的任务是对联合概率进行建模（$$x_i \in \mathcal{V}, y_i \in \mathcal{K}$$）：
 $$
 P(X_1 = x_1 ... X_n = x_n, Y_1 = y_1 ... Y_{n+1} = y_{n+1})
 $$
 
 $$
-= \prod_{i=1}^{n+1} P(Y_i = y_i | Y_{i-2} = y_{i-2}, Y_{i-1} = y_{i-1}) \prod_{i=1}^n P(X_i = x_i|Y_i = y_i) \tag{2.3}
+= \prod_{i=1}^{n+1} P(Y_i = y_i | Y_{i-2} = y_{i-2}, Y_{i-1} = y_{i-1}) \prod_{i=1}^n P(X_i = x_i|Y_i = y_i) \tag{2.4}
 $$
 
-其中 $$y_0 = y_{-1} = *$$，$$*$$ 是一个特殊的开始符号。
-
-公式 2.3 跟上一节 trigram HMMs 中的联合概率因式分解后的形式很相似，所以我们继续假设对任意 $$i$$、任意 $$y_{i-2},y_{i-1},y_i$$：
+如果我们假设对任意 $$i$$、任意 $$y_{i-2},y_{i-1},y_i$$：
 $$
 P(Y_i = y_i | Y_{i-2} = y_{i-2}, Y_{i-1} = y_{i-1}) = q(y_i|y_{i-2},y_{i-1})
 $$
@@ -70,9 +62,11 @@ $$
 P(X_i = x_i|Y_i = y_i) = e(x_i|y_i)
 $$
 
+那么公式 2.4 就可以写成上一部分中公式 2.3 的形式了。
+
 ------
 
-公式 2.3 是由模型中的独立性假设推导出来的，首先：
+公式 2.4 是由模型中的独立性假设推导出来的，首先：
 $$
 P(X_1 = x_1 ... X_n = x_n, Y_1 = y_1 ... Y_{n+1} = y_{n+1})
 $$
@@ -99,16 +93,16 @@ $$
    $$
 
    $$
-   = \prod_{i=1}^n P(X_i = x_i |X_1 = x_1 ... X_{i-1} = x_{i-1}, Y_1 = y_1 ... Y_{n+1} = y_{n+1})  \tag{2.4}
+   = \prod_{i=1}^n P(X_i = x_i |X_1 = x_1 ... X_{i-1} = x_{i-1}, Y_1 = y_1 ... Y_{n+1} = y_{n+1})  \tag{2.5}
    $$
 
    $$
-   = \prod_{i=1}^n P(X_i = x_i | Y_i = y_i) \tag{2.5}
+   = \prod_{i=1}^n P(X_i = x_i | Y_i = y_i) \tag{2.6}
    $$
 
-   公式 2.4 是链式法则，公式 2.5 是我们的假设。即我们假设 $$X_i$$ 只依赖于 $$Y_i$$，条件独立于其他所有变量。
+   公式 2.4 是链式法则，公式 2.6 是我们的假设。即我们假设 $$X_i$$ 只依赖于 $$Y_i$$，条件独立于其他所有变量。
 
-然后就可以推出公式 2.3 了。
+然后就可以推出公式 2.4 了。
 
 ------
 
@@ -123,7 +117,7 @@ $$
 
 ## Trigram HMM 的参数估计
 
-有一个训练集，包含  $$x_1...x_n$$ 和其对应的  $$y_1...y_n$$。定义 $$c(u,v,s)$$ 为标签序列 $$(u,v,s)$$ 在训练集中出现的次数，$$c(u,v)$$ 为 $$(u,v)$$ 在训练集中出现的次数。定义 $$c(s \rightsquigarrow x)$$ 为训练集中在 $$s$$ 状态下观察结果为 $$x$$ 的概率，如 $$c(N \rightsquigarrow dog)$$ 为标注为 $$N$$ 的 $$dog$$ 出现的概率。
+有一个训练集，包含  $$x_1...x_n$$ 和其对应的  $$y_1...y_n$$。定义 $$c(u,v,s)$$ 为标签序列 $$(u,v,s)$$ 在训练集中出现的次数，$$c(u,v)$$ 为 $$(u,v)$$ 在训练集中出现的次数。定义 $$c(s \rightsquigarrow x)$$ 为训练集中在 $$s$$ 状态下观察结果为 $$x$$ 的概率，如 $$c(\text{N} \rightsquigarrow \text{dog})$$ 为标注为 $$\text{N}$$ 的 $$\text{dog}$$ 出现的概率。
 
 则极大似然估计为：
 $$
@@ -169,7 +163,7 @@ $$
 \begin{aligned}
 p(x_1 ... x_n, y_1 ... y_{n+1}) &= r(*,*,y_1,...y_n) \times q(y_{n+1}|y_{n-1},y_n) \\
 &=r(*,*,y_1,...y_n) \times q(\text{STOP}|y_{n-1},y_n)
-\end{aligned} \tag{2.6}
+\end{aligned} \tag{2.7}
 $$
 为了方便，用 $$\mathcal{K}_k$$（$$k \in \{-1, ..., n\}$$）来表示第 $$k$$ 个元素的所有可能标签：
 $$
@@ -180,9 +174,9 @@ $$
 \mathcal{K}_k = \mathcal{K} \text{ for } k \in \{1...n\}
 $$
 
-然后对任意 $$k \in \{1...n\}$$，$$u \in \mathcal{K}_{k-1}, v \in \mathcal{K}_k$$，令 $$\mathcal{S}(k,u,v)$$ 为所有序列 $$y_{-1}, y_0, y_1, ..., y_k$$（$$y_i \in \mathcal{K}_i, i \in \{-1...k\}$$）的集合，其中 $$y_{k-1} = u, y_k = v$$。也就是说 $$\mathcal{S}(k,u,v)$$ 是所有长度为 $$k$$ 的标签序列的集合，以二元组 $$(u,v)$$ 结尾。
+然后对任意 $$k \in \{1...n\}$$，$$u \in \mathcal{K}_{k-1}, v \in \mathcal{K}_k$$，令 $$\mathcal{S}(k,u,v)$$ 为所有序列 $$y_{-1}, y_0, y_1, ..., y_k$$（$$y_i \in \mathcal{K}_i, i \in \{-1...k\}$$）的集合，其中 $$y_{k-1} = u, y_k = v$$。也就是说 $$\mathcal{S}(k,u,v)$$ 是所有长度为 $$k$$ 且以二元组 $$(u,v)$$ 结尾的标签序列的集合。
 
-令 $$\pi(k,u,v)$$ 为长度为 $$k$$ 的标签序列的最大概率：
+令 $$\pi(k,u,v)$$ 为长度为 $$k$$ 且以二元组 $$(u,v)$$ 结尾的标签序列的最大概率：
 $$
 \pi(k,u,v) = \max_{⟨y_0, y_1, ..., y_k⟩ \in \mathcal{S}(k,u,v)} r(y_{-1}, y_0, y_1, ..., y_k)
 $$
@@ -198,15 +192,15 @@ $$
 
 对任意 $$k \in \{1...n\}, u \in \mathcal{K}_{k-1}, v \in \mathcal{K}_k$$：
 $$
-\pi(k,u,v) = \max_{w \in \mathcal{K}_{k-2}} (\pi(k-1,w,u) \times q(v|w,u) \times e(x_k, v)) \tag{2.7}
+\pi(k,u,v) = \max_{w \in \mathcal{K}_{k-2}} (\pi(k-1,w,u) \times q(v|w,u) \times e(x_k, v)) \tag{2.8}
 $$
 公式 2.7 的正确性显而易见。这里是在枚举所有的 $$w$$ 值，然后返回最大的 $$\pi(k,u,v)$$。
 
 **命题 2：**
 $$
-\max_{y_1...y_{n+1}} p(x_1...x_n,y_1...y_{n+1}) = \max_{u \in \mathcal{K_{n-1}},v \in \mathcal{K}_n} (\pi(n,u,v) \times q(\text{STOP}|u,v)) \tag{2.8}
+\max_{y_1...y_{n+1}} p(x_1...x_n,y_1...y_{n+1}) = \max_{u \in \mathcal{K_{n-1}},v \in \mathcal{K}_n} (\pi(n,u,v) \times q(\text{STOP}|u,v)) \tag{2.9}
 $$
-公式 2.8 可由公式 2.6 推出。
+公式 2.9 可由公式 2.7 推出。
 
 &nbsp;
 

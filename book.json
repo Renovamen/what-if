@@ -27,7 +27,7 @@
         "paperSize": "a4"
     },
     "intro": {
-        "avatar": "https://renovamen.ink/img/header-avatar.jpeg",
+        "avatar": "https://renovamen.ink/img/avatar.png",
         "nickname": "Renovamen",
         "content": "The coolest dragon in the world.",
         "icons": {
@@ -37,7 +37,6 @@
         }
     }, 
     "plugins": [
-        "multipart",
         "katex@git+https://gitee.com/Renovamen/gitbook-plugin-katex.git",
         "theme-chaos"
     ],
