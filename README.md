@@ -2,6 +2,9 @@
 
 My messy notebook, built with [Gridsome](https://gridsome.org/). Maybe it is unsuitable for humans to read.
 
+Have a look at this notebook [here](http://notebook.renovamen.ink).
+
+&nbsp;
 ## Usage
 
 ```bash

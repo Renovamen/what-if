@@ -13,8 +13,7 @@
     "dev": "gridsome develop",
     "explore": "gridsome explore",
     "build": "gridsome build",
-    "github": "git push origin master",
-    "coding": "git push coding master"
+    "github": "git push origin master"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
