@@ -1,0 +1,52 @@
+{
+  "version": "1.0.0",
+  "name": "what-if",
+  "description": "Renovamen's messy notebook.",
+  "author": "Renovamen <renovamenzxh@gmail.com>",
+  "homepage": "http://notebook.renovamen.ink",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Renovamen/what-if"
+  },
+  "bugs": "https://github.com/Renovamen/what-if/issues",
+  "scripts": {
+    "dev": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build",
+    "github": "git push origin master",
+    "coding": "git push coding master"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@gridsome/plugin-google-analytics": "^0.1.0",
+    "clipboard-copy": "^3.0.0",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-flexsearch": "0.1.17",
+    "gridsome-remark-katex": "0.1.1",
+    "marked": "^0.6.1",
+    "typography": "^0.16.18",
+    "vue-instantsearch": "^2.0.0",
+    "vue-lazy-hydration": "^1.0.0-beta.7",
+    "vue-popover": "^1.6.2",
+    "vue-scrollto": "^2.13.0"
+  },
+  "devDependencies": {
+    "@gridsome/plugin-critical": "^0.1.2",
+    "@gridsome/remark-prismjs": "^0.2.0",
+    "@gridsome/source-filesystem": "^0.6.0",
+    "@gridsome/transformer-remark": "^0.5.0",
+    "@gridsome/vue-remark": "^0.1.0",
+    "execa": "^1.0.0",
+    "fs-extra": "^7.0.1",
+    "js-yaml": "^3.13.1",
+    "node-sass": "^4.9.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.1.0",
+    "svg-to-vue-component": "^0.2.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

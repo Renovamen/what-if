@@ -1,4 +1,8 @@
+*.log
 .DS_Store
+.cache
+src/.temp
 node_modules
-_book
+dist
 package-lock.json
+yarn.lock
