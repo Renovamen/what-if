@@ -10,6 +10,10 @@
       </div>
     </div>
 
+    <g-link to="/papers/">
+      <span class="main-nav__label">Papers</span>
+    </g-link>
+
     <g-link to="/misc/">
       <span class="main-nav__label">Misc</span>
     </g-link>

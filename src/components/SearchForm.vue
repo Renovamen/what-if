@@ -8,12 +8,20 @@
         placeholder="Search for notes..."
         title="Search notes"
         type="search"
+        @focus="focused = true"
+        @blur="focused = false"
+        @input="query = $event.target.value"
+        @change="query = $event.target.value"
       />
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <font-awesome-icon icon="search" class="search-icon feather feather-search"/>
     </label>
     
-    <div v-if="searchResults.length" class="header-search__result">
+    <div v-if="showResult && this.focused" class="header-search__result">
+      <div v-if="searchResults.length === 0" class="result-group">
+        No results for <span style="font-weight: 600">{{ query }}</span>.
+      </div>
       <div 
+        v-else
         v-for="group in searchResults.results" 
         :key="group.title"
         class="result-group" >
@@ -34,7 +42,9 @@
 export default {
   data () {
     return {
-      searchTerm: ''
+      searchTerm: '',
+      focused: false,
+      query: '',
     }
   },
   computed: {
@@ -42,13 +52,12 @@ export default {
       const searchTerm = this.searchTerm
       if (searchTerm.length < 1) return []
       var raw_result = this.$search.search({ query: searchTerm, limit: 5 })
-      console.log(raw_result)
 
       var result_list = {}
       for(let item of raw_result) {
-        if(!result_list[item.index]) {
-          result_list[item.index] = {
-            "title": item.index,
+        if(!result_list[item.catagory]) {
+          result_list[item.catagory] = {
+            "title": item.catagory,
             "list": []
           }
         }
@@ -57,14 +66,18 @@ export default {
           "title": item.title,
           "path": item.path
         }
-        result_list[item.index]["list"].push(result)
+        result_list[item.catagory]["list"].push(result)
       }
-      // console.log(result_list, raw_result.length)
+
       return {
         "results": result_list,
         "length": raw_result.length
       }
     },
+    showResult() {
+      // show results, if the input is focused and the query is not empty.
+      return this.focused && this.query.length > 0;
+    }
   },
 }
 </script>

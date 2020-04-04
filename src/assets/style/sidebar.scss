@@ -6,8 +6,6 @@
   -webkit-overflow-scrolling: touch;
   padding: 1% 20px 0 5px;
 
-
-
   @media screen and (min-width: 1189px) {
     position: sticky;
     border-right: 1px solid var(--border-color);
@@ -37,6 +35,9 @@
     position: sticky;
     padding-top: 6.5%;
     top: var(--header-height);
+    h3 {
+      margin-left: 14px !important;
+    }
   }
 
   h3 {
@@ -46,8 +47,11 @@
     margin: 15px 0 15px;
     padding-top: 20px;
     border-top: 1px solid var(--border-color);
+    .menu-item {
+      font-weight: 500;
+    }
     &:first-of-type {
-      border:0;
+      border: 0;
     }
   }
 

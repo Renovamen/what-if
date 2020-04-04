@@ -3,7 +3,7 @@
   "name": "what-if",
   "description": "Renovamen's messy notebook.",
   "author": "Renovamen <renovamenzxh@gmail.com>",
-  "homepage": "http://notebook.renovamen.ink",
+  "homepage": "https://notebook.renovamen.ink",
   "repository": {
     "type": "git",
     "url": "https://github.com/Renovamen/what-if"
@@ -27,6 +27,7 @@
     "gridsome-plugin-flexsearch": "0.1.17",
     "gridsome-remark-katex": "0.1.1",
     "marked": "^0.6.1",
+    "tocbot": "^4.10.1",
     "typography": "^0.16.18",
     "vue-instantsearch": "^2.0.0",
     "vue-lazy-hydration": "^1.0.0-beta.7",

@@ -1,19 +1,11 @@
 <template>
   <Layout class="has-sidebar docs-page" :footer="false">
     <div class="container flex flex-align-top">
-      <div class="sidebar">
-        <template v-if="links" v-for="(group, i1) in links">
-          <g-link class="menu-item" :to="group.link" :key="`link-${i1}`">
-            <h3 class="menu-item" :key="`title-${i1}`">{{ group.title }}</h3>
-          </g-link>
-          <template v-for="(item, i2) in group.items">
-            <g-link :exact="item.link == '/docs/'" class="menu-item menu-link" :to="item.link" :key="`link-${i1}-${i2}`">
-              {{ item.title }}
-            </g-link>
-          </template>
-        </template>
-      </div>
-      <Section class="doc-content flex-fit" container="doc-without-toc">
+      <!-- Sidebar -->
+      <Sidebar :links="links" />
+
+      <!-- Content -->
+      <Section class="doc-content flex-fit" :container="containerType">
         <slot />
         <p>
           <a :href="editLink" target="_blank" class="github-edit-link">
@@ -34,16 +26,27 @@
           </div>
         </nav>
       </Section>
+
+      <!-- Catalog -->
+      <Catalog v-if="catalog" :subtitles="subtitles" />
     </div>
   </Layout>
 </template>
 
 <script>
+import Sidebar from '@/components/Sidebar'
+import Catalog from '@/components/Catalog'
 
 export default {
+  components: {
+    Sidebar,
+    Catalog
+  },
   props: {
     subtitles: { type: Array, default: () => [] },
-    links: { type: Array, default: () => [] }
+    links: { type: Array, default: () => [] },
+    catalog: { type: Boolean, default: () => false },
+    readme: { type: Boolean, default: () => false }
   },
   computed: {
     currentPath () {
@@ -51,7 +54,7 @@ export default {
     },
     editLink () {
       let path = this.currentPath
-      if((path.match(new RegExp("/", "g")) || []).length == 1) path = path + '/README'
+      if(this.readme) path = path + '/README'
       return `https://github.com/Renovamen/what-if/blob/master${path}.md`
     },
     items () {
@@ -67,6 +70,10 @@ export default {
     },
     previousPage () {
       return this.items[this.currentIndex - 1]
+    },
+    containerType () {
+      if(this.catalog) return "base"
+      else return "doc-without-toc"
     }
   }
 }

@@ -3,6 +3,7 @@ title: Built a Cluster on Mac with VMware Fusion
 slug: built-cluster-with-vmware
 date: 2018-01-17
 excerpt: "Final Project of 2018 Fall Distributed Systems"
+catagory: Misc
 ---
 
 ## Misc

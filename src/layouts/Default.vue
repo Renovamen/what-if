@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Header from './partials/Header'
-import Footer from './partials/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default {
   props: ['footer', 'primary-bg'],

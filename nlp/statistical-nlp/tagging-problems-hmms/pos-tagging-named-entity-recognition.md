@@ -1,3 +1,7 @@
+---
+catagory: Statistical NLP
+---
+
 # 词性标注和命名实体识别
 
 本节讨论 NLP 中两种重要的标注问题，**词性标注（POS Tagging）**和**命名体识别（Named-Entity Recognition）**。

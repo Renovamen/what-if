@@ -47,6 +47,7 @@ export default {
   border: 0;
   color: currentColor;
   cursor: pointer;
+  width: 40px;
 
   &:hover {
     opacity: .8

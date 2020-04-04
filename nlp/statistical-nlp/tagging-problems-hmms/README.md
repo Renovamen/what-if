@@ -1,3 +1,8 @@
+---
+catagory: Statistical NLP
+readme: true
+---
+
 # 标注问题（Tagging Problems）和隐马尔科夫模型（Hidden Markov Models，HMMs）
 
 **标注问题（tagging problem）**（或**序列标注问题（sequence labeling problem）**）是将源序列 $$x_1...x_n$$（标注模型的输入）映射到标记序列 $$y_1...y_n$$（标注模型的输出）的问题。

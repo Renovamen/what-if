@@ -1,3 +1,7 @@
+---
+catagory: Statistical NLP
+---
+
 # 生成标注模型（Generative Tagging Models）
 
 

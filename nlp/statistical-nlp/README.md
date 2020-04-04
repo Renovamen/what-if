@@ -1,3 +1,8 @@
+---
+catagory: Statistical NLP
+readme: true
+---
+
 # Notes of Statistical NLP
 
 Messy notes of Statistical NLP. Source Markdown files are hosted on [here](https://github.com/Renovamen/what-if/nlp/statistical-nlp).

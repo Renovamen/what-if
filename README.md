@@ -1,8 +1,8 @@
 # What if?
 
-My messy notebook, built with [Gridsome](https://gridsome.org/). Maybe it is unsuitable for humans to read.
+My messy notebook, built with [Gridsome](https://gridsome.org/) and [Vue.js](https://vuejs.org/). Maybe it is unsuitable for humans to read.
 
-Have a look at this notebook [here](http://notebook.renovamen.ink).
+Check out this notebook [here](https://notebook.renovamen.ink).
 
 &nbsp;
 ## Usage
@@ -17,3 +17,14 @@ npm run dev # gridsome develop
 # build for production with minification
 npm run build # gridsome build
 ```
+
+&nbsp;
+## Plugins
+
+- Fonts: [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome)
+
+- Search: [gridsome-plugin-flexsearch](https://github.com/thetre97/gridsome-plugin-flexsearch)
+
+- Katex: [gridsome-remark-katex](https://github.com/pchorus/gridsome-remark-katex)
+
+- Catalog: [tocbot](https://github.com/tscanlin/tocbot)

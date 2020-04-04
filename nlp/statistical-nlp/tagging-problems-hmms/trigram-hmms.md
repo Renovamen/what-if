@@ -1,3 +1,7 @@
+---
+catagory: Statistical NLP
+---
+
 # 三元隐马尔科夫模型（Trigram Hidden Markov Models，Trigram HMMs）
 
 

@@ -1,3 +1,7 @@
+---
+catagory: Statistical NLP
+---
+
 # 马尔科夫模型（Markov Models）
 
 本节讨论**马尔科夫模型（Markov Models）**。

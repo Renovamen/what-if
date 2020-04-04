@@ -1,3 +1,7 @@
+---
+catagory: Statistical NLP
+---
+
 # 特殊处理
 
 HMM 输出概率的参数估计为：

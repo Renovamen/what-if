@@ -27,9 +27,8 @@ export default {
       text-decoration: none;
     }
     &__svg {
-      max-width: 35px;
+      max-width: 30px;
       height: auto;
-      // margin-top: 10px;
       margin-right: 10px;
       margin-bottom: 5px;
     }

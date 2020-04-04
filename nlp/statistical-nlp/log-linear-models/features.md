@@ -1,3 +1,7 @@
+---
+catagory: Statistical NLP
+---
+
 # 特征
 
  $$f(x,y) \in \Reals^d$$ 是表示 $$(x,y)$$ 的特征向量，向量中的 $$f_k(x,y)$$（$$k=1...d$$）被称为**特征（feature）**。每个特征都有一个与之相关的参数 $$v_k$$，$$v_k$$ 的值需要从训练集中估计出来。训练集由样本序列 $$(x^{(i)}, y^{(i)})$$ 组成，其中 $$i=1...n,x^{(i)} \in \mathcal{X}, y^{(i)} \in \mathcal{Y}$$。

@@ -1,3 +1,8 @@
+---
+catagory: Statistical NLP
+readme: true
+---
+
 # 对数线性模型（Log-Linear Models）
 
 对数线性模型（Log-Linear Models）在 NLP 中的应用非常广泛，它的主要优点是能够利用丰富的特征集，从而相比前面提到的简单的评估方法能更好的表示数据。本章将讨论其定义和参数估计的方法。这里有两个引出对数线性模型的例子：

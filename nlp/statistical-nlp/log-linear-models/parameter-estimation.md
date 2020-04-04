@@ -1,6 +1,8 @@
+---
+catagory: Statistical NLP
+---
+
 # 参数估计
-
-
 
 ## Log-Likelihood Function
 

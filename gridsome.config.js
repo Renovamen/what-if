@@ -55,14 +55,14 @@ module.exports = {
       options: {
         collections: [
           {
-            typeName: 'StatisticalNLP',
-            indexName: 'Statistical NLP',
-            fields: ['title']
+            typeName: 'NotePage',
+            indexName: 'Notes',
+            fields: ['title', 'catagory']
           },
           {
             typeName: 'BlogPost',
             indexName: 'Misc',
-            fields: ['title']
+            fields: ['title', 'catagory']
           }
         ],
         searchFields: ['title', 'headings', 'content', 'excerpt'],
@@ -71,7 +71,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'StatisticalNLP',
+        typeName: 'NotePage',
         index: ['README'],
         path: './nlp/statistical-nlp/**/*.md',
         remark: {
@@ -80,6 +80,14 @@ module.exports = {
             'gridsome-remark-katex'
           ]
         },
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'NotePage',
+        index: ['README'],
+        path: './papers/**/*.md',
       }
     },
     {
