@@ -78,7 +78,13 @@ module.exports = {
           plugins: [
             '@gridsome/remark-prismjs',
             'gridsome-remark-katex'
-          ]
+          ],
+          autolinkHeadings: {
+            content: {
+              type: 'text',
+              value: '#',
+            }
+          }
         },
       }
     },

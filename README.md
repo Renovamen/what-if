@@ -22,9 +22,6 @@ npm run build # gridsome build
 ## Plugins
 
 - Fonts: [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome)
-
 - Search: [gridsome-plugin-flexsearch](https://github.com/thetre97/gridsome-plugin-flexsearch)
-
 - Katex: [gridsome-remark-katex](https://github.com/pchorus/gridsome-remark-katex)
-
 - Catalog: [tocbot](https://github.com/tscanlin/tocbot)

@@ -5,7 +5,7 @@
     :catalog="this.$page.doc.catalog" 
     :readme="this.$page.doc.readme">
 
-    <div class="post-content post mb-x2">
+    <div class="post-content post mb">
       <div v-html="$page.doc.content"/>
     </div>
     

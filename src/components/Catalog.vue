@@ -1,5 +1,5 @@
 <template>
-    <div v-if="subtitles.length > 0 && subtitles[0].depth !== 3" class="sidebar sidebar--right hide-for-small">
+    <div v-if="subtitles.length > 1 && subtitles[0].depth !== 3" class="sidebar sidebar--right hide-for-small">
         <h3>Catalog</h3>
         <ul v-if="subtitles.length" class="menu-item submenu toc-container">
             <!-- replace old catalog by tocbot.js -->
@@ -24,7 +24,11 @@ export default {
     },
     watch: {
         $route() {
-            this.creatToc()
+            tocbot.destroy()
+            var _this = this
+            setTimeout(function () {
+                _this.creatToc()
+            }, 200)
         }
     },
     methods: {
@@ -42,6 +46,15 @@ export default {
                 // How many heading levels should not be collapsed.
                 collapseDepth: 3,
             });
+            this.cleanToc()
+        },
+        cleanToc() {
+            // remove "#" created by remark-autolink-headings
+            var toc_list = document.querySelectorAll(".toc-link");
+            for(let toc_item of toc_list) {
+                let toc_text = toc_item.innerHTML
+                toc_item.innerHTML = toc_text.substr(1)
+            }
         }
     },
 }

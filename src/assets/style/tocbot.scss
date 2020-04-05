@@ -2,61 +2,64 @@
   position: relative;
   overflow: hidden;
   // margin-left: -15px !important;
-}
 
-.toc {
-  overflow-y: auto;
-}
+  .toc {
+    overflow-y: auto;
+  }
+  
+  .toc > .toc-list {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .toc-list {
+    margin: 0;
+    padding-left: 15px;
+  }
 
-.toc > .toc-list {
-  overflow: hidden;
-  position: relative;
-}
-
-.toc-list {
-  margin: 0;
-  padding-left: 15px;
-}
-
-li {
-  list-style: none;
-  margin-top: 20px;
-
-  a {
-    margin-top: -15px;
-    &.toc-link {
-      color: currentColor;
-      height: 100%;
-    }
-    &.is-active-link {
-      font-weight: 700;
-      color: var(--primary-color-dark);
-      &:before {
-        content: " ";
-        width: 8px;
-        height: 8px;
-        border-radius: 10px;
-        position: absolute;
-        left: -15px;
-        top: 50%;
-        margin-top: -5px;
-        background-color: var(--primary-color-dark);
+  li {
+    list-style: none;
+    margin-top: 20px;
+  
+    a {
+      margin-top: -15px;
+      &:hover {
+        color: var(--primary-color) !important;
+      }
+      &.toc-link {
+        color: currentColor;
+        height: 100%;
+      }
+      &.is-active-link {
+        font-weight: 600;
+        color: var(--primary-color-dark);
+        &:before {
+          content: " ";
+          width: 8px;
+          height: 8px;
+          border-radius: 10px;
+          position: absolute;
+          left: -15px;
+          top: 50%;
+          margin-top: -5px;
+          background-color: var(--primary-color-dark);
+        }
       }
     }
   }
-}
-
-.is-collapsible {
-  max-height: 1000px;
-  overflow: hidden;
-  transition: all 300ms ease-in-out;
-}
-
-.is-collapsed {
-  max-height: 0;
-}
-
-.is-position-fixed {
-  position: fixed !important;
-  top: 0;
+  
+  .is-collapsible {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .is-collapsed {
+    max-height: 0;
+  }
+  
+  .is-position-fixed {
+    position: fixed !important;
+    top: 0;
+  }
 }
