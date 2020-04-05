@@ -10,15 +10,13 @@
         type="search"
         @focus="focused = true"
         @blur="focused = false"
-        @input="query = $event.target.value"
-        @change="query = $event.target.value"
       />
       <font-awesome-icon icon="search" class="search-icon feather feather-search"/>
     </label>
     
-    <div v-if="showResult && this.focused" class="header-search__result">
+    <div v-if="showResult" class="header-search__result">
       <div v-if="searchResults.length === 0" class="result-group">
-        No results found for query <span style="font-weight: 600">{{ query }}</span>.
+        No results found for query <span style="font-weight: 600">{{ searchTerm }}</span>.
       </div>
       <div 
         v-else
@@ -31,7 +29,7 @@
           :key="item.id"
           :to="item.path"
           class="result-group__item">
-          <p>{{ item.title }}</p>
+          <li @mousedown="go(item.path)"><p>{{ item.title }}</p></li>
         </g-link>
       </div>
     </div>
@@ -44,14 +42,13 @@ export default {
     return {
       searchTerm: '',
       focused: false,
-      query: '',
     }
   },
   computed: {
     searchResults() {
       const searchTerm = this.searchTerm
       if (searchTerm.length < 1) return []
-      var raw_result = this.$search.search({ query: searchTerm, limit: 5 })
+      var raw_result = this.$search.search({ query: searchTerm, limit: 10 })
 
       var result_list = {}
       for(let item of raw_result) {
@@ -75,9 +72,17 @@ export default {
       }
     },
     showResult() {
-      // show results, if the input is focused and the query is not empty.
-      return this.focused && this.query.length > 0;
+      // show results, if the input is focused and the search term is not empty.
+      return this.focused && this.searchTerm.length > 0;
     }
   },
+  methods: {
+    go(path) {
+      // do nothing if the clicked result is same to current position
+      if(this.$route.path === path) return
+      this.searchTerm = ''
+      this.$router.push(path)
+    }
+  }
 }
 </script>

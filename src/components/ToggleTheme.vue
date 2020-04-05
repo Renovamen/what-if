@@ -48,6 +48,9 @@ export default {
   color: currentColor;
   cursor: pointer;
   width: 40px;
+  @media screen and (max-width: 480px) {
+    margin-left: -20px;
+  }
 
   &:hover {
     opacity: .8

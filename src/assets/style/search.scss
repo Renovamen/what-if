@@ -23,10 +23,9 @@
     }
 
     &__result {
-        background-color: #FFF;
+        background-color: var(--bg);
         // pointer-events: none;
         z-index: 10;
-        // color: #111;
         position: absolute;
         top: 100%;
         width: 440px;
@@ -44,7 +43,7 @@
             margin-left: 13px;
             border-width: 10px;
             border-style: solid;
-            border-color: transparent transparent white transparent;
+            border-color: transparent transparent var(--bg) transparent;
         }
         .result-group {
             margin-bottom: 24px;
@@ -54,19 +53,24 @@
                 color: lighten(black, 50%);
             }
             &__item {
-                margin-top: -20px;
                 text-decoration: none;
-                p {
-                    width: calc(100% - 50px);
-                    overflow-x: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    margin: 5px 20px;
-                    font-weight: 600;
+                li {
+                    list-style: none;
+                    border-radius: 5px;
+                    line-height: 30px;
+                    margin-top: -10px;
                     color: var(--body-color);
-                }
-                &:hover {
-                    background-color: var(--body-color);
+                    p {
+                        width: calc(100% - 50px);
+                        overflow-x: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        margin: 5px 20px;
+                        font-weight: 600;
+                    }
+                    &:hover {
+                        background-color: var(--bg-teritary);
+                    }
                 }
             }
         }
