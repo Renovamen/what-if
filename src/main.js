@@ -24,11 +24,11 @@ const typography = new Typography({
 // Font Awesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faShareAlt, faCoffee, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faShareAlt, faCoffee, faSearch, faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
 
-library.add(faShareAlt, faGithub, faSun, faMoon, faCoffee, faSearch)
+library.add(faShareAlt, faGithub, faSun, faMoon, faCoffee, faSearch, faPencilAlt)
 
 // Katex
 import 'katex/dist/katex.min.css'

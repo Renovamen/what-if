@@ -24,7 +24,7 @@ export default {
     },
     watch: {
         $route() {
-            tocbot.destroy()
+            // initialize tocbot.js after vue loaded
             var _this = this
             setTimeout(function () {
                 _this.creatToc()
@@ -46,16 +46,13 @@ export default {
                 // How many heading levels should not be collapsed.
                 collapseDepth: 3,
             });
-            this.cleanToc()
-        },
-        cleanToc() {
             // remove "#" created by remark-autolink-headings
             var toc_list = document.querySelectorAll(".toc-link");
             for(let toc_item of toc_list) {
                 let toc_text = toc_item.innerHTML
                 toc_item.innerHTML = toc_text.substr(1)
             }
-        }
+        },
     },
 }
 </script>

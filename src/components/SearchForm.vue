@@ -18,7 +18,7 @@
     
     <div v-if="showResult && this.focused" class="header-search__result">
       <div v-if="searchResults.length === 0" class="result-group">
-        No results for <span style="font-weight: 600">{{ query }}</span>.
+        No results found for query <span style="font-weight: 600">{{ query }}</span>.
       </div>
       <div 
         v-else

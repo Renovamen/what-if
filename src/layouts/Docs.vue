@@ -9,7 +9,7 @@
         <slot />
         <p>
           <a :href="editLink" target="_blank" class="github-edit-link">
-            <font-awesome-icon :icon="['fab', 'github']" />
+            <font-awesome-icon icon="pencil-alt" />
             <span>Edit this page on GitHub</span>
           </a>
         </p>
