@@ -21,6 +21,7 @@
   --space-x2: 50px;
   --code-color: #fdf9f3;
   --glow: 2px 2px 15px 0 var(--border-color-darker);
+  --dropdown-shadow: 0 1px 20px -5px rgba(0, 0, 0, .5);
 
   @media screen and (max-width: 550px) {
     --space: 20px;
@@ -39,7 +40,8 @@
     --inline-code-bg: rgba(212, 53, 159, .1);
     --primary-color: #3f82bd;
     --primary-color-dark: #60a8e7;
-    --glow: 2px 2px 15px 0 #071521;
+    --glow: 2px 2px 15px 0 #1c2329;
+    --dropdown-shadow: 0 1px 15px -5px rgba(53, 64, 70, 0.5);
   }
 
   [data-theme="sepia"] {

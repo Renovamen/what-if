@@ -30,7 +30,7 @@
         top: 100%;
         width: 440px;
         border-radius: 3px;
-        box-shadow: 0 1px 20px -5px rgba(0, 0, 0, .3);
+        box-shadow: var(--dropdown-shadow);
         padding: 25px 15px 0 15px;
         @media screen and (max-width: 480px) {
             width: 240px;

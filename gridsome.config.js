@@ -100,7 +100,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'BlogPost',
-        path: './misc/*/index.md',
+        path: './misc/*.md',
         refs: {
           author: 'Contributor'
         },

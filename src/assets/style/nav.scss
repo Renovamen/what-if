@@ -83,7 +83,7 @@ nav {
     left:0;
     width: 200px;
     border-radius: 3px;
-    box-shadow: 0 1px 20px -5px rgba(0, 0, 0, .5);
+    box-shadow: var(--dropdown-shadow);
     transform: translateY(-5px);
     opacity: 0;
     transition: opacity .3s, transform .3s cubic-bezier(0.19, 1, 0.22, 1);
