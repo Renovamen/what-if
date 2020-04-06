@@ -25,17 +25,14 @@
   margin-left: 10px!important;
 }
 
-
-.show-for-small {
-  display: none;
+@media screen and (min-width: 1025px) {
+  .show-for-small {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .hide-for-small {
     display: none!important;
-  }
-
-  .show-for-small {
-    display: inherit;
   }
 }

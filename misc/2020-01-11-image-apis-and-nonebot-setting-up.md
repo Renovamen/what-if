@@ -1,6 +1,6 @@
 ---
-title: Image API & NoneBot
-slug: image-api-and-nonebot-setting-up
+title: Image APIs & NoneBot
+slug: image-apis-and-nonebot-setting-up
 date: 2020-01-11
 excerpt: "Here is a list of APIs that can return some images and notes of the process of setting up NoneBot and CoolQ HTTP API (on my Mac)."
 catagory: Misc
@@ -10,7 +10,7 @@ catagory: Misc
 
 I wrote a qqbot which can throw a picture of tempting food back to the people who send pictures of tempting food to you (which we called '放毒') automatically. I called this bot [AntiFood](https://github.com/Renovamen/AntiFood), it is based on [NoneBot](https://github.com/richardchien/nonebot). So here is a list of APIs that can return some images and notes of the process of setting up NoneBot and [CoolQ HTTP API](https://github.com/richardchien/coolq-http-api).
 
-## Image API
+## Image APIs
 
 - Unsplash
     - Offical: https://source.unsplash.com/
@@ -23,7 +23,9 @@ Finally, I choose to crawl food pictures from Baidu Image...
 
 ## CoolQ HTTP API
 
-NoneBot depends on CoolQ HTTP API ([docs](https://cqhttp.cc/docs/4.14/#/)). Use docker to deploy it:
+NoneBot depends on CoolQ HTTP API ([docs](https://cqhttp.cc/docs/4.14/#/)), it can be deployed by using docker.
+
+Pull docker image and create a folder for CoolQ:
 
 ```bash
 docker pull richardchien/cqhttp:latest

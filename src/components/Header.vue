@@ -2,40 +2,11 @@
   <header>
     <div class="header-bar"></div>
     <div class="header-inner container flex gap-30">
-
+      <font-awesome-icon icon="bars" class="header-toggle" @click="toggleSidebar" />
       <Logo/>
-
       <Nav class="flex-fit"/>
-
       <SearchForm />
-
-      <nav class="header-actions flex">
-        <ToggleTheme />
-
-        <a
-          aria-label="Blog"
-          href="//renovamen.ink"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="My blog"
-        >
-          <font-awesome-icon icon="share-alt" />
-        </a>
-
-        <a
-          aria-label="github"
-          href="//github.com/Renovamen/what-if"
-          rel="noopener noreferrer"
-          target="_blank"
-          title="Renovamen/what-if @ GitHub"
-        >
-          <font-awesome-icon :icon="['fab', 'github']" style="font-size: 20px" />
-          <!-- <span
-            class="hide-for-small"
-            style="margin-left:5px;"
-          >v{{ $static.metadata.gridsomeVersion }}</span> -->
-        </a>
-      </nav>
+      <HeaderBtn class="hide-for-small" />
     </div>
   </header>
 </template>
@@ -52,17 +23,22 @@ query {
 import Logo from './Logo'
 import Nav from './Nav'
 import SearchForm from '@/components/SearchForm.vue'
-import ToggleTheme from '@/components/ToggleTheme.vue'
+import HeaderBtn from '@/components/HeaderBtn.vue'
 import LazyHydrate from 'vue-lazy-hydration'
 
 export default {
   components: {
     Logo,
-    ToggleTheme,
     SearchForm,
     Nav,
-    LazyHydrate
-  }
+    LazyHydrate,
+    HeaderBtn
+  },
+  methods: {
+    toggleSidebar() {
+      document.querySelector(".sidebar").classList.toggle('open');
+    }
+  },
 }
 </script>
 
@@ -93,6 +69,10 @@ header {
   .header-inner {
     padding: 0 var(--space);
     min-height: var(--header-height);
+
+    @media screen and (max-width: 850px) {
+      padding: 10px var(--space) 0px;
+    }
   }
 
   @media screen and (min-width: 992px) and (max-resolution: 1) {

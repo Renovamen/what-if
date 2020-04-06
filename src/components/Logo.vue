@@ -25,9 +25,6 @@ export default {
   .logo {
     &__link {
       text-decoration: none;
-      @media screen and (max-width: 480px) {
-        max-width: 15px;
-      }
     }
     &__svg {
       max-width: 30px;
@@ -39,6 +36,15 @@ export default {
       font-size: 25px;
       font-weight: 500;
       color: var(--body-color);
+    }
+    @media screen and (max-width: 1024px) {
+      &__link {
+        max-width: 15px; 
+      }
+      &__svg {
+        max-width: 28px;
+        margin-bottom: 3px;
+      }
     }
   }
 </style>
