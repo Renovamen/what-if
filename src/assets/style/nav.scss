@@ -121,3 +121,50 @@ nav {
     }
   }
 }
+
+nav.mobile-nav {
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
+  width: 100%;
+
+  a {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5px 0;
+    &:hover, &.active {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  
+  .main-nav__label {
+    font-weight: 600;
+    font-size: .8rem;
+  }
+
+  .has-dropdown {
+    display: block;
+    .dropdown {
+      display: block;
+      position: relative;
+      visibility: visible;
+      pointer-events: auto;
+      opacity: 1;
+      box-shadow: none;
+      width: 100%;
+      font-size: .9rem;
+      transform: none;
+      margin-top: -5px;
+      &:before {
+        display: none;
+      }
+      a:hover {
+        background-color: var(--bg);
+      }
+    }
+  }
+}

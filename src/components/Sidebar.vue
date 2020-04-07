@@ -1,9 +1,13 @@
 <template>
   <div class="sidebar">
+    <!-- navbar, shows on mobile only -->
+    <Nav class="mobile-nav show-for-small" />
+
+    <!-- Sidebar -->
     <template v-if="links" v-for="(group, i1) in links">
       <!-- group title -->
       <g-link v-if="group.link" class="menu-item" :to="group.link" :key="`link-${i1}`">
-        <h3 class="menu-item" :key="`title-${i1}`" @mousedown="closeSidebar">
+        <h3 class="menu-item" :key="`title-${i1}`">
           {{ group.title }}
         </h3>
       </g-link>
@@ -12,27 +16,41 @@
       <!-- item title -->
       <template v-for="(item, i2) in group.items">
         <g-link :exact="item.link == '/docs/'" class="menu-item menu-link" :to="item.link" :key="`link-${i1}-${i2}`">
-          <span @mousedown="closeSidebar">{{ item.title }}</span>
+          {{ item.title }}
         </g-link>
       </template>
     </template>
+
+    <!-- shows on mobile only -->
     <HeaderBtn class="show-for-small"/>
   </div>
 </template>
 
 <script>
 import HeaderBtn from '@/components/HeaderBtn.vue'
+import Nav from '@/components/Nav.vue'
 
 export default {
   props: {
     links: { type: Array, default: () => [] }
   },
   components: {
-    HeaderBtn
+    HeaderBtn,
+    Nav
+  },
+  watch: {
+    $route() {
+      this.closeSidebar()
+    }
   },
   methods: {
     closeSidebar() {
-      document.querySelector(".sidebar").classList.remove('open');
+      if(document.querySelector(".true-sidebar")) {
+        document.querySelector(".true-sidebar").classList.remove('open');
+      }
+      if(document.querySelector(".vitural-sidebar")) {
+        document.querySelector(".vitural-sidebar").classList.remove('open');
+      }
     }
   },
 }

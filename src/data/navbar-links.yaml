@@ -1,0 +1,9 @@
+- title: NLP
+  link: /nlp/statistical-nlp/
+  submenu:
+    - title: Statistical NLP
+      link: /nlp/statistical-nlp/
+- title: Papers
+  link: /papers/
+- title: Misc
+  link: /misc/

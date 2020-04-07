@@ -1,6 +1,8 @@
 <template>
   <div id="app" dark>
     <Header />
+    <!-- sidebar for pages with no sidebar on desktop -->
+    <Sidebar class="virtual-sidebar show-for-small" />
     <slot />
     <Footer v-if="footer !== false" />
   </div>
@@ -9,12 +11,14 @@
 <script>
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Sidebar from '@/components/Sidebar'
 
 export default {
   props: ['footer', 'primary-bg'],
   components: {
     Header,
     Footer,
+    Sidebar
   },
   computed: {
     mainClass() {

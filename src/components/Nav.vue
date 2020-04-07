@@ -1,38 +1,41 @@
 <template>
-  <nav class="main-nav flex gap-15">
-    
-    <div class="has-dropdown">
-      <g-link to="/nlp/statistical-nlp/">
-        <span class="main-nav__label">NLP</span>
-      </g-link>
-      <div class="dropdown">
-        <g-link to="/nlp/statistical-nlp/">Statistical NLP</g-link>
+  <nav v-if="links" class="main-nav flex gap-15">
+    <template v-for="(group, i1) in links">
+
+      <div v-if="group.submenu" :key="`group-${i1}`" class="has-dropdown">
+        <g-link :to="group.link" :key="`link-${i1}`">
+          <span class="main-nav__label">{{ group.title }}</span>
+        </g-link>
+        <div v-for="(item, i2) in group.submenu" :key="`item-${i1}-${i2}`" class="dropdown">
+          <g-link :key="`link-${i1}-${i2}`" :to="item.link">{{ item.title }}</g-link>
+        </div>
       </div>
-    </div>
 
-    <g-link to="/papers/">
-      <span class="main-nav__label">Papers</span>
-    </g-link>
+      <g-link v-else :to="group.link" :key="`link-${i1}`">
+        <span class="main-nav__label">{{ group.title }}</span>
+      </g-link>
 
-    <g-link to="/misc/">
-      <span class="main-nav__label">Misc</span>
-    </g-link>
+    </template>
   </nav>
 </template>
+
+
+<script>
+import links from '@/data/navbar-links.yaml'
+
+export default {
+  computed: {
+    links () {
+      console.log(links)
+      return links
+    },
+  },
+}
+</script>
 
 
 <style lang="scss">
 .main-nav {
   flex-wrap: nowrap;
-}
-@media screen and (max-width: 850px) {
- .main-nav {
-    order: 10;
-    min-width: 100%;
-    a {
-      padding-top: 5px;
-      padding-bottom: 10px;
-    }
-  }
 }
 </style>

@@ -27,12 +27,12 @@
 
 @media screen and (min-width: 1025px) {
   .show-for-small {
-    display: none;
+    display: none !important;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .hide-for-small {
-    display: none!important;
+    display: none !important;
   }
 }

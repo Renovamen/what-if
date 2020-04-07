@@ -32,9 +32,7 @@
         border-radius: 3px;
         box-shadow: var(--dropdown-shadow);
         padding: 25px 15px 0 15px;
-        @media screen and (max-width: 480px) {
-            width: 240px;
-        }
+
         &:before {
             content: "";
             position: absolute;
@@ -73,6 +71,13 @@
                     }
                 }
             }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        margin-right: 0px;
+        &__result {
+            width: 65%;
         }
     }
 }

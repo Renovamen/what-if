@@ -2,9 +2,9 @@
   <header>
     <div class="header-bar"></div>
     <div class="header-inner container flex gap-30">
-      <font-awesome-icon icon="bars" class="header-toggle" @click="toggleSidebar" />
+      <font-awesome-icon icon="bars" class="header-toggle show-for-small" @click="toggleSidebar" />
       <Logo/>
-      <Nav class="flex-fit"/>
+      <Nav class="flex-fit hide-for-small"/>
       <SearchForm />
       <HeaderBtn class="hide-for-small" />
     </div>
@@ -36,7 +36,10 @@ export default {
   },
   methods: {
     toggleSidebar() {
-      document.querySelector(".sidebar").classList.toggle('open');
+      if(document.querySelector(".true-sidebar")) {
+        document.querySelector(".true-sidebar").classList.toggle('open');
+      }
+      else document.querySelector(".virtual-sidebar").classList.toggle('open');
     }
   },
 }
@@ -70,8 +73,16 @@ header {
     padding: 0 var(--space);
     min-height: var(--header-height);
 
-    @media screen and (max-width: 850px) {
-      padding: 10px var(--space) 0px;
+    @media screen and (max-width: 1024px) {
+      padding: 10px var(--space) 10px;
+      
+      .header-toggle {
+        font-size: 25px;
+        margin-right: 20px;
+      }
+      .logo__svg {
+        margin-left: -5px;
+      }
     }
   }
 
