@@ -3,6 +3,11 @@
   submenu:
     - title: Statistical NLP
       link: /nlp/statistical-nlp/
+- title: Math
+  link: /math/linear-algebra/
+  submenu:
+    - title: Linear Algebra
+      link: /math/linear-algebra/
 - title: Papers
   link: /papers/
 - title: Misc

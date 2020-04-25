@@ -40,6 +40,20 @@
         - title: 上下文无关文法
           link: /nlp/statistical-nlp/pcfgs/cfgs
 
+- catagory: Linear Algebra
+  sidebar:
+    - title: 线性代数
+      link: /math/linear-algebra/
+      items:
+        - title: 1. 矩阵乘法
+          link: /math/linear-algebra/matrix-multiplication/
+        - title: 2. 矩阵消元
+          link: /math/linear-algebra/matrix-elimination/
+        - title: 8. 可解性和解的结构
+          link: /math/linear-algebra/solution/
+        - title: 9. 线性相关性、基、维数
+          link: /math/linear-algebra/linear-independence/
+
 - catagory: Papers
   sidebar:
     - title: NLP

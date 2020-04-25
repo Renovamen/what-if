@@ -93,6 +93,14 @@ module.exports = {
       options: {
         typeName: 'NotePage',
         index: ['README'],
+        path: './math/**/*.md',
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'NotePage',
+        index: ['README'],
         path: './papers/**/*.md',
       }
     },

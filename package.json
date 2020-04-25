@@ -13,6 +13,7 @@
     "dev": "gridsome develop",
     "explore": "gridsome explore",
     "build": "gridsome build",
+    "preview": "cd dist && http-server",
     "github": "git push origin master"
   },
   "dependencies": {
