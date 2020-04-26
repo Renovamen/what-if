@@ -1,5 +1,5 @@
 ---
-catagory: Statistical NLP
+catagory: NLP
 ---
 
 # 特征
@@ -14,7 +14,7 @@ catagory: Statistical NLP
 
 ![example-features-lm](./img/example-features-lm.png)
 
-前三个特征 $$f_1,f_2,f_3$$ 与三元模型中的一元、二元、三元特征类似，特征 $$f_4...f_8$$ 则考虑了[其他的信息](/nlp/statistical-nlp/log-linear-models/)。
+前三个特征 $$f_1,f_2,f_3$$ 与三元模型中的一元、二元、三元特征类似，特征 $$f_4...f_8$$ 则考虑了[其他的信息](/ai/nlp/log-linear-models/)。
 
 
 

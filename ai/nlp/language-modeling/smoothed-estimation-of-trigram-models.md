@@ -1,5 +1,5 @@
 ---
-catagory: Statistical NLP
+catagory: NLP
 ---
 
 # 三元模型的平滑估计（Smoothed Estimation）

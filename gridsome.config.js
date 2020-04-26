@@ -73,7 +73,7 @@ module.exports = {
       options: {
         typeName: 'NotePage',
         index: ['README'],
-        path: './nlp/statistical-nlp/**/*.md',
+        path: './ai/**/*.md',
         remark: {
           plugins: [
             '@gridsome/remark-prismjs',

@@ -1,5 +1,5 @@
 ---
-catagory: Statistical NLP
+catagory: NLP
 ---
 
 # 生成模型和噪声通道模型

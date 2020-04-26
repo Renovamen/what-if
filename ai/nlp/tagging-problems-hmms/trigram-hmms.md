@@ -1,5 +1,5 @@
 ---
-catagory: Statistical NLP
+catagory: NLP
 ---
 
 # 三元隐马尔科夫模型（Trigram Hidden Markov Models，Trigram HMMs）
@@ -136,7 +136,7 @@ $$
 e(x|s)=\frac{ c(s \rightsquigarrow x) }{c(s)}
 $$
 
-该模型的参数估计就是极大似然估计。现在[平滑](/nlp/statistical-nlp/language-modeling/smoothed-estimation-of-trigram-models/)一下参数 $$q(s|u,v)$$：
+该模型的参数估计就是极大似然估计。现在[平滑](/ai/nlp/language-modeling/smoothed-estimation-of-trigram-models/)一下参数 $$q(s|u,v)$$：
 $$
 q(s|u,v)=\lambda_1 \times q_{ML}(s|u,v) + \lambda_2 \times q_{ML}(s|v) + \lambda_3 \times q_{ML}(s)
 $$
@@ -144,7 +144,7 @@ $$
 
 <br>
 
-该方法的一个问题是，如果单词 $$x$$ 在训练集中出现的频率很低甚至不出现，$$e(x|s)$$ 的值就会很不可靠甚至为 0。[后面](/nlp/statistical-nlp/tagging-problems-hmms/advanced-material/)将讨论解决这个问题的方法。
+该方法的一个问题是，如果单词 $$x$$ 在训练集中出现的频率很低甚至不出现，$$e(x|s)$$ 的值就会很不可靠甚至为 0。[后面](/ai/nlp/tagging-problems-hmms/advanced-material/)将讨论解决这个问题的方法。
 
 
 

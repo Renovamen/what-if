@@ -1,5 +1,5 @@
 ---
-catagory: Statistical NLP
+catagory: NLP
 ---
 
 # 生成标注模型（Generative Tagging Models）
@@ -34,4 +34,4 @@ $$
 - 如何从训练集中估计参数
 - 怎样高效的找出 $$\arg \max_{y_1...y_n} p(x_1...x_n, y_1...y_n)$$
 
-[下一节](/nlp/statistical-nlp/tagging-problems-hmms/trigram-hmms/)将讨论用三元隐马尔科夫模型（Trigram Hidden Markov Models）来解决这些问题。
+[下一节](/ai/nlp/tagging-problems-hmms/trigram-hmms/)将讨论用三元隐马尔科夫模型（Trigram Hidden Markov Models）来解决这些问题。

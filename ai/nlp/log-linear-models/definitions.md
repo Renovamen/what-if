@@ -1,5 +1,5 @@
 ---
-catagory: Statistical NLP
+catagory: NLP
 ---
 
 # 定义
@@ -8,9 +8,9 @@ catagory: Statistical NLP
 
 对数线性模型要解决的问题是：有输入集合 $$\mathcal{X}$$ 和标签集合 $$\mathcal{Y}$$，对条件概率 $$p(y|x)$$（$$x \in \mathcal{X}, y \in \mathcal{Y}$$）进行建模。
 
-如在[语言模型](/nlp/statistical-nlp/language-modeling/)中，$$\mathcal{Y}$$ 是词典 $$\mathcal{V}$$，$$\mathcal{X}$$ 是单词序列 $$w_1...w_{i-1}$$（$$i \geq 1, w_j \in \mathcal{V}, j \in \{1 . . .(i - 1)\}$$）的集合。输入 $$x$$ 为 $$w_1...w_{i-1}$$，标签 $$y$$ 为 $$w_i$$。
+如在[语言模型](/ai/nlp/language-modeling/)中，$$\mathcal{Y}$$ 是词典 $$\mathcal{V}$$，$$\mathcal{X}$$ 是单词序列 $$w_1...w_{i-1}$$（$$i \geq 1, w_j \in \mathcal{V}, j \in \{1 . . .(i - 1)\}$$）的集合。输入 $$x$$ 为 $$w_1...w_{i-1}$$，标签 $$y$$ 为 $$w_i$$。
 
-在[词性标注](/nlp/statistical-nlp/tagging-problems-hmms/)中， $$\mathcal{Y}$$ 是标签集合 $$\mathcal{T}$$，$$\mathcal{X}$$ 是上下文 $$⟨w_1w_2 ... w_n, t_1t_2 ... t_{i-1}⟩$$ 的集合（$$n \geq 1, w_i \in \mathcal{V}, i \in \{1 ... n\}, t_j \in \mathcal{T}, j \in \{1 ... (i-1)\}$$）。
+在[词性标注](/ai/nlp/tagging-problems-hmms/)中， $$\mathcal{Y}$$ 是标签集合 $$\mathcal{T}$$，$$\mathcal{X}$$ 是上下文 $$⟨w_1w_2 ... w_n, t_1t_2 ... t_{i-1}⟩$$ 的集合（$$n \geq 1, w_i \in \mathcal{V}, i \in \{1 ... n\}, t_j \in \mathcal{T}, j \in \{1 ... (i-1)\}$$）。
 
 <br>
 

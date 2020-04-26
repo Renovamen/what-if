@@ -1,5 +1,5 @@
 ---
-catagory: Statistical NLP
+catagory: NLP
 readme: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-catagory: Statistical NLP
+catagory: NLP
 ---
 
 # 三元（Trigram）语言模型
@@ -82,7 +82,7 @@ $$
 1. 如果一个三元组在训练集中没有出现，那么 $$q(w|u,v)=0$$（因为分子为 0）。由于参数规模一般会很大，这种情况会经常出现，导致数据很稀疏。而且这是不合理的，一个三元组在训练集中没有不出现不等于它出现的概率为 0；
 2. 分母 $$c(u,v)$$ 也有可能为 0，这时这个估计的定义就不合法了。
 
-[后面](/nlp/statistical-nlp/language-modeling/smoothed-estimation-of-trigram-models/)我们会讨论该如何改进参数估计方法来解决这些问题，但现在我们先讨论该如何评估一个语言模型的好坏。
+[后面](/ai/nlp/language-modeling/smoothed-estimation-of-trigram-models/)我们会讨论该如何改进参数估计方法来解决这些问题，但现在我们先讨论该如何评估一个语言模型的好坏。
 
 
 

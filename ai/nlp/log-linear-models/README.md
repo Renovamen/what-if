@@ -1,5 +1,5 @@
 ---
-catagory: Statistical NLP
+catagory: NLP
 readme: true
 ---
 
@@ -17,11 +17,11 @@ P(W_i=w_i|W_1=w_1...W_{i-1}=w_{i-1})=p(w_i|w_1...w_{i-1})
 $$
 也就是在给定前面的单词序列 $$w_1...w_{i-1}$$ 的条件下，对 $$w_i$$ 的分布进行建模。
 
-在[三元模型](/nlp/statistical-nlp/language-modeling/trigram-language-models/)中，我们假设了：
+在[三元模型](/ai/nlp/language-modeling/trigram-language-models/)中，我们假设了：
 $$
 p(w_i|w_1...w_{i-1})=p(w_i|w_{i-2},w_{i-1})=q(w_i|w_{i-2},w_{i-1})
 $$
-$$q(w|u,v)$$ 是模型的参数，可以通过一些方法估计出来（如[极大似然估计](/nlp/statistical-nlp/language-modeling/trigram-language-models/#maximum-likelihood-parameter-estimates)）。
+$$q(w|u,v)$$ 是模型的参数，可以通过一些方法估计出来（如[极大似然估计](/ai/nlp/language-modeling/trigram-language-models/#maximum-likelihood-parameter-estimates)）。
 
 但三元模型对于上下文的利用还不够。假如上下文 $$w_1...w_{i-1}$$ 是以下单词序列：
 
@@ -52,7 +52,7 @@ $$
 P(W_i = \text{model}|W_j = \text{grammatical  for some } j \in {1 ...(i-1)})
 $$
 
-一个简单粗暴的方法是魔改一下[线性插值法](/nlp/statistical-nlp/language-modeling/smoothed-estimation-of-trigram-models/#linear-interpolation)，把上述估计直接按不同的权重合在一起：
+一个简单粗暴的方法是魔改一下[线性插值法](/ai/nlp/language-modeling/smoothed-estimation-of-trigram-models/#linear-interpolation)，把上述估计直接按不同的权重合在一起：
 $$
 \begin{aligned}
 p(\text{model}|w_1...w_{i-1}) &= \lambda_1 × q_{ML}(\text{model}|w_{i-2} = \text{any}, w_{i-1} = \text{statistical}) \\

@@ -1,45 +1,61 @@
-- catagory: Statistical NLP
+- catagory: AI
+  sidebar:
+    - title: Stupid AI
+      items:
+        - title: Natural Language Processing
+          link: /ai/nlp/
+
+
+- catagory: NLP
   sidebar:
     - title: 语言模型
-      link: /nlp/statistical-nlp/language-modeling/
+      link: /ai/nlp/language-modeling/
       items:
         - title: 马尔科夫模型
-          link: /nlp/statistical-nlp/language-modeling/markov-models/
+          link: /ai/nlp/language-modeling/markov-models/
         - title: 三元语言模型
-          link: /nlp/statistical-nlp/language-modeling/trigram-language-models/
+          link: /ai/nlp/language-modeling/trigram-language-models/
         - title: 三元模型的平滑估计
-          link: /nlp/statistical-nlp/language-modeling/smoothed-estimation-of-trigram-models/
+          link: /ai/nlp/language-modeling/smoothed-estimation-of-trigram-models/
 
     - title: 标注问题和隐马尔科夫模型
-      link: /nlp/statistical-nlp/tagging-problems-hmms/
+      link: /ai/nlp/tagging-problems-hmms/
       items:
         - title: 词性标注和命名实体识别
-          link: /nlp/statistical-nlp/tagging-problems-hmms/pos-tagging-named-entity-recognition/
+          link: /ai/nlp/tagging-problems-hmms/pos-tagging-named-entity-recognition/
         - title: 生成模型和噪声通道模型
-          link: /nlp/statistical-nlp/tagging-problems-hmms/generative-models-noisy-channel-model/
+          link: /ai/nlp/tagging-problems-hmms/generative-models-noisy-channel-model/
         - title: 生成标注模型
-          link: /nlp/statistical-nlp/tagging-problems-hmms/generative-tagging-models/
+          link: /ai/nlp/tagging-problems-hmms/generative-tagging-models/
         - title: 三元隐马尔科夫模型
-          link: /nlp/statistical-nlp/tagging-problems-hmms/trigram-hmms/
+          link: /ai/nlp/tagging-problems-hmms/trigram-hmms/
         - title: 特殊处理
-          link: /nlp/statistical-nlp/tagging-problems-hmms/advanced-material/
+          link: /ai/nlp/tagging-problems-hmms/advanced-material/
 
     - title: 对数线性模型
-      link: /nlp/statistical-nlp/log-linear-models/
+      link: /ai/nlp/log-linear-models/
       items:
         - title: 定义
-          link: /nlp/statistical-nlp/log-linear-models/definitions
+          link: /ai/nlp/log-linear-models/definitions
         - title: 特征
-          link: /nlp/statistical-nlp/log-linear-models/features
+          link: /ai/nlp/log-linear-models/features
         # - title: 参数估计
-        #   link: /nlp/statistical-nlp/log-linear-models/parameter-estimation
+        #   link: /ai/nlp/log-linear-models/parameter-estimation
 
     - title: 概率上下文无关文法
-      link: /nlp/statistical-nlp/pcfgs/
+      link: /ai/nlp/pcfgs/
       items:
         - title: 上下文无关文法
-          link: /nlp/statistical-nlp/pcfgs/cfgs
+          link: /ai/nlp/pcfgs/cfgs
 
+
+- catagory: Math
+  sidebar:
+    - title: Mathematics
+      items:
+        - title: Linear Algebra
+          link: /math/linear-algebra/
+        
 - catagory: Linear Algebra
   sidebar:
     - title: 线性代数

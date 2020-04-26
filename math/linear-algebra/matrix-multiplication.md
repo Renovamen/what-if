@@ -6,7 +6,7 @@ catalog: true
 # 矩阵乘法
 ## 1.1 向量 x 向量
 
-1. 有向量 $$x,y \in R^n$$，$$x^Ty$$ 被称为**向量内积（Inner Product）**或**点积（Dot Product）**，结果为一个实数。 
+1. 有向量 x $$x,y \in R^n$$，$$x^Ty$$ 被称为**向量内积（Inner Product）**或**点积（Dot Product）**，结果为一个实数。 
 
     $$
     x^Ty \in R^n = 
@@ -65,7 +65,7 @@ catalog: true
 
 ## 1.2 矩阵 x 向量
 
-有矩阵 $$A \in R^{m \times n}$$，向量 $$x \in R^n$$，它们的积是一个向量 $$Ax \in R^m$$。有两种看待矩阵与向量的乘法的角度：
+有矩阵 $$A \in R^{m \times n}$$，向量 $$x \in R^n$$，它们的积是一个向量 $$Ax \in R^m$$。有两种理解矩阵与向量的乘法的方式：
 
 1. 行列内积
 
@@ -124,7 +124,7 @@ catalog: true
 
     可以看到，$$y$$ 是 $$A$$ 的列的线性组合，其中线性组合的系数由 $$x$$ 的元素给出。
   
-也可以在左侧乘以行向量，写为 $$y^T = x^T A$$，其中 $$ A \in R^{m \times n}, x \in R^m, y \in R^n $$。也有两种角度：
+也可以在左侧乘以行向量，写为 $$y^T = x^T A$$，其中 $$ A \in R^{m \times n}, x \in R^m, y \in R^n $$。也有两种理解方式：
 
 1. 把 $$A$$ 按列表示：
 

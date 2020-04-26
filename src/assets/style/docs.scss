@@ -131,8 +131,18 @@
 
 // Katex overflow
 .katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  font-size: 17px;
+  ::-webkit-scrollbar {
+    display: none
+  }
+  .katex-html {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+// Katex fontsize
+.katex-display .katex-html,
+.katex .katex-html {
+  font-size: 20px;
 }

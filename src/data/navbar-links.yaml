@@ -1,10 +1,10 @@
-- title: NLP
-  link: /nlp/statistical-nlp/
+- title: Stupid AI
+  link: /ai/
   submenu:
-    - title: Statistical NLP
-      link: /nlp/statistical-nlp/
+    - title: NLP
+      link: /ai/nlp/
 - title: Math
-  link: /math/linear-algebra/
+  link: /math/
   submenu:
     - title: Linear Algebra
       link: /math/linear-algebra/
