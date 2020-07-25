@@ -1,6 +1,5 @@
 ---
 catagory: Linear Algebra
-catalog: true
 ---
 
 # 线性相关性、基、维数

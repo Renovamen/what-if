@@ -1,6 +1,5 @@
 ---
 catagory: Papers
-catalog: true
 ---
 
 # A Survey on Application of Knowledge Graph

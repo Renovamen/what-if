@@ -1,6 +1,5 @@
 ---
 catagory: Linear Algebra
-catalog: true
 ---
 
 # 8. 求解 Ax = b：可解性和解的结构

@@ -2,10 +2,10 @@
   <Layout class="has-sidebar docs-page" :footer="false">
     <div class="container flex flex-align-top">
       <!-- Sidebar -->
-      <Sidebar class="true-sidebar" :links="links" />
+      <Sidebar class="true-sidebar" :links="links" :subtitles="subtitles" />
 
       <!-- Content -->
-      <Section class="doc-content flex-fit" :container="containerType">
+      <Section class="doc-content flex-fit" container="md">
         <slot />
         <p>
           <a :href="editLink" target="_blank" class="github-edit-link">
@@ -26,9 +26,6 @@
           </div>
         </nav>
       </Section>
-
-      <!-- Catalog -->
-      <Catalog v-if="catalog" :subtitles="subtitles" />
     </div>
   </Layout>
 </template>
@@ -45,7 +42,6 @@ export default {
   props: {
     subtitles: { type: Array, default: () => [] },
     links: { type: Array, default: () => [] },
-    catalog: { type: Boolean, default: () => false },
     readme: { type: Boolean, default: () => false }
   },
   computed: {
@@ -70,10 +66,6 @@ export default {
     },
     previousPage () {
       return this.items[this.currentIndex - 1]
-    },
-    containerType () {
-      if(this.catalog) return "base"
-      else return "doc-without-toc"
     }
   }
 }

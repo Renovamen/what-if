@@ -1,6 +1,5 @@
 ---
 catagory: Papers
-catalog: true
 readme: true
 ---
 

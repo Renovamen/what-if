@@ -40,12 +40,12 @@
     }
   }
 
-  &--right {
+  &--toc {
     border-right:0;
     width: 220px;
-    position: sticky;
-    padding-top: 6.5%;
-    top: var(--header-height);
+    // position: sticky;
+    padding-top: 3%;
+    // top: var(--header-height);
     h3 {
       margin-left: 14px !important;
     }
@@ -95,17 +95,17 @@
     &.active {
       color: var(--primary-color-dark);
       position: relative;
-      padding-left: .8rem;
+      // padding-left: .8rem;
 
       &:before {
         content: " ";
-        width: 8px;
-        height: 8px;
-        border-radius: 10px;
+        width: 4px;
+        height: 18px;
+        // border-radius: 10px;
         position: absolute;
-        left: -1px;
+        right: 0px;
         top: 50%;
-        margin-top: -5px;
+        margin-top: -9px;
         background-color: var(--primary-color-dark);
         animation: scaleIn .7s forwards;
       }

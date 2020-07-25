@@ -23,6 +23,8 @@
   
     a {
       margin-top: -15px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
       &:hover {
         color: var(--primary-color) !important;
       }
@@ -33,17 +35,17 @@
       &.is-active-link {
         font-weight: 600;
         color: var(--primary-color-dark);
-        &:before {
-          content: " ";
-          width: 8px;
-          height: 8px;
-          border-radius: 10px;
-          position: absolute;
-          left: -15px;
-          top: 50%;
-          margin-top: -5px;
-          background-color: var(--primary-color-dark);
-        }
+        // &:before {
+        //   content: " ";
+        //   width: 8px;
+        //   height: 8px;
+        //   border-radius: 10px;
+        //   position: absolute;
+        //   left: -15px;
+        //   top: 50%;
+        //   margin-top: -5px;
+        //   background-color: var(--primary-color-dark);
+        // }
       }
     }
   }

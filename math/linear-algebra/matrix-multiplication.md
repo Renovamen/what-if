@@ -1,6 +1,5 @@
 ---
 catagory: Linear Algebra
-catalog: true
 ---
 
 # 矩阵乘法

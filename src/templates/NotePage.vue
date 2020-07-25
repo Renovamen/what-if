@@ -1,8 +1,7 @@
 <template>
   <DocsLayout 
-    :subtitles="subtitles" 
-    :links="links" 
-    :catalog="this.$page.doc.catalog" 
+    :subtitles="subtitles"
+    :links="links"
     :readme="this.$page.doc.readme">
 
     <div class="post-content post mb">
@@ -17,7 +16,6 @@ query ($id: ID!) {
   doc: notePage (id: $id) {
     title
     catagory
-    catalog
     readme
     headings (depth: h1) {
       value

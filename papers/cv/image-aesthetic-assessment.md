@@ -1,6 +1,5 @@
 ---
 catagory: Papers
-catalog: true
 ---
 
 # Image Aesthetic Assessment

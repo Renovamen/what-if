@@ -8,16 +8,14 @@
   &-full,
   &-base,
   &-sm,
-  &-mini,
-  &-doc-without-toc {
+  &-mini {
     padding: 0 var(--space);
     margin-left: auto;
     margin-right: auto;
     width: 100%;
   }
-  &-doc-without-toc { max-width: 840px }
   &-md { max-width: 760px }
-  &-base { max-width: 710px }
+  &-base { max-width: 680px }
   &-sm { max-width: 630px }
   &-mini { max-width: 460px }
 

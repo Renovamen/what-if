@@ -1,6 +1,6 @@
 <template>
-    <div v-if="subtitles.length > 1 && subtitles[0].depth !== 3" class="sidebar sidebar--right hide-for-small">
-        <h3>Catalog</h3>
+    <div v-if="subtitles.length > 1 && subtitles[0].depth !== 3" class="sidebar--toc">
+        <!-- <h3>Catalog</h3> -->
         <ul v-if="subtitles.length" class="menu-item submenu toc-container">
             <!-- replace old catalog by tocbot.js -->
             <!-- 
