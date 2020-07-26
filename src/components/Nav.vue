@@ -6,8 +6,10 @@
         <g-link :to="group.link" :key="`link-${i1}`">
           <span class="main-nav__label">{{ group.title }}</span>
         </g-link>
-        <div v-for="(item, i2) in group.submenu" :key="`item-${i1}-${i2}`" class="dropdown">
-          <g-link :key="`link-${i1}-${i2}`" :to="item.link">{{ item.title }}</g-link>
+        <div class="dropdown">
+          <li v-for="(item, i2) in group.submenu" :key="`item-${i1}-${i2}`">
+            <g-link :key="`link-${i1}-${i2}`" :to="item.link">{{ item.title }}</g-link>
+          </li>
         </div>
       </div>
 

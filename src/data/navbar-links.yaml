@@ -1,7 +1,9 @@
 - title: Stupid AI
   link: /ai/
   submenu:
-    - title: NLP
+    - title: Deep Learning
+      link: /ai/dl/
+    - title: Statistical NLP
       link: /ai/nlp/
 - title: Math
   link: /math/
