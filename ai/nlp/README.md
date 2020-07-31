@@ -3,9 +3,9 @@ catagory: NLP
 readme: true
 ---
 
-# Notes of NLP
+# Statistical NLP
 
-Messy notes of NLP. Source Markdown files are hosted on [here](https://github.com/Renovamen/what-if/tree/master/ai/nlp).
+My messy notes of statistical NLP. Source Markdown files are hosted [here](https://github.com/Renovamen/what-if/tree/master/ai/nlp).
 
 
 

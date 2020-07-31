@@ -2,7 +2,11 @@
   sidebar:
     - title: Stupid AI
       items:
-        - title: Natural Language Processing
+        - title: Machine Learning
+          link: /ai/ml/
+        - title: Deep Learning
+          link: /ai/dl/
+        - title: Statistical NLP
           link: /ai/nlp/
 
 
@@ -48,6 +52,25 @@
         - title: 上下文无关文法
           link: /ai/nlp/pcfgs/cfgs
 
+- catagory: ML
+  sidebar:
+    - title: 机器学习基础
+      items:
+        - title: 损失函数
+          link: /ai/ml/basic-ml/loss-function/
+          
+- catagory: DL
+  sidebar:
+    - title: 前馈神经网络
+      items:
+        - title: 网络结构
+          link: /ai/dl/fnn/net-structure/
+        - title: 激活函数
+          link: /ai/dl/fnn/activation-function/
+        - title: 参数学习
+          link: /ai/dl/fnn/parameters-estimation/
+        - title: 深层神经网络
+          link: /ai/dl/fnn/deep-neural-network/
 
 - catagory: Math
   sidebar:

@@ -28,7 +28,7 @@ import links from '@/data/navbar-links.yaml'
 export default {
   computed: {
     links () {
-      console.log(links)
+      // console.log(links)
       return links
     },
   },
