@@ -22,6 +22,32 @@ npm run build # gridsome build
 ## Plugins
 
 - Fonts: [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome)
+
 - Search: [gridsome-plugin-flexsearch](https://github.com/thetre97/gridsome-plugin-flexsearch)
+
 - Katex: [gridsome-remark-katex](https://github.com/pchorus/gridsome-remark-katex)
+
 - Catalog: [tocbot](https://github.com/tscanlin/tocbot)
+
+&nbsp;
+## Fixes
+
+### None-English Anchors
+
+Follow [this pull request](https://github.com/gridsome/gridsome/pull/1293) (haven't been merged) to support non-English anchors (like Chinese, Japanese and Korean).
+
+Modify `gridsome/app/entry.client.js`:
+
+```js
+const { route, location } = router.resolve({ 
+   path: path + ($el.search || '') + ($el.hash || '') 
+}) 
+```
+
+to 
+
+```js
+const { route, location } = router.resolve({ 
+   path: path + ($el.search || '') + decodeURI($el.hash || '')
+}) 
+```
