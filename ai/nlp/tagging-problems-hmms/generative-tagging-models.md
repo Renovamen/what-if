@@ -2,13 +2,13 @@
 catagory: NLP
 ---
 
-# 生成标注模型（Generative Tagging Models）
+# 生成标注模型
 
 
 
-## Definitions
+## 定义
 
-生成模型可以被用于标注问题。令 $$\mathcal{K}$$ 为所有可能出现的标签的集合，且假设它是一个有限集。则有**定义 2.1（生成标注模型）**：
+生成模型可以被用于标注问题。令 $$\mathcal{K}$$ 为所有可能出现的标签的集合，且假设它是一个有限集。则有**定义 2.1（生成标注模型，Generative Tagging Models）**：
 
 假设有限集 $$\mathcal{V}$$ 是所有单词的集合，有限集 $$\mathcal{K}$$ 是所有标签的集合。定义 $$\mathcal{S}$$ 为所有序列对 $$\langle x_1 ... x_n, y_1 ... y_n \rangle$$（$$n \geq 0, x_i \in \mathcal{V}, y_i \in \mathcal{K}, i = 1...n$$） 的集合。则生成标注模型是一个函数 $$p$$，满足：
 
@@ -26,7 +26,7 @@ $$
 
 
 
-## Problems
+## 存在的问题
 
 现在有三个重要的问题：
 

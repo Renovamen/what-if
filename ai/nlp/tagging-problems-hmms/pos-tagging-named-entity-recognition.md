@@ -4,11 +4,11 @@ catagory: NLP
 
 # 词性标注和命名实体识别
 
-本节讨论 NLP 中两种重要的标注问题，**词性标注（POS Tagging）**和**命名体识别（Named-Entity Recognition）**。
+本节讨论 NLP 中两种重要的标注问题，**词性标注（POS Tagging）**和**命名实体识别（Named-Entity Recognition）**。
 
 
 
-## POS Tagging
+## 词性标注
 
 **词性标注（Part-of-speech (POS) tagging）**是序列对建模的一种。它的目标是构建一个模型，其输入为一个句子，如 $$\text{the dog saw a cat}$$；输出为一个标记序列（tag sequence）（也叫状态序列（state sequence）），如 $$\text{D N V D N}$$（$$\text{D}$$ 为限定词， $$\text{N}$$ 为名词， $$\text{V}$$ 为动词）。
 
@@ -27,9 +27,9 @@ catagory: NLP
 
 
 
-## Named-Entity Recognition
+## 命名实体识别
 
-命名实体识别中，输入是一个句子，输出是一个已经标记好了命名实体的句子。如：
+**命名实体识别（Named-Entity Recognition）**中，输入是一个句子，输出是一个已经标记好了命名实体的句子。如：
 
 ![named-entity-recognition](./img/named-entity-recognition.png)
 

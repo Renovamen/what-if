@@ -2,13 +2,13 @@
 catagory: NLP
 ---
 
-# 三元隐马尔科夫模型（Trigram Hidden Markov Models，Trigram HMMs）
+# 三元隐马尔科夫模型
 
 
 
-## Definitions
+## 定义
 
-**定义 2.2（Trigram HMMs）**：
+**定义 2.2（三元隐马尔科夫模型（Trigram Hidden Markov Models，Trigram HMMs））**：
 
 trigram HMM 由有限集 $$\mathcal{V}$$、有限集 $$\mathcal{K}$$ 和以下参数组成：
 
@@ -44,9 +44,7 @@ $$
 
 
 
-## Independence Assumptions
-
-**Trigram HMMs 中的独立性假设**
+## 独立性假设
 
 考虑一对有随机变量组成的序列 $$X_1 ... X_n$$ 和 $$Y_1 ... Y_n$$，其中 $$X_i$$ 可以为 $$\mathcal{V}$$ 中的任何单词， $$Y_i$$ 可以为 $$\mathcal{K}$$ 中的任何标签。因为 $$n$$ 是一个随机变量，句子可以为任意长度，所以这里用与[变长序列的马尔科夫模型](../Language-Modeling/Markov-Models.md)中所用方法类似的方法来处理这个问题。
 
@@ -72,7 +70,7 @@ $$
 
 ------
 
-公式 2.4 是由模型中的独立性假设推导出来的，首先：
+公式 2.4 是由模型中的**独立性假设（Independence Assumptions）**推导出来的，首先：
 $$
 P(X_1 = x_1 ... X_n = x_n, Y_1 = y_1 ... Y_{n+1} = y_{n+1})
 $$
@@ -121,9 +119,8 @@ $$
 
 
 
-## Parameters Estimation
+## 参数估计
 
-**Trigram HMM 的参数估计**
 
 有一个训练集，包含  $$x_1...x_n$$ 和其对应的  $$y_1...y_n$$。定义 $$c(u,v,s)$$ 为标签序列 $$(u,v,s)$$ 在训练集中出现的次数，$$c(u,v)$$ 为 $$(u,v)$$ 在训练集中出现的次数。定义 $$c(s \rightsquigarrow x)$$ 为训练集中在 $$s$$ 状态下观察结果为 $$x$$ 的概率，如 $$c(\text{N} \rightsquigarrow \text{dog})$$ 为标注为 $$\text{N}$$ 的 $$\text{dog}$$ 出现的概率。
 
@@ -136,7 +133,7 @@ $$
 e(x|s)=\frac{ c(s \rightsquigarrow x) }{c(s)}
 $$
 
-该模型的参数估计就是极大似然估计。现在[平滑](/ai/nlp/language-modeling/smoothed-estimation-of-trigram-models/)一下参数 $$q(s|u,v)$$：
+该模型的**参数估计（Parameters Estimation）**就是极大似然估计。现在[平滑](/ai/nlp/language-modeling/smoothed-estimation-of-trigram-models/)一下参数 $$q(s|u,v)$$：
 $$
 q(s|u,v)=\lambda_1 \times q_{ML}(s|u,v) + \lambda_2 \times q_{ML}(s|v) + \lambda_3 \times q_{ML}(s)
 $$
@@ -148,9 +145,7 @@ $$
 
 
 
-## Viterbi Algorithm
-
-**维比特算法**
+## 维比特算法
 
 现在回到找出 $$\arg \max_{y_1...y_{n+1}} p(x_1...x_n,y_1...y_{n+1})$$，即输入序列 $$x_1...x_n$$，找出概率最大的标签序列的问题。按照之前的定义：
 $$
@@ -160,11 +155,11 @@ $$
 
 
 
-### The Basic Algorithm
+### 基本算法
 
-#### Definitions
+#### 定义
 
-维比特算法是一种动态规划算法。给定输入序列 $$x_1...x_n$$，对任意 $$k \in \{1...n\}$$，任意序列 $$y_{-1}, y_0, y_1, ..., y_k$$（$$y_i \in \mathcal{K}, i = 1...k, y_0 = y_{-1} = *$$），令：
+**维比特算法（Viterbi Algorithm）**是一种**动态规划（Dynamic Programming）**算法。给定输入序列 $$x_1...x_n$$，对任意 $$k \in \{1...n\}$$，任意序列 $$y_{-1}, y_0, y_1, ..., y_k$$（$$y_i \in \mathcal{K}, i = 1...k, y_0 = y_{-1} = *$$），令：
 $$
 r(y_{-1}, y_0, y_1, ..., y_k)=\prod_{i=1}^k q(y_i|y_{i-2},y_{i-1})\prod_{i=1}^k e(x_i|y_i)
 $$
@@ -192,7 +187,7 @@ $$
 $$
 
 
-#### Dynamic Programming
+#### 动态规划
 
 然后用动态规划的方法对所有 $$(k,u,v)$$ 求出 $$\pi(k,u,v)$$：
 
@@ -222,16 +217,16 @@ $$
 
 
 
-### Backpointers
+### 反向指针
 
 上面的算法返回了 $$\max_{y_1...y_{n+1}} p(x_1...x_n,y_1...y_{n+1})$$（最大概率），然而我们希望算法能返回 $$\arg \max_{y_1...y_{n+1}} p(x_1...x_n,y_1...y_{n+1})$$（概率最大的标签序列）。
 
-所以要每一步都要存一个反向指针 $$bp(k,u,v)$$，记录下引出了当前这个概率最高的长度为 $$k$$ 且以 $$(u,v)$$ 结尾的序列的前一个状态 $$w$$，如下图所示：
+所以要每一步都要存一个**反向指针（backpointers）**$$bp(k,u,v)$$，记录下引出了当前这个概率最高的长度为 $$k$$ 且以 $$(u,v)$$ 结尾的序列的前一个状态 $$w$$，如下图所示：
 
 ![viterbi-algorithm-backpointer](./img/viterbi-algorithm-backpointer.png)
 
 
-## Strength and Weakness
+## 优缺点
 
 - 容易训练，只需要在训练集中统计出现次数
 - 效果比较好（在命名实体识别任务上准确率高于 90%）

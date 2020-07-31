@@ -3,13 +3,13 @@ catagory: NLP
 readme: true
 ---
 
-# 语言模型（Language Modeling）
+# 语言模型
 
 现在有一个语料库，它是某种语言中一系列句子的集合，现在我们要从中构建出一个语言模型，并进行参数估计。**语言模型（Language Modeling）**是用来计算一个句子出现的概率的模型。
 
 
 
-## Definition
+## 定义
 
 令词典 $$\mathcal{V}$$ 为该语言中所有单词的集合。如：如果要为英语构建一个语言模型，则：
 
@@ -52,7 +52,7 @@ $$
 
 
 
-## Reference
+## 参考
 
 1. [**Language Modeling (Notes)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/lm-spring2013.pdf)
 2. [**Language Modeling (Slides)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/lmslides.pdf)

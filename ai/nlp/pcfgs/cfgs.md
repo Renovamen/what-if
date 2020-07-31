@@ -2,11 +2,11 @@
 catagory: NLP
 ---
 
-# 上下文无关文法（Context-Free Grammars，CFGs）
+# 上下文无关文法
 
 
 
-## Basic Definitions
+## 基本定义
 
 一个**上下文无关文法（Context-Free Grammar，CFG）**是一个四元组 $$G=(N,\Sigma,R,S)$$，其中：
 

@@ -3,7 +3,7 @@ catagory: NLP
 readme: true
 ---
 
-# 标注问题（Tagging Problems）和隐马尔科夫模型（Hidden Markov Models，HMMs）
+# 标注问题和隐马尔科夫模型
 
 **标注问题（tagging problem）**（或**序列标注问题（sequence labeling problem）**）是将源序列 $$x_1...x_n$$（标注模型的输入）映射到标记序列 $$y_1...y_n$$（标注模型的输出）的问题。
 
@@ -11,7 +11,7 @@ readme: true
 
 
 
-## Reference
+## 参考
 
 1. [**Tagging Problems, and Hidden Markov Models (Notes)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/hmms-spring2013.pdf)
 2. [**Tagging Problems, and Hidden Markov Models (Slides)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/tagging.pdf)

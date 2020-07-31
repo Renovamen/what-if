@@ -8,7 +8,7 @@ catagory: NLP
 
 
 
-## Features for Language Modeling 
+## 语言模型的特征
 
 语言模型中，输入 $$x$$ 是单词序列 $$w_1w_2...w_{i-1}$$，标签 $$y$$ 是一个单词 $$w_i$$。下图展示了一些特征的例子，每个特征都是一个返回 0 或 1 的指示函数（indicator functions）：
 
@@ -18,11 +18,11 @@ catagory: NLP
 
 
 
-## Feature Template
+## 特征模板
 
-上例中，前三个特征指向的是特定的 unigram，bigram 或 trigram。而特征模板（feature template）可以用来生成考虑了训练集中所有 unigram，bigram 或 trigram 的特征集。
+上例中，前三个特征指向的是特定的 unigram，bigram 或 trigram。而**特征模板（feature template）**可以用来生成考虑了训练集中所有 unigram，bigram 或 trigram 的特征集。
 
-**定义 3.2（三元特征模板（Trigram feature template））：**
+**定义 3.2（三元特征模板，Trigram feature template）：**
 
 对训练集中出现过的任意三元组 $$(u,v,w)$$，定义特征：
 $$
@@ -46,7 +46,7 @@ $$
 
 <br>
 
-**定义 3.3（二元特征模板（Bigram feature template））：**
+**定义 3.3（二元特征模板，Bigram feature template）：**
 
 对训练集中出现过的任意二元组 $$(v,w)$$，定义特征：
 $$
@@ -60,7 +60,7 @@ $$
 
 <br>
 
-**定义 3.4（一元特征模板（Unigram feature template））：**
+**定义 3.4（一元特征模板，Unigram feature template）：**
 
 对训练集中出现过的任意 unigram $$(w)$$，定义特征：
 $$
@@ -99,7 +99,7 @@ $$
 
 当然我们也可以定义其他的特征模板，如：
 
-**定义 3.5 (Length-4 Suffix Template)：**
+**定义 3.5（Length-4 Suffix Template）：**
 
 对训练集中出现过的任意 $$(v,w)$$，其中 $$v=suff4(w_{i-1})$$，$$w=y$$，定义特征：
 $$
@@ -113,13 +113,11 @@ $$
 
 
 
-## Feature Sparsity
-
-**特征的稀疏性**
+## 特征的稀疏性
 
 从特征模板的定义可以看出，最终生成的特征数量 $$d$$ 可能会非常大，而通常只极少部分 $$k$$（$$k \in \{1...d\}$$）能满足 $$f_k(x,y)=1$$。这就导致特征可能会非常稀疏，只有极少部分特征为非零值。比如在一个只用了一元、二元、三元特征模板的语言模型中，特征数量等于训练集中出现过的所有 unigram，bigram 和 trigram 的数量，但对任意 $$(x,y)$$，最多只可能有三个特征是非零值。
 
-因为特征的稀疏性，在实现对数线性模型时就不需要直接操作 $$d$$ 维特征向量 $$f(x,y)$$ 了，只需要用一个哈希表对每对 $$(x,y)$$ 记录其非零特征的索引就行：
+因为特征的**稀疏性（sparsity）**，在实现对数线性模型时就不需要直接操作 $$d$$ 维特征向量 $$f(x,y)$$ 了，只需要用一个哈希表对每对 $$(x,y)$$ 记录其非零特征的索引就行：
 $$
 Z(x, y) = \{k: f_k(x, y) = 1\}
 $$

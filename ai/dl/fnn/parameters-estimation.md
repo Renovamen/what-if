@@ -6,7 +6,7 @@ catagory: DL
 
 ## 损失函数
 
-损失函数用[交叉熵损失](/ai/ml/basic-ml/loss-function/)：
+损失函数用[交叉熵损失](/ai/ml/basic-ml/loss-function/#交叉熵损失)：
 
 $$
 L(y, \hat{y}) = -y^{\top} \log \hat{y}

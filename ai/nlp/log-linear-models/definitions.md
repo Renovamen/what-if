@@ -4,7 +4,7 @@ catagory: NLP
 
 # 定义
 
-## Basic Definitions
+## 基本定义
 
 对数线性模型要解决的问题是：有输入集合 $$\mathcal{X}$$ 和标签集合 $$\mathcal{Y}$$，对条件概率 $$p(y|x)$$（$$x \in \mathcal{X}, y \in \mathcal{Y}$$）进行建模。
 
@@ -32,7 +32,7 @@ $$
 
 
 
-## Model Form
+## 模型形式
 
 公式 3.1 中，最主要的是求内积 $$v \cdot f(x,y)$$ 。 $$v \cdot f(x,y)$$ 越大说明在给定上下文 $$x$$ 的情况下，$$y$$ 出现的概率越大。$$v \cdot f(x,y)$$ 可以是任意实数，但 $$\exp (v \cdot f(x,y))$$ 只可能是正数。
 

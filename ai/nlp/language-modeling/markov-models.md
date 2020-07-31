@@ -6,11 +6,9 @@ catagory: NLP
 
 本节讨论**马尔科夫模型（Markov Models）**。
 
-## Markov Models for Fixed-length Sequences
+## 定长序列的马尔科夫模型
 
-**定长序列（Fixed-length Sequences）的马尔科夫模型。**
-
-考虑一个随机变量序列 $$X_1, X_2, ... ,X_n$$ （$$X_i \in \mathcal{V}$$），它的长度 $$n$$ 是一个定值。我们需要计算联合概率 $$P(X_1=x_1, X_2=x_2, ..., X_n=x_n)$$，即任意一个序列 $$x_1 x_2 ... x_n$$ 出现的概率。
+考虑一个随机变量序列 $$X_1, X_2, ... ,X_n$$ （$$X_i \in \mathcal{V}$$），它的长度 $$n$$ 是一个定值（fixed-length sequences）。我们需要计算联合概率 $$P(X_1=x_1, X_2=x_2, ..., X_n=x_n)$$，即任意一个序列 $$x_1 x_2 ... x_n$$ 出现的概率。
 
 序列 $$x_1 x_2 ... x_n$$ 的所有可能的取值为 $$|\mathcal{V}|^n$$，我们不可能列举出所有 $$|\mathcal{V}|^n$$ 种可能，所以我们需要进行一些假设。
 
@@ -64,11 +62,9 @@ $$
 
 
 
-## Markov Sequences for Variable-length Sentences
+## 变长序列的马尔科夫模型
 
-**变长序列（Variable-length Sentences）的马尔科夫模型**
-
-大多数情况下句子长度 $$n$$ 都是不定的，为了处理这个问题，我们假设句子中的第 $$n$$ 个单词 $$X_n$$ 总是为一个特殊符号 **STOP**，STOP 符号只能出现在句子末尾。即 $$x_n = \text{STOP}$$，$$i = 1 ... (n-1)$$，$$x_i \in \mathcal{V}$$。
+大多数情况下句子长度 $$n$$ 都是不定的（variable-length sentences），为了处理这个问题，我们假设句子中的第 $$n$$ 个单词 $$X_n$$ 总是为一个特殊符号 **STOP**，STOP 符号只能出现在句子末尾。即 $$x_n = \text{STOP}$$，$$i = 1 ... (n-1)$$，$$x_i \in \mathcal{V}$$。
 
 按照之前的假设（如二阶马尔科夫假设），我们每一步都按照分布 $$P(X_i=x_i | X_{i-2}=x_{i-2}, X_{i-1}=x_{i-1})$$ 来生成 $$x_i$$。$$x_i$$ 可以是 $$\mathcal{V}$$ 中的变量，也可以是 STOP 符号。如果我们生成了 STOP 符号，则该句子生成结束，否则继续生成下一个单词，即：
 

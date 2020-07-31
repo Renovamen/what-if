@@ -7,7 +7,7 @@ readme: true
 
 
 
-## Reference
+## 参考
 
 1. [**Probabilistic Context-Free Grammars (PCFGs) (Notes)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf)
 2. [**Parsing, and Context-Free Grammars 1 (Slides)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/slides/parsing1.pdf)

@@ -2,15 +2,13 @@
 catagory: NLP
 ---
 
-# 三元模型的平滑估计（Smoothed Estimation）
+# 三元模型的平滑估计
 
 极大似然估计会导致稀疏数据的问题，即使训练集非常大，很多 $$c(u,v,w)$$ 和 $$c(u,v)$$ 也会很小，甚至为 0。因此本节将讨论用于缓和数据稀疏问题的**平滑估计（Smoothed Estimation）**，它的核心思想依赖于 lower-order statistical estimates，即用一元和二元模型的估计去平滑三元模型的估计。本节将讨论两种常用方法：**线性插值（Linear Interpolation）**和 **Discounting Methods**，以及与**装桶（Bucketing）**结合的线性插值。
 
 
 
-## Linear Interpolation
-
-**线性插值**
+## 线性插值
 
 定义三元、二元和一元模型的极大似然估计为：
 $$
@@ -25,11 +23,11 @@ $$
 q_{ML}(w)=\frac{c(u,v,w)}{c()}
 $$
 
-$$c(w)$$ 表示单词 $$w$$ 在训练集中出现的次数，$$c()$$ 表示训练集中所有单词的数量。
+$$c(w)$$ 表示单词 $$w$$ 在训练集中出现的次数，$$c(\cdot)$$ 表示训练集中所有单词的数量。
 
-它们有各自的优缺点：一元模型估计出的参数的分子和分母一定会大于 0（因为每个词在训练集中都至少出现了一次），但它完全忽视了上下文信息。而 三元模型考虑了上下文信息，但很多参数会被估计为 0，数据更稀疏。二元模型则介于两者之间。
+它们有各自的优缺点：一元模型估计出的参数的分子和分母一定会大于 0（因为每个词在训练集中都至少出现了一次），但它完全忽视了上下文信息。而三元模型考虑了上下文信息，但很多参数会被估计为 0，数据更稀疏。二元模型则介于两者之间。
 
-线性插值的思想是把三种估计加权平均，定义三元估计为：
+因此**线性插值（Linear Interpolation）**的思想是把三种估计加权平均，定义三元估计为：
 $$
 q(w|u,v)=\lambda_1 \times q_{ML}(w|u,v) + \lambda_2 \times q_{ML}(w|v) + \lambda_3 \times q_{ML}(w)
 $$
@@ -37,7 +35,7 @@ $$
 
 <br>
 
-估计 $$\lambda$$ 的值有多种方式，一种常见的方法是：假设我们有一些不同于训练集和测试集的额外的数据，称之为 development data。$$c'(u, v, w)$$ 为三元组 $$(u, v, w)$$ 在 development data 中出现的次数。则 development data 上的 log-likelihood（对数似然函数值）为：
+估计 $$\lambda$$ 的值有多种方式，一种常见的方法是：假设我们有一些不同于训练集和测试集的额外的数据，称之为**验证集（development set/validation set）**。$$c'(u, v, w)$$ 为三元组 $$(u, v, w)$$ 在验证集中出现的次数。则验证集上的 **log-likelihood（对数似然函数值）**为：
 $$
 L(\lambda_1,\lambda_2,\lambda_3)=\sum_{u,v,w}c'(u,v,w) \log q(w|u,v)
 $$
@@ -75,7 +73,7 @@ $$
 
 $$\gamma > 0$$ 是该方法中唯一的参数。这种方法可以保证 $$\lambda_1 \geq 0, \lambda_2 \geq 0, \lambda_3 \geq 0$$ 和 $$\lambda_1 + \lambda_2 + \lambda_3 = 1$$。
 
-$$\lambda_1$$ 会随着 $$c(u, v)$$ 的增大而增大，$$\lambda_2$$ 会随着 $$c(v)$$ 的增大而增大。如果 $$c(u, v) = 0$$，则有 $$\lambda_1 = 0$$；如果 $$c(v) = 0$$，则有 $$\lambda_2 = 0$$。$$\gamma$$ 依然取能最大化 development data 上的 log-likelihood 的值。
+$$\lambda_1$$ 会随着 $$c(u, v)$$ 的增大而增大，$$\lambda_2$$ 会随着 $$c(v)$$ 的增大而增大。如果 $$c(u, v) = 0$$，则有 $$\lambda_1 = 0$$；如果 $$c(v) = 0$$，则有 $$\lambda_2 = 0$$。$$\gamma$$ 依然取能最大化验证集上的 log-likelihood 的值。
 
 这种决定参数的方式非常粗糙，而且一般情况下并不是最优的。但它足够简单，且有较好的实际应用效果。
 
@@ -178,7 +176,7 @@ $$q_D (w|u,v)$$ 会随着 $$\beta$$ 的变化而变化，一般我们会尝试�
 
 
 
-## Linear Interpolation with Bucketing
+## 线性插值 + bucketing
 
 线性插值模型中参数估计的定义为：
 $$
@@ -214,7 +212,7 @@ $$
 
 <br>
 
-平滑参数还是取能最大化 development data 上的 log-likelihood 的值。定义 $$c'(u,v,w)$$ 为三元组 $$u,v,w$$ 在 development data 中出现的次数，则 development data 上的的 log-likelihood 为：
+平滑参数还是取能最大化验证集上的 log-likelihood 的值。定义 $$c'(u,v,w)$$ 为三元组 $$u,v,w$$ 在验证集中出现的次数，则验证集上的的 log-likelihood 为：
 $$
 \sum_{u,v,w} c'(u,v,w) \log q(w|u,v)
 $$
