@@ -2,7 +2,7 @@
   <header>
     <div class="header-bar"></div>
     <div class="header-inner container flex gap-30">
-      <font-awesome-icon icon="bars" class="header-toggle show-for-small" @click="toggleSidebar" />
+      <font-awesome-icon icon="bars" class="header-toggle show-for-small" @click="toggleSidebar" @click.stop />
       <Logo/>
       <Nav class="flex-fit hide-for-small"/>
       <SearchForm />
