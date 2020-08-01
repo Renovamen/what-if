@@ -42,6 +42,16 @@ export default {
     Nav,
     Catalog
   },
+  /*
+    an inelegant solution for a strange bug:
+    errors(tocbot) will occur during building without performing 'querySelector' here
+    and I don't not why, but it works...
+  */
+  watch: {
+    $route() {
+      var tmp = document.querySelector(".true-sidebar")
+    }
+  },
   mounted(){
     // click outside the sidebar to close sidebar
     document.body.addEventListener('click',()=>{
