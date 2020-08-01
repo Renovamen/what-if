@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar" @click.stop>
+  <div class="sidebar">
     <!-- navbar, shows on mobile only -->
     <Nav class="mobile-nav show-for-small" />
 
@@ -42,23 +42,18 @@ export default {
     Nav,
     Catalog
   },
-  mounted(){
-    // click outside the sidebar to close sidebar
-    document.body.addEventListener('click',()=>{
-      this.closeSidebar();
-    }, false);
+  watch: {
+    $route() {
+      this.closeSidebar()
+    }
   },
   methods: {
-    // if the sidebar is open, close it
     closeSidebar() {
-      var trueSidebar = document.querySelector(".true-sidebar")
-      var vituralSidebar = document.querySelector(".vitural-sidebar")
-
-      if(trueSidebar && trueSidebar.classList.contains('open')) {
-        trueSidebar.classList.remove('open');
+      if(document.querySelector(".true-sidebar")) {
+        document.querySelector(".true-sidebar").classList.remove('open');
       }
-      if(vituralSidebar && vituralSidebar.classList.contains('open')) {
-        vituralSidebar.classList.remove('open');
+      if(document.querySelector(".vitural-sidebar")) {
+        document.querySelector(".vitural-sidebar").classList.remove('open');
       }
     },
     currentRoute() {
