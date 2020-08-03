@@ -57,7 +57,7 @@ Some papers about image aesthetic assessment, know more about them [here](https:
     **Gourmet Photography Dataset for Aesthetic Assessment of Food Images.** *Kekai Sheng, et al.* SIGGRAPH 2018. [[Dataset]](https://github.com/Openning07/GPA)
 
 
-## Models
+## Approaches
 
 ### Machine Learning
 

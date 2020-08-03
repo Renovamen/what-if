@@ -103,3 +103,7 @@
       items:
         - title: Image Aesthetic Assessment
           link: /papers/cv/image-aesthetic-assessment/
+    - title: DL
+      items:
+        - title: Continual Learning
+          link: /papers/dl/continual-learning/
