@@ -4,7 +4,7 @@ catagory: Papers
 
 # Image Aesthetic Assessment
 
-Some papers about image aesthetic assessment, know more about them [here](https://renovamen.ink/2020/02/29/image-aesthetic-assessment/).
+Some papers about image aesthetic assessment (图像美感评估), know more about them [here](https://renovamen.ink/2020/02/29/image-aesthetic-assessment/).
 
 ## Surveys
 

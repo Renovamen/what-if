@@ -12,6 +12,8 @@
   submenu:
     - title: Linear Algebra
       link: /math/linear-algebra/
+    - title: Information Theory
+      link: /math/information-theory/
 - title: Papers
   link: /papers/
 - title: Misc

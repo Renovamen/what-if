@@ -9,7 +9,7 @@ Messy notes of Linear Algebra. Source Markdown files are hosted on [here](https:
 
 
 
-## Resource
+## References
 
 1. [MIT - 18.06 Linear Algebra](http://open.163.com/special/opencourse/daishu.html)
 
