@@ -14,7 +14,8 @@
     "explore": "gridsome explore",
     "build": "gridsome build",
     "preview": "cd dist && http-server",
-    "github": "git push origin master"
+    "github": "git push origin master",
+    "coding": "git push coding master"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
