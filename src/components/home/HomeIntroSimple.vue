@@ -29,9 +29,9 @@
         </h1>
 
         <p class="intro__lead lead post mb">
-          Renovamen's messy notebook, hosted on <a href="https://github.com/Renovamen/what-if" target="_blank">Github</a>. 
-          Maybe it is unsuitable for humans to read... 
-          This website is built with <a href="https://gridsome.org/" target="_blank">Gridsome</a> and <a href="https://vuejs.org/" target="_blank">Vue.js</a>, hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a>.
+          Renovamen's messy notebook, maybe it is unsuitable for humans to read... 
+          This notebook is built with <a href="https://gridsome.org/" target="_blank">Gridsome</a> and <a href="https://vuejs.org/" target="_blank">Vue.js</a>, 
+          hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a> and <a href="https://coding.net/" target="_blank">Coding Pages</a>.
         </p>
 
         <!-- <p class="intro__links">
