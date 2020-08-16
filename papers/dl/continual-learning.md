@@ -74,7 +74,19 @@ Impose constraints on the update of the neural weights.
 
 - **Improving and Understanding Variational Continual Learning.** *Siddharth Swaroop, et al.* NIPS 2018 Continual Learning Workshop. [[Paper]](https://arxiv.org/pdf/1905.02099.pdf) [[Code]](https://github.com/nvcuong/variational-continual-learning/tree/master/improved_ddm)
 
-- **Online Continual Learning with Maximally Interfered Retrieval.** *Rahaf Aljundi, et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/9357-online-continual-learning-with-maximal-interfered-retrieval.pdf)
+- **Memory Aware Synapses: Learning What (Not) to Forget.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* ECCV 2018. [[Paper]](https://openaccess.thecvf.com/content_ECCV_2018/papers/Rahaf_Aljundi_Memory_Aware_Synapses_ECCV_2018_paper.pdf) [[Code]](https://github.com/rahafaljundi/MAS-Memory-Aware-Synapses)
+
+    > Compute a importance weight for each parameter after a task. The parameter with a higher importance weight should be updated less during future tasks.
+
+- **Task Agnostic Continual Learning Using Online Variational Bayes.** *Chen Zeno, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1803.10123.pdf) [[Code]](https://github.com/igolan/bgd)
+
+    > (Title is a good enough summary.
+
+- **Task-Free Continual Learning.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* CVPR 2019. [[Paper]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aljundi_Task-Free_Continual_Learning_CVPR_2019_paper.pdf)
+
+- **Online Continual Learning with Maximally Interfered Retrieval.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/9357-online-continual-learning-with-maximal-interfered-retrieval.pdf)
+
+- **Uncertainty-based Continual Learning with Adaptive Regularization.** *Hongjoon Ahn, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1905.11614.pdf) [[Code]](https://github.com/csm9493/UCL)
 
 
 
@@ -101,12 +113,14 @@ Mimic past data by generative models (GAN, VAE, etc).
 
 - **Generative Models from the perspective of Continual Learning.** *Timothée Lesort, et al.* IJCNN 2019. [[Paper]](https://arxiv.org/pdf/1812.09111.pdf) [[Code]](https://github.com/TLESORT/Generative_Continual_Learning)
 
-- **Continual Unsupervised Representation Learning.** *Dushyant Rao, et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/8981-continual-unsupervised-representation-learning.pdf) [[Code]](https://github.com/deepmind/deepmind-research/tree/master/curl)
-
 - **Learning to Remember: A Synaptic Plasticity Driven Framework for Continual Learning.** *Oleksiy Ostapenko, et al.* CVPR 2019. [[Paper]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Ostapenko_Learning_to_Remember_A_Synaptic_Plasticity_Driven_Framework_for_Continual_CVPR_2019_paper.pdf) [[Code]](https://github.com/SAP-samples/machine-learning-dgm)
 
+- **Continual Unsupervised Representation Learning.** *Dushyant Rao, et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/8981-continual-unsupervised-representation-learning.pdf) [[Code]](https://github.com/deepmind/deepmind-research/tree/master/curl)
 
-### Architectural
+    > Continual learning without task boundaries via dynamic expansion and generative replay (VAE).
+
+
+### Dynamic Expansion
 
 Increase in network capacity that handles new tasks without affecting learned networks.
 
@@ -114,34 +128,64 @@ Increase in network capacity that handles new tasks without affecting learned ne
 
 - **Progressive Neural Networks.** *Andrei A. Rusu, et al.* arXiv 2016. [[Paper]](https://arxiv.org/pdf/1606.04671.pdf)
 
-- **Expert Gate: Lifelong Learning with a Network of Experts.** *Rahaf Aljundi, et al.* CVPR 2017. [[Paper]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Aljundi_Expert_Gate_Lifelong_CVPR_2017_paper.pdf) [[Re-implementation]](https://github.com/wannabeOG/ExpertNet-Pytorch)
+- **Expert Gate: Lifelong Learning with a Network of Experts.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* CVPR 2017. [[Paper]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Aljundi_Expert_Gate_Lifelong_CVPR_2017_paper.pdf) [[Re-implementation]](https://github.com/wannabeOG/ExpertNet-Pytorch)
 
 - **Random Path Selection for Continual Learning.** *Jathushan Rajasegaran, et al.* NIPS 2019. [[Paper]](http://papers.nips.cc/paper/9429-random-path-selection-for-continual-learning.pdf) [[Code]](https://github.com/brjathu/RPSnet)
 
-- **Continual Learning with Adaptive Weights (CLAW).** *Tameem Adel, et al.* ICLR 2020. [[Paper]](https://openreview.net/pdf?id=Hklso24Kwr) 
-
-### Hybrid
-
-Employ some hybrid methods, mix different continual learning strategies.
-
 - **Compacting, Picking and Growing for Unforgetting Continual Learning.** *Steven C. Y. Hung, et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/9518-compacting-picking-and-growing-for-unforgetting-continual-learning.pdf) [[Code]](https://github.com/ivclab/CPG)
 
+    > Gradual model pruning (compacting) → Train a 0-1 mask to pick weights of previous tasks (picking) → Dynamic expansion (growing)
+
+- **Continual Unsupervised Representation Learning.** *Dushyant Rao, et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/8981-continual-unsupervised-representation-learning.pdf) [[Code]](https://github.com/deepmind/deepmind-research/tree/master/curl)
+
+    > Continual learning without task boundaries via dynamic expansion and generative replay (VAE).
+
+- **Continual Learning with Adaptive Weights (CLAW).** *Tameem Adel, et al.* ICLR 2020. [[Paper]](https://openreview.net/pdf?id=Hklso24Kwr) 
+
+- **A Neural Dirichlet Process Mixture Model for Task-Free Continual Learning.** *Soochan Lee, et al.* ICLR 2020. [[Paper]](https://openreview.net/pdf?id=SJxSOJStPr) [[Code]](https://github.com/soochan-lee/CN-DPM)
 
 
-### Meta Continual-Learning
+### Meta Continual Learning
 
 [Here](/papers/dl/meta-learning/) is also a list of literatures for Meta Learning.
 
 - **Meta Continual Learning.** *Risto Vuori, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1806.06928.pdf)
 
-- **Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference.** *Matthew Riemer, et al.* ICLR 2019. [[Paper]](https://arxiv.org/pdf/1810.11910.pdf) [[Code]](https://github.com/mattriemer/MER)
-
-- **Meta-Learning Representations for Continual Learning.** *Khurram Javed and Martha White.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/8458-meta-learning-representations-for-continual-learning.pdf) [[Code]](https://github.com/khurramjaved96/mrcl) [[Poster]](https://sites.ualberta.ca/~kjaved/posters/mrcl.pdf)
+    > Train a RNN as optimizer, and the optimizer leverages information of both current and previous tasks to learn to preserve previous parameters.
 
 
-### Continual Meta-Learning
+- **Learning to Learn without Forgetting by Maximizing Transfer and Minimizing Interference.** *Matthew Riemer, et al.* ICLR 2019. [[Paper]](https://arxiv.org/pdf/1810.11910.pdf) [[Code]](https://github.com/mattriemer/MER) (Meta-Experience Replay, MER)
+
+    > Combine Reptile (a meta-learning algorithm) with experience replay for rapidly learning the current and future experience and preserving past knowledge.
+
+- **Meta-Learning Representations for Continual Learning.** *Khurram Javed and Martha White.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1905.12588.pdf) [[Code]](https://github.com/khurramjaved96/mrcl) [[Poster]](https://sites.ualberta.ca/~kjaved/posters/mrcl.pdf)
 
 - **Reconciling Meta-Learning and Continual Learning with Online Mixtures of Tasks.** *Ghassen Jerfel, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1812.06080.pdf)
+
+- **Continuous Meta-Learning without Tasks.** *James Harrison, et al.* arXiv 2019. [[Paper]](https://arxiv.org/pdf/1912.08866.pdf) [[Code]](https://github.com/StanfordASL/moca) [[OpenReview]](https://openreview.net/forum?id=r1l1myStwr)
+
+    > Integrate Bayesian online changepoint detection algorithm with existing meta-learning approaches to enable meta-learning in task-unsegmented settings.
+
+- **Task Agnostic Continual Learning via Meta Learning.** *Xu He, et al.* ICML 2020 LifelongML Workshop. [[Paper]](https://openreview.net/pdf?id=AeIzVxdJgeb)
+
+
+### Task Free
+
+- **Task-Free Continual Learning.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* CVPR 2019. [[Paper]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aljundi_Task-Free_Continual_Learning_CVPR_2019_paper.pdf)
+
+- **Continual Unsupervised Representation Learning.** *Dushyant Rao, et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/8981-continual-unsupervised-representation-learning.pdf) [[Code]](https://github.com/deepmind/deepmind-research/tree/master/curl)
+
+    > Continual learning without task boundaries via dynamic expansion (Dirichlet process) and generative replay (VAE).
+
+- **Reconciling Meta-Learning and Continual Learning with Online Mixtures of Tasks.** *Ghassen Jerfel, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1812.06080.pdf)
+
+- **Continuous Meta-Learning without Tasks.** *James Harrison, et al.* arXiv 2019. [[Paper]](https://arxiv.org/pdf/1912.08866.pdf) [[Code]](https://github.com/StanfordASL/moca) [[OpenReview]](https://openreview.net/forum?id=r1l1myStwr)
+
+    > Integrate Bayesian online changepoint detection algorithm with existing meta-learning approaches to enable meta-learning in task-unsegmented settings.
+
+- **A Neural Dirichlet Process Mixture Model for Task-Free Continual Learning.** *Soochan Lee, et al.* ICLR 2020. [[Paper]](https://openreview.net/pdf?id=SJxSOJStPr) [[Code]](https://github.com/soochan-lee/CN-DPM)
+
+- **Task Agnostic Continual Learning via Meta Learning.** *Xu He, et al.* ICML 2020 LifelongML Workshop. [[Paper]](https://openreview.net/pdf?id=AeIzVxdJgeb)
 
 
 ### + Reinforcement Learning
@@ -151,14 +195,50 @@ Employ some hybrid methods, mix different continual learning strategies.
 - **Experience Replay for Continual Learning.** *David Rolnick, et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/8327-experience-replay-for-continual-learning.pdf)
  
 
-
 ### + Generative Modeling
 
 - **Lifelong GAN: Continual Learning for Conditional Image Generation.** *Mengyao Zhai, et al.* ICCV 2019. [[Paper]](https://openaccess.thecvf.com/content_ICCV_2019/papers/Zhai_Lifelong_GAN_Continual_Learning_for_Conditional_Image_Generation_ICCV_2019_paper.pdf) 
 
 - **Generative Models from the perspective of Continual Learning.** *Timothée Lesort, et al.* IJCNN 2019. [[Paper]](https://arxiv.org/pdf/1812.09111.pdf) [[Code]](https://github.com/TLESORT/Generative_Continual_Learning)
 
+
+### Bayesian
+
+- **Variational Continual Learning.** *Cuong V. Nguyen, et al.* ICLR 2018. [[Paper]](https://openreview.net/pdf?id=BkQqq0gRb) [[Re-implementation]](https://github.com/nvcuong/variational-continual-learning) (VCL)
+
+- **Improving and Understanding Variational Continual Learning.** *Siddharth Swaroop, et al.* NIPS 2018 Continual Learning Workshop. [[Paper]](https://arxiv.org/pdf/1905.02099.pdf) [[Code]](https://github.com/nvcuong/variational-continual-learning/tree/master/improved_ddm)
+
+- **Task Agnostic Continual Learning Using Online Variational Bayes.** *Chen Zeno, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1803.10123.pdf) [[Code]](https://github.com/igolan/bgd)
+
+    > (Title is a good enough summary.
+
 - **Continual Unsupervised Representation Learning.** *Dushyant Rao, et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/8981-continual-unsupervised-representation-learning.pdf) [[Code]](https://github.com/deepmind/deepmind-research/tree/master/curl)
+
+    > Continual learning without task boundaries via dynamic expansion and generative replay (VAE).
+
+- **Reconciling Meta-Learning and Continual Learning with Online Mixtures of Tasks.** *Ghassen Jerfel, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1812.06080.pdf)
+
+- **Uncertainty-based Continual Learning with Adaptive Regularization.** *Hongjoon Ahn, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1905.11614.pdf) [[Code]](https://github.com/csm9493/UCL)
+
+- **Continuous Meta-Learning without Tasks.** *James Harrison, et al.* arXiv 2019. [[Paper]](https://arxiv.org/pdf/1912.08866.pdf) [[Code]](https://github.com/StanfordASL/moca) [[OpenReview]](https://openreview.net/forum?id=r1l1myStwr)
+
+    > Integrate Bayesian online changepoint detection algorithm with existing meta-learning approaches to enable meta-learning in task-unsegmented settings.
+
+- **Task Agnostic Continual Learning via Meta Learning.** *Xu He, et al.* ICML 2020 LifelongML Workshop. [[Paper]](https://openreview.net/pdf?id=AeIzVxdJgeb)
+
+- **A Neural Dirichlet Process Mixture Model for Task-Free Continual Learning.** *Soochan Lee, et al.* ICLR 2020. [[Paper]](https://openreview.net/pdf?id=SJxSOJStPr) [[Code]](https://github.com/soochan-lee/CN-DPM)
+
+
+
+### New Settings
+
+- **Online Fast Adaptation and Knowledge Accumulation (OSAKA): a New Approach to Continual Learning.** *Massimo Caccia, et al.* arXiv 2020. [[Paper]](https://arxiv.org/pdf/2003.05856.pdf) [[Code]](https://github.com/ElementAI/osaka)
+
+- **Wandering Within a World: Online Contextualized Few-Shot Learning.** *Mengye Ren, et al.* arXiv 2020. [[Paper]](https://arxiv.org/pdf/2007.04546.pdf)
+
+- **Compositional Language Continual Learning.** *Yuanpeng Li, et al.* ICLR 2020. [[Paper]](https://openreview.net/pdf?id=rklnDgHtDS) [[Code]](https://github.com/yli1/CLCL)
+
+    > Continual learning in NLP for seq2seq style tasks.
 
 
 ## Workshops

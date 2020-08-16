@@ -29,7 +29,7 @@ npm run build # gridsome build
 &nbsp;
 ## Fixes
 
-### None-English Anchors
+### Non-English Anchors
 
 Follow [this pull request](https://github.com/gridsome/gridsome/pull/1293) (haven't been merged) to support non-English anchors (like Chinese, Japanese and Korean).
 

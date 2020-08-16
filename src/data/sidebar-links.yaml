@@ -82,7 +82,12 @@
           link: /ai/dl/fnn/parameters-estimation/
         - title: 深层神经网络
           link: /ai/dl/fnn/deep-neural-network/
-
+    - title: 生成模型
+      items:
+        - title: 变分自编码器
+          link: /ai/dl/generative-models/vae/
+        - title: 生成对抗网络
+          link: /ai/dl/generative-models/gan/
 
 - catagory: Math
   sidebar:

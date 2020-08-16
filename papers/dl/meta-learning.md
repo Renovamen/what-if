@@ -48,6 +48,8 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 
 ### Optimization-based
 
+- **Learning to Learn by Gradient Descent by Gradient Descent.** *Marcin Andrychowicz, et al.* NIPS 2016. [[Paper]](https://arxiv.org/pdf/1606.04474v1.pdf) [[Code]](https://github.com/deepmind/learning-to-learn)
+
 - **Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks.** *Chelsea Finn, et al.* ICML 2017. [[Paper]](https://arxiv.org/pdf/1703.03400.pdf) [[Code]](https://github.com/cbfinn/maml)
 
 - **On First-Order Meta-Learning Algorithms.** *Alex Nichol, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1803.02999.pdf)[[Code]](https://github.com/openai/supervised-reptile) [[Slide]](https://www.slideshare.net/YoonhoLee4/on-firstorder-metalearning-algorithms)
