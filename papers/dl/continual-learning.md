@@ -27,7 +27,7 @@ Literatures of Continual Learning (持续学习, also called Lifelong / Incremen
 
 ## Surveys
 
-- **Continual Lifelong Learning with Neural Networks: A Review.** *German I. Parisi, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1802.07569.pdf)
+- **Continual Lifelong Learning with Neural Networks: A Review.** *German I. Parisi, et al.* Neural Networks 2019. [[Paper]](https://arxiv.org/pdf/1802.07569.pdf)
 
     > A survey on different approaches (regularization / dynamic architectures / rehearsal) for continual learning.
 
@@ -88,6 +88,7 @@ Impose constraints on the update of the neural weights.
 
 - **Uncertainty-based Continual Learning with Adaptive Regularization.** *Hongjoon Ahn, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1905.11614.pdf) [[Code]](https://github.com/csm9493/UCL)
 
+- **Efficient continual learning in neural networks with embedding regularization.** *Jary Pomponi, et al.* Neurocomputing 2020. [[Paper]](https://arxiv.org/pdf/1909.03742.pdf)
 
 
 ### Rehearsal
@@ -170,6 +171,10 @@ Increase in network capacity that handles new tasks without affecting learned ne
 
 
 ### Task Free
+
+- **Task Agnostic Continual Learning Using Online Variational Bayes.** *Chen Zeno, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1803.10123.pdf) [[Code]](https://github.com/igolan/bgd)
+
+    > (Title is a good enough summary.
 
 - **Task-Free Continual Learning.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* CVPR 2019. [[Paper]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aljundi_Task-Free_Continual_Learning_CVPR_2019_paper.pdf)
 

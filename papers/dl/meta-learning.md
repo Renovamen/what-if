@@ -53,3 +53,7 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 - **Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks.** *Chelsea Finn, et al.* ICML 2017. [[Paper]](https://arxiv.org/pdf/1703.03400.pdf) [[Code]](https://github.com/cbfinn/maml)
 
 - **On First-Order Meta-Learning Algorithms.** *Alex Nichol, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1803.02999.pdf)[[Code]](https://github.com/openai/supervised-reptile) [[Slide]](https://www.slideshare.net/YoonhoLee4/on-firstorder-metalearning-algorithms)
+
+- **Online Meta-Learning.** *Chelsea Finn, et al.* ICML 2019. [[Paper]](https://arxiv.org/pdf/1902.08438.pdf)
+
+- **Meta-Learning with Implicit Gradients.** *Aravind Rajeswaran, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1909.04630.pdf)
