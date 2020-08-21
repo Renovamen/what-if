@@ -60,3 +60,16 @@ catagory: Misc
 - [Typora](https://typora.io/) #
 
     - 所见即所得
+
+
+## Chrome 插件
+
+- [Dark Reader](https://github.com/darkreader/darkreader)
+
+- [File Icons for GitHub and GitLab](https://github.com/homerchen19/github-file-icons)
+
+- [Octotree](https://github.com/ovity/octotree)
+
+- [Momentum](https://momentumdash.com/)
+
+- [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega)
