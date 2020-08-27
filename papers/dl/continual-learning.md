@@ -68,27 +68,27 @@ Impose constraints on the update of the neural weights.
 
 - **Overcoming Catastrophic Forgetting in Neural Networks.** *James Kirkpatrick, et al.* PNAS 2017. [[Paper]](https://arxiv.org/pdf/1612.00796.pdf) (Elastic Weight Consolidation, EWC)
 
-- **Continual Learning Through Synaptic Intelligence.** *Friedemann Zenke, et al.* ICML 2017. [[Paper]](http://proceedings.mlr.press/v70/zenke17a/zenke17a.pdf) [[Code]](https://github.com/ganguli-lab/pathint) (Intelligent Synapses, IS)
+- **Continual Learning Through Synaptic Intelligence.** *Friedemann Zenke, et al.* ICML 2017. [[Paper]](https://arxiv.org/pdf/1703.04200.pdf) [[Code]](https://github.com/ganguli-lab/pathint) (Intelligent Synapses, IS)
 
 - **Variational Continual Learning.** *Cuong V. Nguyen, et al.* ICLR 2018. [[Paper]](https://openreview.net/pdf?id=BkQqq0gRb) [[Re-implementation]](https://github.com/nvcuong/variational-continual-learning) (VCL)
 
 - **Improving and Understanding Variational Continual Learning.** *Siddharth Swaroop, et al.* NIPS 2018 Continual Learning Workshop. [[Paper]](https://arxiv.org/pdf/1905.02099.pdf) [[Code]](https://github.com/nvcuong/variational-continual-learning/tree/master/improved_ddm)
 
-- **Memory Aware Synapses: Learning What (Not) to Forget.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* ECCV 2018. [[Paper]](https://openaccess.thecvf.com/content_ECCV_2018/papers/Rahaf_Aljundi_Memory_Aware_Synapses_ECCV_2018_paper.pdf) [[Code]](https://github.com/rahafaljundi/MAS-Memory-Aware-Synapses)
-
-    > Compute a importance weight for each parameter after a task. The parameter with a higher importance weight should be updated less during future tasks.
+- **Memory Aware Synapses: Learning What (Not) to Forget.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* ECCV 2018. [[Paper]](https://arxiv.org/pdf/1711.09601.pdf) [[Code]](https://github.com/rahafaljundi/MAS-Memory-Aware-Synapses)
 
 - **Task Agnostic Continual Learning Using Online Variational Bayes.** *Chen Zeno, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1803.10123.pdf) [[Code]](https://github.com/igolan/bgd)
 
     > (Title is a good enough summary.
 
-- **Task-Free Continual Learning.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* CVPR 2019. [[Paper]](https://openaccess.thecvf.com/content_CVPR_2019/papers/Aljundi_Task-Free_Continual_Learning_CVPR_2019_paper.pdf)
+- **Task-Free Continual Learning.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* CVPR 2019. [[Paper]](https://arxiv.org/pdf/1812.03596.pdf)
 
 - **Online Continual Learning with Maximally Interfered Retrieval.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/9357-online-continual-learning-with-maximal-interfered-retrieval.pdf)
 
 - **Uncertainty-based Continual Learning with Adaptive Regularization.** *Hongjoon Ahn, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1905.11614.pdf) [[Code]](https://github.com/csm9493/UCL)
 
 - **Efficient continual learning in neural networks with embedding regularization.** *Jary Pomponi, et al.* Neurocomputing 2020. [[Paper]](https://arxiv.org/pdf/1909.03742.pdf)
+
+- **Uncertainty-guided Ccontinual Learning with Bayesian Neural Networks.** *Sayna Ebrahimi, et al.* ICLR 2020. [[Paper]](https://arxiv.org/pdf/1906.02425.pdf) [[Code]](https://github.com/SaynaEbrahimi/UCB)
 
 
 ### Rehearsal
