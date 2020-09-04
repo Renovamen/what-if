@@ -28,7 +28,7 @@
     "gridsome": "^0.7.0",
     "gridsome-plugin-flexsearch": "0.1.17",
     "gridsome-remark-katex": "0.1.1",
-    "marked": "^0.6.1",
+    "marked": "^1.1.1",
     "tocbot": "^4.10.1",
     "typography": "^0.16.18",
     "vue-lazy-hydration": "^1.0.0-beta.7",
