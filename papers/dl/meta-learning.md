@@ -38,22 +38,37 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 - [**Meta Reinforcement Learning.**](https://lilianweng.github.io/lil-log/2019/06/23/meta-reinforcement-learning.html) *Lilian Weng.* 2019.
 
 
-
 ## Theses
 
 - **Learning to Learn with Gradient.** *[Chelsea Finn](https://ai.stanford.edu/~cbfinn/).* UC Berkeley, 2018. [[Thesis]](http://ai.stanford.edu/~cbfinn/_files/dissertation.pdf)
 
 
+## Talks
+
+- [Bayesian Model-Agnostic Meta-Learning](https://www.slideshare.net/YoonhoLee4/on-firstorder-metalearning-algorithms)
+
+
 ## Approaches
 
-### Optimization-based
+### Gradient-based
 
 - **Learning to Learn by Gradient Descent by Gradient Descent.** *Marcin Andrychowicz, et al.* NIPS 2016. [[Paper]](https://arxiv.org/pdf/1606.04474v1.pdf) [[Code]](https://github.com/deepmind/learning-to-learn)
 
 - **Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks.** *Chelsea Finn, et al.* ICML 2017. [[Paper]](https://arxiv.org/pdf/1703.03400.pdf) [[Code]](https://github.com/cbfinn/maml)
 
-- **On First-Order Meta-Learning Algorithms.** *Alex Nichol, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1803.02999.pdf)[[Code]](https://github.com/openai/supervised-reptile) [[Slide]](https://www.slideshare.net/YoonhoLee4/on-firstorder-metalearning-algorithms)
+- **On First-Order Meta-Learning Algorithms.** *Alex Nichol, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1803.02999.pdf)[[Code]](https://github.com/openai/supervised-reptile)
 
 - **Online Meta-Learning.** *Chelsea Finn, et al.* ICML 2019. [[Paper]](https://arxiv.org/pdf/1902.08438.pdf)
 
 - **Meta-Learning with Implicit Gradients.** *Aravind Rajeswaran, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1909.04630.pdf)
+
+
+### Bayesian
+
+- **Recasting Gradient-Based Meta-Learning as Hierarchical Bayes.** *Erin Grant, et al.* ICLR 2018. [[Paper]](https://arxiv.org/pdf/1801.08930.pdf)
+
+- **Bayesian Model-Agnostic Meta-Learning.** *Taesup Kim, et al.* NIPS 2018. [[Paper]](https://arxiv.org/pdf/1806.03836.pdf) [[Code]](https://github.com/jsikyoon/bmaml) [[Slide]](https://www.slideshare.net/sangwoomo7/bayesian-modelagnostic-metalearning)
+
+- **Uncertainty in Model-Agnostic Meta-Learning using Variational Inference.** *Cuong Nguyen, et al.* WACV 2020. [[Paper]](https://arxiv.org/pdf/1907.11864.pdf) [[Code]](https://github.com/cnguyen10/few_shot_meta_learning)
+
+- **Bayesian Online Meta-Learning with Laplace Approximation.** *Pau Ching Yap, et al.* arXiv 2020. [[Paper]](https://arxiv.org/pdf/2005.00146.pdf)
