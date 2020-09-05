@@ -52,9 +52,9 @@ export default {
 
       var result_list = {}
       for(let item of raw_result) {
-        if(!result_list[item.catagory]) {
-          result_list[item.catagory] = {
-            "title": item.catagory,
+        if(!result_list[item.index]) {
+          result_list[item.index] = {
+            "title": item.index,
             "list": []
           }
         }
@@ -63,7 +63,7 @@ export default {
           "title": item.title,
           "path": item.path
         }
-        result_list[item.catagory]["list"].push(result)
+        result_list[item.index]["list"].push(result)
       }
 
       return {
