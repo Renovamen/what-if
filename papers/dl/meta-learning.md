@@ -12,15 +12,15 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 
 ## Courses & Tutorials
 
-- **Meta Learning.** Hung-yi Lee (李宏毅). [Slides: [Part 1](https://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Meta1%20(v6).pdf), [Part 2](https://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Meta2%20(v4).pdf)] [[Video]](https://www.youtube.com/watch?v=EkAqYbpCYAc&list=PLJV_el3uVTsOK_ZK5L0Iv_EQoL1JefRL4&index=33&t=0s)
+- **Meta Learning.** *Hung-yi Lee (李宏毅).* [Slides: [Part 1](https://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Meta1%20(v6).pdf), [Part 2](https://speech.ee.ntu.edu.tw/~tlkagk/courses/ML_2019/Lecture/Meta2%20(v4).pdf)] [[Video]](https://www.youtube.com/watch?v=EkAqYbpCYAc&list=PLJV_el3uVTsOK_ZK5L0Iv_EQoL1JefRL4&index=33&t=0s)
 
 - [ICML 2019 Tutorial - Meta-Learning: from Few-Shot Learning to Rapid Reinforcement Learning](https://sites.google.com/view/icml19metalearning)
 
 - [CVPR 2020 Tutorial - Towards Annotation-Efficient Learning: Few-Shot, Self-Supervised, and Incremental Learning Approaches](https://annotation-efficient-learning.github.io/)
 
-- **Stanford CS330: Deep Multi-Task and Meta Learning.** Chelsea Finn. [Video: [BiliBili](https://www.bilibili.com/video/BV1He411s7K4), [YouTube](https://www.youtube.com/playlist?list=PLoROMvodv4rMC6zfYmnD7UG3LVvwaITY5)] [[Homepage]](https://cs330.stanford.edu/)
+- **Stanford CS330: Deep Multi-Task and Meta Learning.** *[Chelsea Finn](https://ai.stanford.edu/~cbfinn/).* [Video: [BiliBili](https://www.bilibili.com/video/BV1He411s7K4), [YouTube](https://www.youtube.com/playlist?list=PLoROMvodv4rMC6zfYmnD7UG3LVvwaITY5)] [[Homepage]](https://cs330.stanford.edu/)
 
-- [Generalizing from Few Examples with Meta-Learning.](https://www.dropbox.com/s/sm68skkkbxbob0i/metalearning.pdf?dl=0) Hugo Larochelle.
+- [Generalizing from Few Examples with Meta-Learning.](https://www.dropbox.com/s/sm68skkkbxbob0i/metalearning.pdf?dl=0) *Hugo Larochelle.*
 
 ## Surveys
 
@@ -45,6 +45,8 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 
 ## Talks
 
+- [Properties of Good Meta-Learning Algorithms (And How to Achieve Them).](https://ai.stanford.edu/~cbfinn/_files/icml2018_automl_35min.pdf) *[Chelsea Finn](https://ai.stanford.edu/~cbfinn/).* ICML 2018 AutoML Workshop.
+
 - [Bayesian Model-Agnostic Meta-Learning](https://www.slideshare.net/YoonhoLee4/on-firstorder-metalearning-algorithms)
 
 
@@ -63,11 +65,22 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 - **Meta-Learning with Implicit Gradients.** *Aravind Rajeswaran, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1909.04630.pdf)
 
 
+### Sechond-order Derivative
+
+- **Meta-Learning with Implicit Gradients.** *Aravind Rajeswaran, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1909.04630.pdf) [[Re-implementation]](https://paperswithcode.com/paper/meta-learning-with-implicit-gradients)
+
+- **Efficient Meta Learning via Minibatch Proximal Update.** *Pan Zhou, et al.* NIPS 2019. [[Paper]](https://panzhous.github.io/assets/pdf/2019-NIPS-metaleanring.pdf) [[Appendix]](https://panzhous.github.io/assets/pdf/2019-NIPS-metaleanring-supplementary.pdf) [[Slide]](https://panzhous.github.io/assets/pdf/2019neurips-slides.pdf) [[Poster]](https://panzhous.github.io/assets/pdf/2019-NIPS-poster.pdf) [[Code]](https://panzhous.github.io/assets/code/MetaMinibatchProx.zip)
+
+- **Meta-Curvature.** *Eunbyung Park and Junier B. Oliva.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1902.03356.pdf) [[Code]](https://github.com/silverbottlep/meta_curvature)
+
+
 ### Bayesian
 
 - **Recasting Gradient-Based Meta-Learning as Hierarchical Bayes.** *Erin Grant, et al.* ICLR 2018. [[Paper]](https://arxiv.org/pdf/1801.08930.pdf)
 
 - **Bayesian Model-Agnostic Meta-Learning.** *Taesup Kim, et al.* NIPS 2018. [[Paper]](https://arxiv.org/pdf/1806.03836.pdf) [[Code]](https://github.com/jsikyoon/bmaml) [[Slide]](https://www.slideshare.net/sangwoomo7/bayesian-modelagnostic-metalearning)
+
+- **Probabilistic Model-Agnostic Meta-Learning.** *Chelsea Finn, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1806.02817.pdf)
 
 - **Uncertainty in Model-Agnostic Meta-Learning using Variational Inference.** *Cuong Nguyen, et al.* WACV 2020. [[Paper]](https://arxiv.org/pdf/1907.11864.pdf) [[Code]](https://github.com/cnguyen10/few_shot_meta_learning)
 
