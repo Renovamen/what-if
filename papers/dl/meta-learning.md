@@ -60,8 +60,6 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 
 - **On First-Order Meta-Learning Algorithms.** *Alex Nichol, et al.* arXiv 2018. [[Paper]](https://arxiv.org/pdf/1803.02999.pdf)[[Code]](https://github.com/openai/supervised-reptile)
 
-- **Online Meta-Learning.** *Chelsea Finn, et al.* ICML 2019. [[Paper]](https://arxiv.org/pdf/1902.08438.pdf)
-
 - **Meta-Learning with Implicit Gradients.** *Aravind Rajeswaran, et al.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1909.04630.pdf)
 
 
@@ -72,6 +70,13 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 - **Efficient Meta Learning via Minibatch Proximal Update.** *Pan Zhou, et al.* NIPS 2019. [[Paper]](https://panzhous.github.io/assets/pdf/2019-NIPS-metaleanring.pdf) [[Appendix]](https://panzhous.github.io/assets/pdf/2019-NIPS-metaleanring-supplementary.pdf) [[Slide]](https://panzhous.github.io/assets/pdf/2019neurips-slides.pdf) [[Poster]](https://panzhous.github.io/assets/pdf/2019-NIPS-poster.pdf) [[Code]](https://panzhous.github.io/assets/code/MetaMinibatchProx.zip)
 
 - **Meta-Curvature.** *Eunbyung Park and Junier B. Oliva.* NIPS 2019. [[Paper]](https://arxiv.org/pdf/1902.03356.pdf) [[Code]](https://github.com/silverbottlep/meta_curvature)
+
+
+### Online
+
+- **Online Learning of a Memory for Learning Rates.** *Franziska Meier, et al.* ICRA 2018. [[Paper]](https://arxiv.org/pdf/1709.06709.pdf) [[Code]](https://github.com/fmeier/online-meta-learning)
+
+- **Online Meta-Learning.** *Chelsea Finn, et al.* ICML 2019. [[Paper]](https://arxiv.org/pdf/1902.08438.pdf)
 
 
 ### Bayesian
