@@ -58,6 +58,10 @@
       items:
         - title: 损失函数
           link: /ai/ml/basic-ml/loss-function/
+    - title: 优化算法
+      items:
+        - title: 共轭梯度下降
+          link: /ai/ml/optimization/conjugate-gradient/
     - title: 概率图模型
       link: /ai/ml/pcg/
       items:
@@ -69,7 +73,7 @@
           link: /ai/ml/pcg/parameters-learning-latent/
         - title: 参数学习：变分推断
           link: /ai/ml/pcg/variational-inference/
-          
+
 - catagory: DL
   sidebar:
     - title: 前馈神经网络
@@ -97,7 +101,6 @@
           link: /math/linear-algebra/
         - title: Information Theory
           link: /math/information-theory/
-          
         
 - catagory: Linear Algebra
   sidebar:
@@ -113,7 +116,6 @@
         - title: 9. 线性相关性、基、维数
           link: /math/linear-algebra/linear-independence/
 
-
 - catagory: Information Theory
   sidebar:
     - title: 信息论
@@ -121,7 +123,6 @@
       items:
         - title: 散度
           link: /math/information-theory/divergence/
-
 
 - catagory: Papers
   sidebar:

@@ -90,3 +90,7 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 - **Uncertainty in Model-Agnostic Meta-Learning using Variational Inference.** *Cuong Nguyen, et al.* WACV 2020. [[Paper]](https://arxiv.org/pdf/1907.11864.pdf) [[Code]](https://github.com/cnguyen10/few_shot_meta_learning)
 
 - **Bayesian Online Meta-Learning with Laplace Approximation.** *Pau Ching Yap, et al.* arXiv 2020. [[Paper]](https://arxiv.org/pdf/2005.00146.pdf)
+
+### Others
+
+- **Provable Guarantees for Gradient-Based Meta-Learning.** *Mikhail Khodak, et al.* ICML 2019. [[Paper]](https://arxiv.org/pdf/1902.10644.pdf) [[Code]](https://github.com/mkhodak/FMRL)
