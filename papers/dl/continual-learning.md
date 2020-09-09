@@ -70,8 +70,6 @@ Impose constraints on the update of the neural weights.
 
 - **Continual Learning Through Synaptic Intelligence.** *Friedemann Zenke, et al.* ICML 2017. [[Paper]](https://arxiv.org/pdf/1703.04200.pdf) [[Code]](https://github.com/ganguli-lab/pathint) (Intelligent Synapses, IS)
 
-- **Variational Continual Learning.** *Cuong V. Nguyen, et al.* ICLR 2018. [[Paper]](https://openreview.net/pdf?id=BkQqq0gRb) [[Re-implementation]](https://github.com/nvcuong/variational-continual-learning) (VCL)
-
 - **Improving and Understanding Variational Continual Learning.** *Siddharth Swaroop, et al.* NIPS 2018 Continual Learning Workshop. [[Paper]](https://arxiv.org/pdf/1905.02099.pdf) [[Code]](https://github.com/nvcuong/variational-continual-learning/tree/master/improved_ddm)
 
 - **Memory Aware Synapses: Learning What (Not) to Forget.** *[Rahaf Aljundi](https://homes.esat.kuleuven.be/~raljundi/index.html), et al.* ECCV 2018. [[Paper]](https://arxiv.org/pdf/1711.09601.pdf) [[Code]](https://github.com/rahafaljundi/MAS-Memory-Aware-Synapses)
@@ -90,6 +88,8 @@ Impose constraints on the update of the neural weights.
 
 - **Uncertainty-guided Ccontinual Learning with Bayesian Neural Networks.** *Sayna Ebrahimi, et al.* ICLR 2020. [[Paper]](https://arxiv.org/pdf/1906.02425.pdf) [[Code]](https://github.com/SaynaEbrahimi/UCB)
 
+- **Continual Learning with Node-Importance based Adaptive Group Sparse Regularization.** *Sangwon Jung, et al.* CVPR 2020 Workshop on Continual Learning in Computer Vision. [[Paper]](https://arxiv.org/pdf/2003.13726.pdf)
+
 
 ### Rehearsal
 
@@ -101,7 +101,11 @@ Use extra memory to store data from previous tasks.
 
 - **iCaRL: Incremental Classifier and Representation Learning.** *Sylvestre-Alvise Rebuffi, et al.* CVPR 2017. [[Paper]](https://openaccess.thecvf.com/content_cvpr_2017/papers/Rebuffi_iCaRL_Incremental_Classifier_CVPR_2017_paper.pdf) [[Code]](https://github.com/srebuffi/iCaRL)
 
+- **Variational Continual Learning.** *Cuong V. Nguyen, et al.* ICLR 2018. [[Paper]](https://openreview.net/pdf?id=BkQqq0gRb) [[Re-implementation]](https://github.com/nvcuong/variational-continual-learning) (VCL)
+
 - **Experience Replay for Continual Learning.** *David Rolnick, et al.* NIPS 2019. [[Paper]](https://papers.nips.cc/paper/8327-experience-replay-for-continual-learning.pdf)
+
+- **Continual Learning with Bayesian Neural Networks for Non-Stationary Data.** *Richard Kurle, et al.* ICLR 2020. [[Paper]](https://openreview.net/pdf?id=SJlsFpVtDB)
  
 
 #### Generative Replay
@@ -233,6 +237,7 @@ Increase in network capacity that handles new tasks without affecting learned ne
 
 - **A Neural Dirichlet Process Mixture Model for Task-Free Continual Learning.** *Soochan Lee, et al.* ICLR 2020. [[Paper]](https://openreview.net/pdf?id=SJxSOJStPr) [[Code]](https://github.com/soochan-lee/CN-DPM)
 
+- **Continual Learning with Bayesian Neural Networks for Non-Stationary Data.** *Richard Kurle, et al.* ICLR 2020. [[Paper]](https://openreview.net/pdf?id=SJlsFpVtDB)
 
 
 ### New Settings

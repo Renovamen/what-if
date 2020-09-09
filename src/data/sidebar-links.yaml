@@ -62,6 +62,8 @@
       items:
         - title: 共轭梯度下降
           link: /ai/ml/optimization/conjugate-gradient/
+        - title: 近端梯度下降
+          link: /ai/ml/optimization/proximal-gradient/
     - title: 概率图模型
       link: /ai/ml/pcg/
       items:

@@ -43,7 +43,7 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 - **Learning to Learn with Gradient.** *[Chelsea Finn](https://ai.stanford.edu/~cbfinn/).* UC Berkeley, 2018. [[Thesis]](http://ai.stanford.edu/~cbfinn/_files/dissertation.pdf)
 
 
-## Talks
+## Talks & Slides
 
 - [Properties of Good Meta-Learning Algorithms (And How to Achieve Them).](https://ai.stanford.edu/~cbfinn/_files/icml2018_automl_35min.pdf) *[Chelsea Finn](https://ai.stanford.edu/~cbfinn/).* ICML 2018 AutoML Workshop.
 
