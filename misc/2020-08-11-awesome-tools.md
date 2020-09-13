@@ -46,6 +46,14 @@ catagory: Misc
 
     - 不支持 Latex 公式（所以没用了，好肤浅的理由 2333）
 
+- [VNote](https://github.com/tamlok/vnote)
+
+    - 开源（基于 Qt）
+
+    - 无限目录
+
+    - 支持公式，不过渲染似乎有点慢...
+
 - [OneNote](https://onenote.com)
 
     - 巨硬系产品对公式的支持都挺令人头大...
