@@ -18,18 +18,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      # Install Node.js
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          node-version: ${{ matrix.node-version }}
-      
-      # Install @gridsome/cli
-      - name: Install Gridsome CI
-        run: |
-          npm install @gridsome/cli -g
+          persist-credentials: false
 
       # Use GitHub Actions' cache to shorten build times and decrease load on servers
       - name: Check Cache
@@ -39,20 +31,20 @@ jobs:
           path: node_modules
           key: ${{ runner.OS }}-${{ hashFiles('**/package-lock.json') }}
 
-      # Install dependencies if there is no cache ()
+      # Install dependencies if there is no cache
       - name: Install Dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
           npm install
       
-      # Build Gridsome and push it to gh-pages
-      - name: Build and Deploy Gridsome
-        run: |
-          npm run build
-          cd dist
-          git init
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git add .
-          git commit -m "Gridsome build from Action ${{ github.sha }}"
-          git push --force --quiet "https://${{ secrets.JEKYLL_PAT }}@github.com/${{ github.repository }}.git" master:gh-pages
+      # Build Gridsome
+      - name: Build
+        run: npm run build
+      
+      # Push it to gh-pahes
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist
