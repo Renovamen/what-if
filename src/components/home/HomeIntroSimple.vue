@@ -31,7 +31,7 @@
         <p class="intro__lead lead post mb">
           Renovamen's messy notebook, maybe it is unsuitable for humans to read... 
           This notebook is built with <a href="https://gridsome.org/" target="_blank">Gridsome</a> and <a href="https://vuejs.org/" target="_blank">Vue.js</a>, 
-          hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a> and <a href="https://coding.net/" target="_blank">Coding Pages</a>.
+          hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a> and <a href="https://vercel.com/" target="_blank">Vercel</a>.
         </p>
 
         <!-- <p class="intro__links">
