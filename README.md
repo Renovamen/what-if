@@ -30,4 +30,4 @@ npm run build # gridsome build
 &nbsp;
 ## Notes
 
-For `gridsome`, here I use [this version](https://gitee.com/Renovamen/gridsome) (see [package.json](package.json)). It was forked from Gridsome `v0.7.15` and modified a little. Refer to the link for more details.
+For `gridsome`, here I use [this version](https://gitee.com/Renovamen/gridsome) (see [package.json](package.json#L29)). It was forked from Gridsome `v0.7.15` and modified a little. Refer to the link for more details.

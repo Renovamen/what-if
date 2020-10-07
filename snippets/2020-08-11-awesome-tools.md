@@ -3,7 +3,7 @@ title: Awesome Tools
 slug: awesome-tools
 date: 2020-08-11
 excerpt: "记录一些用过（或者云过）的工具"
-catagory: Misc
+catagory: Snippets
 ---
 
 加 # 的是正在用的。
@@ -62,12 +62,18 @@ catagory: Misc
 
 - [EverNote](https://evernote.com/)
 
+## 编辑器
+
+- [Visual Studio Code](https://code.visualstudio.com/) #
+
+- [Atom](https://atom.io/) #
+
+- [Sublime Text](https://www.sublimetext.com/)
+
 
 ## Markdown 编辑器
 
 - [Typora](https://typora.io/) #
-
-    - 所见即所得
 
 
 ## Chrome 插件
@@ -81,3 +87,39 @@ catagory: Misc
 - [Momentum](https://momentumdash.com/)
 
 - [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega)
+
+
+## VSCode 主题
+
+- [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme)
+
+- [Atom One Light Theme](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onelight)
+
+没错一边用着 VSCode 一边馋着 Atom 的主题，人类就是这样吃着碗里的看着锅里的。不过 Atom 的颜值也的确不是 VSCode 装个主题就能比得上的就是了（滑稽
+
+- [Dracula](https://draculatheme.com/)
+
+## Atom 插件
+
+- Latex：
+
+    - [latex](https://atom.io/packages/latex)
+
+    - [language-latex](https://atom.io/packages/language-latex)
+
+    - [pdf-view](https://atom.io/packages/pdf-view)
+
+
+- 终端：[atom-ide-terminal](https://atom.io/packages/atom-ide-terminal)
+
+- Python：
+
+     - [ide-python](https://atom.io/packages/ide-python)
+
+     - [autocomplete-python](https://atom.io/packages/autocomplete-python)
+
+- 其他：
+
+     - [atom-ide-ui](https://atom.io/packages/atom-ide-ui)
+
+     - [atom-beautify](https://atom.io/packages/atom-beautify)

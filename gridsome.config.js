@@ -31,7 +31,7 @@ module.exports = {
   },
 
   templates: {
-    BlogPost: '/misc/:year/:month/:day/:slug',
+    BlogPost: '/snippets/:year/:month/:day/:slug',
     Contributor: '/contributor/:id'
   },
 
@@ -61,7 +61,7 @@ module.exports = {
           },
           {
             typeName: 'BlogPost',
-            indexName: 'Misc',
+            indexName: 'Snippets',
             fields: ['title', 'catagory']
           }
         ],
@@ -108,7 +108,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'BlogPost',
-        path: './misc/*.md',
+        path: './snippets/*.md',
         refs: {
           author: 'Contributor'
         },

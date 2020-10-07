@@ -3,7 +3,7 @@ title: Image APIs & NoneBot
 slug: image-apis-and-nonebot-setting-up
 date: 2020-01-11
 excerpt: "Here is a list of APIs that can return some images and notes of the process of setting up NoneBot and CoolQ HTTP API (on my Mac)."
-catagory: Misc
+catagory: Snippets
 ---
 
 ## Misc
