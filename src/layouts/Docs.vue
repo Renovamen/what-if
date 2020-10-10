@@ -2,7 +2,7 @@
   <Layout class="has-sidebar docs-page" :footer="false">
     <div class="container flex flex-align-top">
       <!-- Sidebar -->
-      <Sidebar class="true-sidebar" :links="links" :subtitles="subtitles" />
+      <Sidebar :links="links" :subtitles="subtitles" />
 
       <!-- Content -->
       <Section class="doc-content flex-fit" container="md">

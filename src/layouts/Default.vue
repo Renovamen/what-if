@@ -2,7 +2,7 @@
   <div id="app" dark>
     <Header />
     <!-- sidebar for pages with no sidebar on desktop -->
-    <Sidebar class="virtual-sidebar show-for-small" />
+    <Sidebar class="show-for-small" />
     <slot />
     <Footer v-if="footer !== false" />
   </div>

@@ -36,10 +36,8 @@ export default {
   },
   methods: {
     toggleSidebar() {
-      if(document.querySelector(".true-sidebar")) {
-        document.querySelector(".true-sidebar").classList.toggle('open');
-      }
-      else document.querySelector(".virtual-sidebar").classList.toggle('open');
+      // children[1] is always a sidebar
+      this.$parent.$children[1].$el.classList.toggle('open');
     }
   },
 }

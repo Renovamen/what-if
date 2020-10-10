@@ -49,7 +49,7 @@ export default {
   */
   watch: {
     $route() {
-      var tmp = document.querySelector(".true-sidebar")
+      var tmp = document.querySelector(".true_sidebar")
     }
   },
   methods: {
