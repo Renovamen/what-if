@@ -45,8 +45,10 @@ export default {
     .nav-item, .repo-link
       display block
       line-height 1.25rem
-      font-size 1.1em
+      font-size 1em
       padding 0.5rem 0 0.5rem 1.5rem
+      button
+        font-size 1em
   & > .sidebar-links
     padding 1.5rem 0
     & > li > a.sidebar-link

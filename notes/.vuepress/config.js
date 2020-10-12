@@ -15,6 +15,7 @@ module.exports = {
         searchMaxSuggestions: 10,
         sidebarDepth: 5,
         repo: 'Renovamen/what-if',
+        docsDir: 'notes',
         editLinks: true,
         editLinkText: 'Edit this page on Github',
         // 最后更新时间
@@ -217,7 +218,7 @@ module.exports = {
         },
     },
     markdown: {
-        lineNumbers: true,
+        // lineNumbers: true,
         extendMarkdown: md => {
             md.set({
                 html: true

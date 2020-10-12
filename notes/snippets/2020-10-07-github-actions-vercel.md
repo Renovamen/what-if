@@ -78,6 +78,58 @@ on:
     branches: [ master ]
 
 jobs:
+  build-and-deploy-vuepress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Node.js 环境
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.0
+        with:
+          node-version: '12.x'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      
+      # npm run build
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+      
+      # 推送到同一个 repo 的 gh-pages 分支
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist # build 输出文件夹
+          cname: notebook.renovamen.ink  # 如果用了自定义域名，在这里设置
+```
+
+其中 [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) 是一个别人写好的 action，能把指定路径的文件推到 `gh-pages` 分支。
+
+
+也可以用 [JamesIves/github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action)，它是一个能把指定路径的文件推到指定分支的 action：
+
+```yaml
+name: build and deploy
+
+# 检测 master 分支上的推送和 pr
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
@@ -115,6 +167,4 @@ jobs:
           FOLDER: dist  # npm run build 的输出文件夹
 ```
 
-其中 [JamesIves/github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action) 是一个别人写好的 action，能把指定路径的文件推到指定分支。
-
-这里直接在 `gh-pages` 分支建 `CNAME` 就行，不会被删掉。
+不过虽然作者在[表示](https://github.com/JamesIves/github-pages-deploy-action#additional-build-files-)在 `gh-pages` 分支手动 commit 一个 `CNAME` 之后，`CNAME` 不会在后面的部署中被清掉，但我不管怎么试都会被清掉，所以就没用了...大概是我的方式不太对...

@@ -1,8 +1,8 @@
 <template>
     <Common>
-        <div class="post-wrapper">
+        <div class="post-container">
             <h1 class="title">{{ $page.title }}</h1>
-            <Content/>
+            <Page />
         </div>
         <Footer class="footer" />
     </Common>
@@ -11,37 +11,31 @@
 <script>
 import Footer from '@theme/components/Footer'
 import Common from '@theme/components/Common.vue'
+import PageEdit from '@theme/components/PageEdit.vue'
+import Page from '@theme/components/Page.vue'
 
 export default {
     name: 'Post',
     components: {
         Footer,
-        Common
+        Common,
+        PageEdit,
+        Page
     },
 }
 </script>
 
 
 <style lang="stylus">
-.post-wrapper {
-    width: 60%;
-    margin: $navbarHeight auto 100px;
-    font-size: 1.15rem;
+.post-container {
+    margin: $navbarHeight auto 0;
     word-wrap: break-word;
     word-break: normal;
     .title {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: -50px;
         padding-top: 50px;
-    }
-    code {
-        font-size: .95rem;
-    }
-}
-
-@media (max-width: $MQNarrow) {
-    .post-wrapper {
-        width: 90%;
+        max-width: 95%;
     }
 }
 </style>

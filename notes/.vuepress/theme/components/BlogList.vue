@@ -27,7 +27,7 @@ export default {
   align-items: flex-start;
   margin: $navbarHeight auto 100px;
   padding: 0;
-  max-width: 50%;
+  max-width: 55%;
 
   .blog-list {
     flex: auto;
