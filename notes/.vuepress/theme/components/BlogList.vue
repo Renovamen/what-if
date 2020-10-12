@@ -15,7 +15,6 @@ export default {
   },
   methods: {
     getBlogs() {
-      console.log(this.$pagination.pages)
       return this.$pagination.pages
     }
   },
