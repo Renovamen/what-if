@@ -1,7 +1,7 @@
 <template>
     <div class="theme-container" :class="pageClasses">
         <Navbar v-if="shouldShowNavbar" />
-        <div class="snippets-title">
+        <div class="title">
             <h1>Snippets</h1>
             <p style="opacity: .8">A space for storing these messy segments.</p>
         </div>
@@ -52,8 +52,8 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.snippets-title {
+<style lang="stylus" scoped>
+.title {
     text-align: center;
     margin: $navbarHeight auto -50px;
     h1 {
@@ -62,12 +62,5 @@ export default {
     p {
         font-size: 1.1rem;
     }
-}
-
-@media (max-width: $MQNarrow) {
-  .blog-list-wrapper {
-    max-width: 85%;
-    margin-bottom: 50px;
-  }
 }
 </style>

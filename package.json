@@ -11,9 +11,9 @@
   "bugs": "https://github.com/Renovamen/what-if/issues",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev . --open --host \"localhost\"",
-    "build": "vuepress build .",
-    "preview": "cd .vuepress/dist && http-server"
+    "dev": "vuepress dev notes . --open --host \"localhost\"",
+    "build": "vuepress build notes .",
+    "preview": "cd dist && http-server"
   },
   "devDependencies": {
     "vuepress": "^1.6.0"
