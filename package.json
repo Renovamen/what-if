@@ -1,0 +1,37 @@
+{
+  "name": "what-if",
+  "description": "Renovamen's notebook.",
+  "version": "1.0.0",
+  "author": "Renovamen <renovamenzxh@gmail.com>",
+  "homepage": "https://notebook.renovamen.ink",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Renovamen/what-if"
+  },
+  "bugs": "https://github.com/Renovamen/what-if/issues",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev . --open --host \"localhost\"",
+    "build": "vuepress build .",
+    "preview": "cd .vuepress/dist && http-server"
+  },
+  "devDependencies": {
+    "vuepress": "^1.6.0"
+  },
+  "dependencies": {
+    "@vuepress/plugin-active-header-links": "1.6.0",
+    "@vuepress/plugin-nprogress": "1.6.0",
+    "@vuepress/plugin-search": "1.6.0",
+    "@vuepress/plugin-blog": "1.9.2",
+    "@vuepress/plugin-medium-zoom": "1.5.0",
+    "vue-class-component": "^7.2.3",
+    "vue-click-outside": "1.1.0",
+    "@liradb2000/markdown-it-katex": "^2.0.7",
+    "md5": "2.2.1",
+    "lodash": "^4.17.15",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.2",
+    "vuepress-plugin-container": "^2.0.2",
+    "vuepress-plugin-smooth-scroll": "^0.0.9"
+  }
+}
