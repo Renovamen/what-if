@@ -12,7 +12,7 @@
     padding: 1.5rem 2.5rem;
     border-top: 1px solid var(--border-color);
     text-align: center;
-    color: lighten($textColor, 25%);
+    color: var(--text-color-sub);
     a {
         font-size 14px
     }

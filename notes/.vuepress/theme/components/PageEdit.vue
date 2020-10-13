@@ -132,7 +132,7 @@ export default {
     display inline-block
     a
       // color lighten($textColor, 25%)
-      color $accentColor
+      color var(--accent-color)
       margin-right 0.25rem
       &:hover
         text-decoration underline
@@ -141,10 +141,10 @@ export default {
     font-size 0.9em
     .prefix
       font-weight 500
-      color lighten($textColor, 25%)
+      color var(--text-color)
     .time
       font-weight 400
-      color #767676
+      color var(--text-color-sub)
 
 @media (max-width: $MQMobile)
   .page-edit

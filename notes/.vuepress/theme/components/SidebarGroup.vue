@@ -83,12 +83,13 @@ export default {
 
 <style lang="stylus">
 .sidebar-group
+  background var(--background-color)
   .sidebar-group
     padding-left 0.5em
   &:not(.collapsable)
     .sidebar-heading:not(.clickable)
       cursor auto
-      color inherit
+      color var(--text-color)
   // refine styles of nested sidebar groups
   &.is-sub-group
     padding-left 0
@@ -109,7 +110,7 @@ export default {
       border-left none
 
 .sidebar-heading
-  color $textColor
+  color var(--text-color)
   transition color .15s ease
   cursor pointer
   font-size 1.1em
@@ -129,10 +130,10 @@ export default {
   &.clickable
     &.active
       font-weight 600
-      color $accentColor
-      border-left-color $accentColor
+      color var(--accent-color)
+      border-left-color var(--accent-color)
     &:hover
-      color $accentColor
+      color var(--accent-color)
 
 .sidebar-group-items
   transition height .1s ease-out

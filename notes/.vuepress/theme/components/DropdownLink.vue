@@ -158,8 +158,9 @@ export default {
     font-weight 600
     font-size inherit
       &:hover
-        color $accentColor
+        color var(--accent-color)
   .nav-dropdown
+    background-color var(--background-color) !important
     .dropdown-item
       color inherit
       line-height 1.7rem
@@ -181,14 +182,14 @@ export default {
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem
         &:hover
-          color $accentColor
+          color var(--accent-color)
         &.router-link-active
-          color $accentColor
+          color var(--accent-color)
           &::after
             content ""
             width 0
             height 0
-            border-left 5px solid $accentColor
+            border-left 5px solid var(--accent-color)
             border-top 3px solid transparent
             border-bottom 3px solid transparent
             position absolute

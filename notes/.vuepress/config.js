@@ -10,7 +10,6 @@ module.exports = {
     themeConfig: {
         logo: '/favicon.svg',
         smoothScroll: true,
-        // 搜索设置
         search: true,
         searchMaxSuggestions: 10,
         sidebarDepth: 5,
@@ -18,12 +17,9 @@ module.exports = {
         docsDir: 'notes',
         editLinks: true,
         editLinkText: 'Edit this page on Github',
-        // 最后更新时间
         lastUpdated: 'Last Updated',
-        // 作者
         author: 'Renovamen',
-        // 项目开始时间
-        startYear: '2017',
+        authorLink: 'renovamen.ink',
         nav: [
             {
                 text: 'Stupid AI',
@@ -62,19 +58,6 @@ module.exports = {
             {
                 text: 'Snippets',
                 link: '/snippets/',
-            },
-            {
-                text: 'Me?',
-                items: [
-                    {
-                        text: 'GitHub',
-                        link: 'https://github.com/Renovamen',
-                    },
-                    {
-                        text: 'Blog',
-                        link: 'https://renovamen.ink',
-                    }
-                ]
             }
         ],
         sidebar: {

@@ -106,7 +106,7 @@ export default {
       .algolia-docsearch-suggestion--category-header
         padding 5px 10px
         margin-top 0
-        background $accentColor
+        background var(--accent-color)
         color #fff
         font-weight 600
         .algolia-docsearch-suggestion--highlight

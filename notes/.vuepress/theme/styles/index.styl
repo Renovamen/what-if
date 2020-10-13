@@ -10,14 +10,14 @@
 html, body
   padding 0
   margin 0
-  background-color #fff
+  background-color var(--background-color)
 
 body
   font-family Jost, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size 1.05rem
-  color $textColor
+  color var(--text-color)
 
 .page
   padding-left $sidebarWidth
@@ -29,9 +29,9 @@ body
   left 0
   right 0
   height $navbarHeight
-  background-color #fff
+  background var(--background-color-transparent)
+  border-bottom 1px solid var(--border-color)
   box-sizing border-box
-  border-bottom 1px solid $borderColor
 
 .sidebar-mask
   position fixed
@@ -53,8 +53,9 @@ body
   left 0
   bottom 0
   box-sizing border-box
-  border-right 1px solid $borderColor
+  border-right 1px solid var(--border-color)
   overflow-y auto
+  background-color var(--background-color)
 
 {$contentClass}:not(.custom)
   @extend $wrapper
@@ -81,7 +82,7 @@ body
 
 a
   font-weight 500
-  color $accentColor
+  color var(--accent-color)
   text-decoration none
 
 p a code
@@ -160,7 +161,7 @@ p, ul, ol
 
 hr
   border 0
-  border-top 1px solid $borderColor
+  border-top 1px solid var(--border-color)
 
 table
   border-collapse collapse
@@ -169,13 +170,13 @@ table
   overflow-x: auto
 
 tr
-  border-top 1px solid #dfe2e5
+  border-top 1px solid var(--border-color)
 
   &:nth-child(2n)
-    background-color #f6f8fa
+    background-color var(--code-color)
 
 th, td
-  border 1px solid #dfe2e5
+  border 1px solid var(--border-color)
   padding .6em 1em
 
 .theme-container
@@ -213,11 +214,11 @@ th, td
 
 ::-webkit-scrollbar-thumb:vertical
   height: 5px;
-  background-color: $accentColor;
+  background-color: var(--accent-color);
 
 ::-webkit-scrollbar-thumb:horizontal
   width: 5px;
-  background-color: $accentColor;
+  background-color: var(--accent-color);
 
 
 @media (min-width: ($MQMobile + 1px))

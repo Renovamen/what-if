@@ -9,17 +9,24 @@
       :items="items"
     />
     <slot name="bottom" />
+
+    <NavBtn />
   </aside>
 </template>
 
 <script>
 import SidebarLinks from '@theme/components/SidebarLinks.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
+import NavBtn from '@theme/components/NavBtn.vue'
 
 export default {
   name: 'Sidebar',
 
-  components: { SidebarLinks, NavLinks },
+  components: {
+    SidebarLinks,
+    NavLinks,
+    NavBtn
+  },
 
   props: ['items']
 }
@@ -38,7 +45,7 @@ export default {
     display inline-block
   .nav-links
     display none
-    border-bottom 1px solid $borderColor
+    border-bottom 1px solid var(--border-color)
     padding 0.5rem 0 0.75rem 0
     a
       font-weight 600
@@ -47,8 +54,13 @@ export default {
       line-height 1.25rem
       font-size 1em
       padding 0.5rem 0 0.5rem 1.5rem
-      button
+      button span
         font-size 1em
+        color: var(--text-color)
+  .nav-buttons
+    display none
+    padding 0.5rem 0 0.75rem 0
+    margin-left 0.3rem
   & > .sidebar-links
     padding 1.5rem 0
     & > li > a.sidebar-link
@@ -64,6 +76,8 @@ export default {
       display block
       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
         top calc(1rem - 2px)
+    .nav-buttons
+      display block
     & > .sidebar-links
       padding 1rem 0
 </style>

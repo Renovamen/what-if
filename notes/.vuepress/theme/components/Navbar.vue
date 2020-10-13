@@ -20,18 +20,21 @@
       >{{ $siteTitle }}</span>
     </RouterLink>
 
+    <NavLinks class="can-hide" />
+
     <div
       class="links"
       :style="linksWrapMaxWidth ? {
         'max-width': linksWrapMaxWidth + 'px'
       } : {}"
-    >
+    > 
       <AlgoliaSearchBox
         v-if="isAlgoliaSearch"
         :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-      <NavLinks class="can-hide" />
+      <NavBtn class="can-hide" />
+      <!-- <ToggleMode class="can-hide" /> -->
     </div>
   </header>
 </template>
@@ -41,6 +44,8 @@ import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import SidebarButton from '@theme/components/SidebarButton.vue'
 import NavLinks from '@theme/components/NavLinks.vue'
+import NavBtn from '@theme/components/NavBtn.vue'
+// import ToggleMode from '@theme/components/ToggleMode'
 
 export default {
   name: 'Navbar',
@@ -48,8 +53,10 @@ export default {
   components: {
     SidebarButton,
     NavLinks,
+    NavBtn,
     SearchBox,
-    AlgoliaSearchBox
+    AlgoliaSearchBox,
+    // ToggleMode
   },
 
   data () {
@@ -99,34 +106,52 @@ $navbar-horizontal-padding = 1.5rem
 .navbar
   padding $navbar-vertical-padding $navbar-horizontal-padding
   line-height $navbarHeight - 1.4rem
+  box-shadow var(--box-shadow)
   a, span, img
     display inline-block
-  .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
-    vertical-align top
-  .site-name
-    font-size 1.4rem
-    font-weight 600
-    color $textColor
-    position relative
+  .home-link
+    margin-right 30px
+    .logo
+      height $navbarHeight - 1.4rem
+      min-width $navbarHeight - 1.4rem
+      margin-right 0.8rem
+      vertical-align top
+    .site-name
+      font-size 1.4rem
+      font-weight 600
+      color var(--text-color)
+      position relative
   .links
     padding-left 1.5rem
     box-sizing border-box
-    background-color white
+    background-color var(--background-color)
     white-space nowrap
     font-size 0.9rem
     position absolute
     right $navbar-horizontal-padding
     top $navbar-vertical-padding
     display flex
+    background-color transparent
     .search-box
       flex: 0 0 auto
       vertical-align top
       input
         width 12rem
         border-radius $borderRadius
+        background-color var(--background-color)
+        color var(--text-color)
+        &:focus
+          border 1px solid var(--accent-color)
+      .suggestions
+        background var(--background-color)
+        border 1px solid var(--border-color)
+      .suggestion
+        a
+          color var(--text-color)
+        &.focused
+          background-color var(--background-color-secondary)
+          a
+            color var(--accent-color)
 
 @media (max-width: $MQNarrow)
   .search-box

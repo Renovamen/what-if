@@ -22,7 +22,7 @@ export default {
   width 100%
   overflow: hidden;
   border-radius: $borderRadius
-  border: 1px solid rgba($accentColor, 0.25)
+  border: 1px solid var(--border-color)
   box-sizing: border-box;
   transition all .3s
   background-color var(--background-color)
@@ -49,13 +49,13 @@ export default {
       height: 2px;
       bottom: 0;
       left: 0;
-      background-color: $accentColor;
+      background-color: var(--accent-color);
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
       transition: .3s ease-in-out;
     // &:hover a
-    //     color $accentColor
+    //     color var(--accent-color)
     // &:hover:after
     //     visibility visible
     //     -webkit-transform: scaleX(1);
