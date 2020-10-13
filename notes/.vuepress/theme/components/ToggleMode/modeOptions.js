@@ -19,6 +19,8 @@ const modeOptions = {
     '--text-color-sub': '#797878',
     '--border-color': '#e2ecec',
     '--code-color': 'rgba(27, 31, 35, 0.05)',
+    '--inline-code-text': '#c52950',
+    '--inline-code-bg': '#f9f2f4',
     '--mask-color': '#888',
     '--accent-color':  '#377bb5',
   },
@@ -42,6 +44,8 @@ const modeOptions = {
     '--text-color-sub': '#b8bbba',
     '--border-color': '#3c4a5f',
     '--code-color': 'rgba(0, 0, 0, .3)',
+    '--inline-code-text': '#96c2eb',
+    '--inline-code-bg': 'rgba(76, 86, 128, 0.4)',
     '--mask-color': '#000',
     '--accent-color':  '#74b3eb',
   }

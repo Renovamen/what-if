@@ -8,7 +8,10 @@
         :href="editLink"
         target="_blank"
         rel="noopener noreferrer"
-      >{{ editLinkText }}</a>
+      >
+        <font-awesome-icon icon="pencil-alt" style="font-size: 15px" />
+        {{ editLinkText }}
+      </a>
       <OutboundLink />
     </div>
 
@@ -25,9 +28,18 @@
 <script>
 import isNil from 'lodash/isNil'
 import { endingSlashRE, outboundRE } from '../util'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+library.add(faPencilAlt)
 
 export default {
   name: 'PageEdit',
+
+  components: {
+    FontAwesomeIcon
+  },
 
   computed: {
     lastUpdated () {

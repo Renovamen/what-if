@@ -7,7 +7,7 @@
 在 [EM 算法中](/ai/dl/pcg/parameters-learning-latent/#从-kl-散度来理解)有：
 
 $$
-\log p(x) = \text{ELBO}(q,x) + \text{KL}(q(z) \| p(z | x)) \tag{1}
+\log p(x) = \text{ELBO}(q,x) + \text{KL}(q(z) \| p(z \mid x)) \tag{1}
 $$
 
 在 E 步中，我们需要找到一个 $q(z) = p(z | x)$，从而使得 $\log p(x) = \text{ELBO}(q,x)$。这里假设 $p(z | x)$ 是可以计算的，但这个假设有可能是不成立的，后验可能是 intractable 的。

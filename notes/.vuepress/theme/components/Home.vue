@@ -55,13 +55,6 @@
     </div>
 
     <Content class="theme-default-content custom" />
-
-    <div
-      v-if="data.footer"
-      class="footer"
-    >
-      {{ data.footer }}
-    </div>
   </main>
 </template>
 
@@ -98,7 +91,7 @@ export default {
   .hero
     text-align center
     margin-top 33vh
-    height 67vh - $navbarHeight - 6.5em
+    height 67vh - $navbarHeight - 7.1rem
     img
       max-width: 100%
       max-height 280px
@@ -145,11 +138,6 @@ export default {
       color lighten($textColor, 10%)
     p
       color lighten($textColor, 25%)
-  .footer
-    padding 2.5rem
-    border-top 1px solid $borderColor
-    text-align center
-    color lighten($textColor, 25%)
 
 @media (max-width: $MQMobile)
   .home
