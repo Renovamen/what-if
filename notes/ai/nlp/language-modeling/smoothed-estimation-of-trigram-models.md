@@ -9,11 +9,11 @@
 定义三元、二元和一元模型的极大似然估计为：
 
 $$
-q_{ML}(w|u,v)=\frac{c(u,v,w)}{c(u,v)}
+q_{ML}(w \mid u,v)=\frac{c(u,v,w)}{c(u,v)}
 $$
 
 $$
-q_{ML}(w|v)=\frac{c(u,v,w)}{c(v)}
+q_{ML}(w \mid v)=\frac{c(u,v,w)}{c(v)}
 $$
 
 $$
@@ -27,7 +27,7 @@ $c(w)$ 表示单词 $w$ 在训练集中出现的次数，$c(\cdot)$ 表示训练
 因此**线性插值**（Linear Interpolation）的思想是把三种估计加权平均，定义三元估计为：
 
 $$
-q(w|u,v)=\lambda_1 \times q_{ML}(w|u,v) + \lambda_2 \times q_{ML}(w|v) + \lambda_3 \times q_{ML}(w)
+q(w \mid u,v)=\lambda_1 \times q_{ML}(w \mid u,v) + \lambda_2 \times q_{ML}(w \mid v) + \lambda_3 \times q_{ML}(w)
 $$
 
 其中 $\lambda_1 \geq 0, \lambda_2 \geq 0, \lambda_3 \geq 0$，且 $\lambda_1 + \lambda_2 + \lambda_3 = 1$。
@@ -37,11 +37,11 @@ $$
 估计 $\lambda$ 的值有多种方式，一种常见的方法是：假设我们有一些不同于训练集和测试集的额外的数据，称之为**验证集**（development set/validation set）。$c'(u, v, w)$ 为三元组 $(u, v, w)$ 在验证集中出现的次数。则验证集上的 **log-likelihood**（对数似然函数值）为：
 
 $$
-L(\lambda_1,\lambda_2,\lambda_3)=\sum_{u,v,w}c'(u,v,w) \log q(w|u,v)
+L(\lambda_1,\lambda_2,\lambda_3)=\sum_{u,v,w}c'(u,v,w) \log q(w \mid u,v)
 $$
 
 $$
-=\sum_{u,v,w}c'(u,v,w) \log (\lambda_1 \times q_{ML}(w|u,v) + \lambda_2 \times q_{ML}(w|v) + \lambda_3 \times q_{ML}(w))
+=\sum_{u,v,w}c'(u,v,w) \log (\lambda_1 \times q_{ML}(w \mid u,v) + \lambda_2 \times q_{ML}(w \mid v) + \lambda_3 \times q_{ML}(w))
 $$
 
 我们要选择使 $L(\lambda_1,\lambda_2,\lambda_3)$ 尽可能大，且满足 $\lambda_1 \geq 0, \lambda_2 \geq 0, \lambda_3 \geq 0$，$\lambda_1 + \lambda_2 + \lambda_3 = 1$ 的 $\lambda$ 值：
@@ -52,11 +52,11 @@ $$
 
 &nbsp;
 
-综上，我们引入了三个平滑参数 $\lambda_1,\lambda_2,\lambda_3$，这三个参数可以被理解为是三元、二元、一元极大似然估计的置信度或权重。比如，如果 $\lambda_1$ 的值非常接近于 1 ，则意味着我们认为 $q_{ML}(w|u,v)$ 的意义很大；相反，如果 $\lambda_1$ 接近于 0，则意味我们认为 $q_{ML}(w|u,v)$ 的意义不大。
+综上，我们引入了三个平滑参数 $\lambda_1,\lambda_2,\lambda_3$，这三个参数可以被理解为是三元、二元、一元极大似然估计的置信度或权重。比如，如果 $\lambda_1$ 的值非常接近于 1 ，则意味着我们认为 $q_{ML}(w \mid u,v)$ 的意义很大；相反，如果 $\lambda_1$ 接近于 0，则意味我们认为 $q_{ML}(w \mid u,v)$ 的意义不大。
 
 在实际操作中，我们应该让 $\lambda_1,\lambda_2,\lambda_3$ 根据不同的二元组 $(u, v)$ 进行改变。具体来说，当 $c(u, v)$ 更大时，我们应该将 $\lambda_1$ 变得更大。因为我们认为当 $c(u, v)$ 较大时，应该给三元估计更高的置信度。
 
-需要保证当 $c(u, v) = 0$ 时，$\lambda_1 =0$。因为此时 $q_{ML}(w|u,v)=\frac{c(u,v,w)}{c(u,v)}$ 的分母为 0，三元极大似然估计的无法定义。同样，如果 $c(u, v)$ 和 $c(v)$ 都为 0，那么需要保证 $ \lambda_1 = \lambda_2 = 0$，因为此时三元和二元极大似然估计都无法定义。
+需要保证当 $c(u, v) = 0$ 时，$\lambda_1 =0$。因为此时 $q_{ML}(w \mid u,v)=\frac{c(u,v,w)}{c(u,v)}$ 的分母为 0，三元极大似然估计的无法定义。同样，如果 $c(u, v)$ 和 $c(v)$ 都为 0，那么需要保证 $ \lambda_1 = \lambda_2 = 0$，因为此时三元和二元极大似然估计都无法定义。
 
 &nbsp;
 
@@ -84,7 +84,7 @@ $\lambda_1$ 会随着 $c(u, v)$ 的增大而增大，$\lambda_2$ 会随着 $c(v)
 
 ## Discounting Methods
 
-先考虑一下二元模型的估计，目标是对任意 $w \in \mathcal{V} \cup \{\text{STOP}\}$，$v \in \mathcal{V} \cup \{*\}$，估计出 $q(w|v)$。
+先考虑一下二元模型的估计，目标是对任意 $w \in \mathcal{V} \cup \{\text{STOP}\}$，$v \in \mathcal{V} \cup \{*\}$，估计出 $q(w \mid v)$。
 
 对任意 $c(v,w)>0$，定义 discounted counts 为：
 
@@ -97,7 +97,7 @@ $\beta$ 的值在 0 到 1 之间（一般取 $\beta = 0.5$）。减去 $\beta$ �
 对任意满足 $c(u,v)>0$ 的二元组 $(u,v)$，定义：
 
 $$
-q(w|v)=\frac{c^*(v,w)}{c(v)}
+q(w \mid v)=\frac{c^*(v,w)}{c(v)}
 $$
 
 相当于在分子上减去了 discounted counts。
@@ -147,7 +147,7 @@ $$
 则该估计的定义为：
 
 $$
-q_D(w|v)= 
+q_D(w \mid v)= 
 \begin{cases}
    \frac{c^*(v,w)}{c(v)} & \text{if } w \in \mathcal{A}(v) \\
    \alpha(v) \times \frac{q_{ML}(w)}{\sum_{w \in \mathcal{B}(v)}q_{ML}(w)} & \text{if } w \in \mathcal{B}(v)
@@ -175,10 +175,10 @@ $$
 则三元估计为：
 
 $$
-q_D(w|u,v)= 
+q_D(w \mid u,v)= 
 \begin{cases}   
 	\frac{c^*(u,v,w)}{c(u,v)} & \text{if } w \in \mathcal{A}(u,v) \\   
-	\alpha(u,v) \times \frac{q_{ML}(w|v)}{\sum_{w \in \mathcal{B}(u,v)}q_{ML}(w|v)} & \text{if } w \in \mathcal{B}(u,v)
+	\alpha(u,v) \times \frac{q_{ML}(w \mid v)}{\sum_{w \in \mathcal{B}(u,v)}q_{ML}(w \mid v)} & \text{if } w \in \mathcal{B}(u,v)
 \end{cases}
 $$
 
@@ -192,9 +192,9 @@ $$
 
 $\beta$ 是该方法中唯一的参数，跟线性插值模型一样，一般也是用能最大化 development data 上的 log-likelihood $\beta$。定义 $c'(u,v,w)$ 为三元组 $u,v,w$ 在 development data 中出现的次数，development data 上的 log-likelihood 为：
 $
-\sum_{u,v,w}c'(u,v,w) \log q_D (w|u,v)
+\sum_{u,v,w}c'(u,v,w) \log q_D (w \mid u,v)
 $
-$q_D (w|u,v)$ 会随着 $\beta$ 的变化而变化，一般我们会尝试一系列可能的 $\beta$ 值，如 $\{0.1,0.2,...,0.9\}$，对每个 $\beta$ 值都计算一遍 development data 上的 log-likelihood，最后选择能最大化 development data 上的 log-likelihood 的 $\beta$。
+$q_D (w \mid u,v)$ 会随着 $\beta$ 的变化而变化，一般我们会尝试一系列可能的 $\beta$ 值，如 $\{0.1,0.2,...,0.9\}$，对每个 $\beta$ 值都计算一遍 development data 上的 log-likelihood，最后选择能最大化 development data 上的 log-likelihood 的 $\beta$。
 
 
 
@@ -203,7 +203,7 @@ $q_D (w|u,v)$ 会随着 $\beta$ 的变化而变化，一般我们会尝试一系
 线性插值模型中参数估计的定义为：
 
 $$
-q(w|u,v)=\lambda_1 \times q_{ML}(w|u,v) + \lambda_2 \times q_{ML}(w|v) + \lambda_3 \times q_{ML}(w)
+q(w \mid u,v)=\lambda_1 \times q_{ML}(w \mid u,v) + \lambda_2 \times q_{ML}(w \mid v) + \lambda_3 \times q_{ML}(w)
 $$
 
 当 $c(u, v)$ 更大时，我们应该将 $\lambda_1$ 变得更大；同样，当 $c(v)$ 更大时，也应该将 $\lambda_2$ 变得更大。一个实现这个目标的典型方法是 bucketing。
@@ -231,7 +231,7 @@ $$
 则线性插值估计的定义为：
 
 $$
-q(w|u,v)=\lambda_1^{(k)} \times q_{ML}(w|u,v) + \lambda_2^{(k)} \times q_{ML}(w|v) + \lambda_3^{(k)} \times q_{ML}(w)
+q(w \mid u,v)=\lambda_1^{(k)} \times q_{ML}(w \mid u,v) + \lambda_2^{(k)} \times q_{ML}(w \mid v) + \lambda_3^{(k)} \times q_{ML}(w)
 $$
 
 其中 $k \in \Pi(u,v)$。
@@ -243,15 +243,15 @@ $$
 平滑参数还是取能最大化验证集上的 log-likelihood 的值。定义 $c'(u,v,w)$ 为三元组 $u,v,w$ 在验证集中出现的次数，则验证集上的的 log-likelihood 为：
 
 $$
-\sum_{u,v,w} c'(u,v,w) \log q(w|u,v)
+\sum_{u,v,w} c'(u,v,w) \log q(w \mid u,v)
 $$
 
 $$
-= \sum_{u,v,w} c'(u,v,w) \log (\lambda_1^{(\Pi(u,v))} \times q_{ML}(w|u,v) + \lambda_2^{(\Pi(u,v))} \times q_{ML}(w|v) + \lambda_3^{(\Pi(u,v))} \times q_{ML}(w))
+= \sum_{u,v,w} c'(u,v,w) \log (\lambda_1^{(\Pi(u,v))} \times q_{ML}(w \mid u,v) + \lambda_2^{(\Pi(u,v))} \times q_{ML}(w \mid v) + \lambda_3^{(\Pi(u,v))} \times q_{ML}(w))
 $$
 
 $$
-= \sum_{k=1}^K \sum_{u,v,w: \Pi(u,v)=k} c'(u,v,w) \log (\lambda_1^{(k)} \times q_{ML}(w|u,v) + \lambda_2^{(k)} \times q_{ML}(w|v) + \lambda_3^{(k)} \times q_{ML}(w))
+= \sum_{k=1}^K \sum_{u,v,w: \Pi(u,v)=k} c'(u,v,w) \log (\lambda_1^{(k)} \times q_{ML}(w \mid u,v) + \lambda_2^{(k)} \times q_{ML}(w \mid v) + \lambda_3^{(k)} \times q_{ML}(w))
 $$
 
 然后取能最大化这个值的 $\lambda_1^{(k)},\lambda_2^{(k)},\lambda_3^{(k)}$。

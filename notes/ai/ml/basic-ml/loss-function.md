@@ -5,7 +5,7 @@
 **交叉熵损失函数**（Cross-Entropy Loss Function）一般用于分类问题。假设样本的标签为 $C$ 个离散的类别，模型 $f(x; \theta) \in [0, 1]^C$ 的输出为标签类别的条件概率分布，即：
 
 $$
-f_c (x; \theta) = p(y=c | x; \theta)
+f_c (x; \theta) = p(y=c \mid x; \theta)
 $$
 
 $f_c (x; \theta)$ 为模型 $f(x; \theta)$ 的输出向量的第 $c$ 维，且满足：

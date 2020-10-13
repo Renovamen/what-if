@@ -1,17 +1,8 @@
 # 变分推断
 
 ::: tip
-这一节里有的公式似乎没有区分积分和求和，那就不区分了吧反正意思对了就行 2333。[saf](sadf)
+这一节里有的公式似乎没有区分积分和求和，那就不区分了吧反正意思对了就行 2333。
 :::
-
-::: warning
-这一节里有的公式似乎没有区分积分和求和，那就不区分了吧反正意思对了就行 2333。[saf](sadf)
-:::
-
-::: danger
-这一节里有的公式似乎没有区分积分和求和，那就不区分了吧反正意思对了就行 2333。[saf](sadf)
-:::
-
 
 在 [EM 算法中](/ai/dl/pcg/parameters-learning-latent/#从-kl-散度来理解)有：
 
@@ -25,13 +16,13 @@ $$
 这里解释一下为啥 intractable。由贝叶斯定理：
 
 $$
-p(z|x) = \frac{p(x|z)p(z)}{p(x)}
+p(z \mid x) = \frac{p(x \mid z)p(z)}{p(x)}
 $$
 
 也就是说这里需要算输入数据的分布 $p(x)$：
 
 $$
-p(x)=\int_z p(x|z)p(z) dz
+p(x)=\int_z p(x \mid z)p(z) dz
 $$
 
 
@@ -40,15 +31,15 @@ $$
 ---
 
 
-因此有了**变分推断（Variational Inference）**，也称**变分贝叶斯（Variational Bayesian）**，变分推断可以看作 EM 算法的扩展版，主要处理不能精确求出 $p(z|x)$ 的情况。
+因此有了**变分推断（Variational Inference）**，也称**变分贝叶斯（Variational Bayesian）**，变分推断可以看作 EM 算法的扩展版，主要处理不能精确求出 $p(z \mid x)$ 的情况。
 
-变分推断的思想是，在 E 步中，寻找一个简单分布 $q^\ast(z)$ 来近似 $p(z|x)$：
+变分推断的思想是，在 E 步中，寻找一个简单分布 $q^\ast(z)$ 来近似 $p(z \mid x)$：
 
 $$
-q^\ast(z) = \arg \min_{q(z) \in Q} \text{KL}(q(z) \| p(z | x)) \tag{2}
+q^\ast(z) = \arg \min_{q(z) \in Q} \text{KL}(q(z) \| p(z \mid x)) \tag{2}
 $$
 
-其中 $Q$ 为候选的概率分布族。当 $\text{KL}(q(z) \| p(z | x))$ 无限接近于 0 时，$q^\ast(z)$ 与 $p(z | x)$ 就无限接近。但如刚刚所说，$p(z|x)$ 难以直接计算，因此我们不能直接优化这个 KL 散度。
+其中 $Q$ 为候选的概率分布族。当 $\text{KL}(q(z) \| p(z \mid x))$ 无限接近于 0 时，$q^\ast(z)$ 与 $p(z \mid x)$ 就无限接近。但如刚刚所说，$p(z \mid x)$ 难以直接计算，因此我们不能直接优化这个 KL 散度。
 
 结合式 (1) 和式 (2)，有：
 
@@ -66,12 +57,12 @@ $$
 
 ## ELBO
 
-[上一节](/ai/dl/pcg/parameters-learning-latent/#从-kl-散度来理解)中算出 $\text{KL}(q(z) \| p(z | x))$ 为：
+[上一节](/ai/dl/pcg/parameters-learning-latent/#从-kl-散度来理解)中算出 $\text{KL}(q(z) \| p(z \mid x))$ 为：
 
 $$
 \begin{aligned}
-    \text{KL}(q(z) \| p(z | x)) &= - \sum_z q(z) \log \frac{p(z | x)}{q(z)} \\
-        &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log p(z|x)] \\
+    \text{KL}(q(z) \| p(z \mid x)) &= - \sum_z q(z) \log \frac{p(z \mid x)}{q(z)} \\
+        &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log p(z \mid x)] \\
         &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log \frac{p(x,z)}{p(x)}] \\
         &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log p(x,z)] + \log p(x)
 \end{aligned}
@@ -81,7 +72,7 @@ $$
 
 $$
 \begin{aligned}
-    \text{ELBO}(q,x) &= \log p(x) - \text{KL}(q(z) \| p(z | x)) \\
+    \text{ELBO}(q,x) &= \log p(x) - \text{KL}(q(z) \| p(z \mid x)) \\
         &= \mathbb{E}_{q(z)}[\log p(x,z)] - \mathbb{E}_{q(z)}[\log q(z)]
 \end{aligned}
 $$
@@ -90,8 +81,8 @@ $$
 
 $$
 \begin{aligned}
-    \theta_{t+1} &= \arg \max_\theta \sum_z p_{\theta_t}(z | x) \log p_\theta(x,z) \\
-        &= \arg \max_\theta \mathbb{E}_{p_{\theta_t}(z|x)}[\log p_\theta(x,z)]
+    \theta_{t+1} &= \arg \max_\theta \sum_z p_{\theta_t}(z \mid x) \log p_\theta(x,z) \\
+        &= \arg \max_\theta \mathbb{E}_{p_{\theta_t}(z \mid x)}[\log p_\theta(x,z)]
 \end{aligned}
 $$
 
@@ -199,7 +190,7 @@ $$
 
 ## 其他
 
-我们通常会选择一些比较简单的分布 $q(z)$ 来近似 $p(z|x)$。但当 $p(z|x)$ 比较复杂时，往往很难用简单的 $q(z)$ 去近似。这时可以用神经网络的强大拟合能力来近似 $p(z|x)$，这种思想被应用在了[变分自编码器中](/ai/dl/generative-models/vae/)。
+我们通常会选择一些比较简单的分布 $q(z)$ 来近似 $p(z \mid x)$。但当 $p(z \mid x)$ 比较复杂时，往往很难用简单的 $q(z)$ 去近似。这时可以用神经网络的强大拟合能力来近似 $p(z \mid x)$，这种思想被应用在了[变分自编码器中](/ai/dl/generative-models/vae/)。
 
 ## 参考
 

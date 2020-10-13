@@ -60,7 +60,7 @@ export default {
   .nav-buttons
     display none
     padding 0.5rem 0 0.75rem 0
-    margin-left 0.3rem
+    margin-left 0.4rem
   & > .sidebar-links
     padding 1.5rem 0
     & > li > a.sidebar-link
