@@ -69,6 +69,9 @@ export default {
       font-weight bold
     & > li:not(:first-child)
       margin-top .75rem
+  .sidebar-group-items
+    li.sidebar-header > a.sidebar-link.active
+      background-color var(--background-color-secondary)
 
 @media (max-width: $MQMobile)
   .sidebar

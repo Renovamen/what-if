@@ -123,7 +123,7 @@ a.sidebar-link
     font-weight 600
     color var(--accent-color)
     border-left-color var(--accent-color)
-    background var(--default-color-8)
+    // background var(--default-color-8)
   .sidebar-group &
     padding-left 2rem
   .sidebar-sub-headers &

@@ -164,6 +164,8 @@ export default {
     .dropdown-item
       color inherit
       line-height 1.7rem
+      &:hover
+        background-color var(--background-color-secondary)
       h4
         margin 0.45rem 0 0
         border-top 1px solid #eee

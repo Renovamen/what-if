@@ -6,6 +6,7 @@
     <li
       v-for="(item, i) in items"
       :key="i"
+      class="sidebar-header"
     >
       <SidebarGroup
         v-if="item.type === 'group'"
