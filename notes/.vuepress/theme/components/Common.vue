@@ -7,12 +7,12 @@
         <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
         <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-        <template #top>
-            <slot name="sidebar-top" />
-        </template>
-        <template #bottom>
-            <slot name="sidebar-bottom" />
-        </template>
+            <template #top>
+                <slot name="sidebar-top" />
+            </template>
+            <template #bottom>
+                <slot name="sidebar-bottom" />
+            </template>
         </Sidebar>
         <slot></slot>
     </div>
@@ -32,8 +32,8 @@ export default {
 
     props: {
         sidebarItems: {
-        type: Array,
-        default: () => []
+            type: Array,
+            default: () => []
         }
     },
 

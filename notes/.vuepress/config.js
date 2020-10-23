@@ -6,7 +6,6 @@ module.exports = {
         ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css' }],
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
     ],
-    dest: "dist",
     themeConfig: {
         logo: '/favicon.svg',
         smoothScroll: true,
@@ -194,6 +193,7 @@ module.exports = {
                     children: [
                         'dl/continual-learning',
                         'dl/meta-learning',
+                        'dl/model-compression',
                         'dl/misc'
                     ],
                 }

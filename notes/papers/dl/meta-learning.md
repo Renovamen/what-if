@@ -90,3 +90,9 @@ Literatures of Meta Learning (元学习) / Few-Shot Learning (小样本学习).
 ### Others
 
 - **Provable Guarantees for Gradient-Based Meta-Learning.** *Mikhail Khodak, et al.* ICML 2019. [[Paper]](https://arxiv.org/pdf/1902.10644.pdf) [[Code]](https://github.com/mkhodak/FMRL)
+
+
+## Libraries
+
+- [learn2learn](https://github.com/learnables/learn2learn)
+- [Torchmeta](https://github.com/tristandeleu/pytorch-meta)
