@@ -1,5 +1,6 @@
 ---
 title: Awesome Tools
+date: 2020-08-11
 ---
 
 记录一些用过（或者云过）的工具

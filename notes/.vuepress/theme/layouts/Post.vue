@@ -27,15 +27,14 @@ export default {
 
 
 <style lang="stylus">
-.post-container {
-    margin: $navbarHeight auto 0;
-    word-wrap: break-word;
-    word-break: normal;
-    .title {
-        text-align: center;
-        margin-bottom: -50px;
-        padding-top: 50px;
-        max-width: 95%;
-    }
-}
+.post-container
+    margin $navbarHeight auto 0
+    min-height 100vh - $navbarHeight - 15.5rem
+    word-wrap break-word
+    word-break normal
+    .title
+        text-align center
+        margin-bottom -50px
+        padding-top 50px
+        max-width 95%
 </style>

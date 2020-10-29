@@ -1,5 +1,6 @@
 ---
 title: Built a Cluster on Mac with VMware Fusion
+date: 2018-01-17
 ---
 
 Final Project of 2018 Fall Distributed Systems
