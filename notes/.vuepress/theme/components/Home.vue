@@ -87,7 +87,7 @@ export default {
   max-width $homePageWidth
   margin 0px auto
   display block
-  padding: 0;
+  padding: 0
   .hero
     text-align center
     margin-top 33vh
@@ -102,14 +102,14 @@ export default {
     h1, .description, .action
       margin 1.8rem auto
     .description
-      line-height: 1.5;
-      max-width: 610px;
-      font-size: 1.5rem;
+      line-height: 1.5
+      max-width: 610px
+      font-size: 1.5rem
     .action-button
       display inline-block
       font-size 1.2rem
       color #fff
-      background-color $accentColor
+      background-color var(--accent-color)
       padding 0.8rem 1.6rem
       border-radius 4px
       transition background-color .1s ease
@@ -118,7 +118,7 @@ export default {
       &:hover
         background-color lighten($accentColor, 10%)
   .features
-    border-top 1px solid $borderColor
+    border-top 1px solid var(--border-color)
     padding 1.2rem 0
     margin-top 2.5rem
     display flex

@@ -20,7 +20,7 @@ import Footer from '@theme/components/Footer'
 const emojiArray = [
   '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(^_^)b', '(╯‵□′)╯',
   '(=\'X\'=)', '(>_<)', '\\(°ˊДˋ°)/', 'ㄟ(▔▽▔)ㄏ'
-];
+] 
 
 export default {
   components: {
@@ -30,33 +30,27 @@ export default {
 
   methods: {
     getEmoji () {
-      return emojiArray[Math.floor(Math.random() * emojiArray.length)];
+      return emojiArray[Math.floor(Math.random() * emojiArray.length)] 
     }
   }
 }
 </script>
 
 <style lang="stylus">
-.error-container {
+.error-container
   padding $navbarHeight 2rem 0
   height 100vh - $navbarHeight - 15.5rem
-  .error-content {
-    text-align: center;
-    margin-top: 12rem;
-    h1 {
-      font-size: 35px;
-      margin-bottom: -15px;
-    }
-    .error-emoji {
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-    a {
-      color: var(--text-color);
-      :hover {
-        color: var(--accent-color);
-      }
-    }
-  }
-}
+  .error-content
+    text-align center 
+    margin-top 12rem 
+    h1
+      font-size 35px 
+      margin-bottom -15px 
+    .error-emoji
+      font-size 50px 
+      margin-bottom 10px 
+    a
+      color var(--text-color)
+      :hover
+        color var(--accent-color)
 </style>

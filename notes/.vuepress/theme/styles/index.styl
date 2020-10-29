@@ -98,7 +98,7 @@ kbd
 
 blockquote
   font-size 1rem
-  color #999;
+  color #999
   border-left .2rem solid #dfe2e5
   margin 1rem 0
   padding .25rem 0 .25rem 1rem
@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6
         margin-top 2rem
 
   &:hover .header-anchor
-    opacity: 1
+    opacity 1
 
 h1
   font-size 2.2rem
@@ -166,8 +166,8 @@ hr
 table
   border-collapse collapse
   margin 1rem 0
-  display: block
-  overflow-x: auto
+  display block
+  overflow-x auto
 
 tr
   border-top 1px solid var(--border-color)
@@ -182,7 +182,7 @@ th, td
 .theme-container
   &.sidebar-open
     .sidebar-mask
-      display: block
+      display block
 
   &.no-navbar
     {$contentClass}:not(.custom) > h1, h2, h3, h4, h5, h6
@@ -196,29 +196,26 @@ th, td
   display none !important
 
 /************* Katex overflow *************/
-.katex-display {
-  ::-webkit-scrollbar {
-    display: none
-  }
-  .katex-html {
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-}
+.katex-display
+  ::-webkit-scrollbar
+    display none
+  .katex-html
+    overflow-x auto
+    overflow-y hidden
+    -webkit-overflow-scrolling touch
 
 /************* Styles for scrollbar *************/
 ::-webkit-scrollbar
-  width: 5px;
-  height: 5px;
+  width 5px
+  height 5px
 
 ::-webkit-scrollbar-thumb:vertical
-  height: 5px;
-  background-color: var(--accent-color);
+  height 5px
+  background-color var(--accent-color)
 
 ::-webkit-scrollbar-thumb:horizontal
-  width: 5px;
-  background-color: var(--accent-color);
+  width 5px
+  background-color var(--accent-color)
 
 
 @media (min-width: ($MQMobile + 1px))

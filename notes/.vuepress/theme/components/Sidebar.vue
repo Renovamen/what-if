@@ -35,8 +35,8 @@ export default {
 <style lang="stylus">
 .sidebar
   &&::-webkit-scrollbar
-    width: 0
-    height: 0
+    width 0
+    height 0
   ul
     padding 0
     margin 0
@@ -56,7 +56,7 @@ export default {
       padding 0.5rem 0 0.5rem 1.5rem
       button span
         font-size 1em
-        color: var(--text-color)
+        color var(--text-color)
   .nav-buttons
     display none
     padding 0.5rem 0 0.75rem 0

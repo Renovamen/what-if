@@ -65,19 +65,15 @@ export default {
 
 <style lang="stylus">
 
-.nav-buttons {
-  a {
-    width: 25px;
-  }
-	svg {
-    transition: color .2s;
-    color: var(--text-color);
-    margin-top: 7px;
-    background-color: transparent;
-    border: 0;
-    &:hover {
-      color: var(--accent-color);
-    }
-  }
-}
+.nav-buttons
+  a
+    width 25px
+	svg
+    transition color .2s
+    color var(--text-color)
+    margin-top 7px
+    background-color transparent
+    border 0
+    &:hover
+      color var(--accent-color)
 </style>

@@ -26,14 +26,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.title {
-    text-align: center;
-    margin: $navbarHeight auto -50px;
-    h1 {
-       padding-top: 50px;
-    }
-    p {
-        font-size: 1.1rem;
-    }
-}
+.title
+    text-align center
+    margin $navbarHeight auto -50px
+    h1
+       padding-top 50px
+    p
+        font-size 1.1rem
 </style>

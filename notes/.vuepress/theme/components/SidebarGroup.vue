@@ -103,7 +103,7 @@ export default {
     & > .sidebar-group-items
       padding-left 1rem
       & > li > .sidebar-link
-        font-size: 0.95em;
+        font-size: 0.95em 
         border-left none
   &.depth-2
     & > .sidebar-heading
