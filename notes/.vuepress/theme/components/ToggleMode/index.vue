@@ -3,36 +3,28 @@
         :aria-label="'Toggle ' + nextMode" :title="'Toggle ' + nextMode"
         class="toggle-mode"
     >
-		<font-awesome-icon :icon="['far', 'sun']" v-if="currentMode === 'light'" style="font-size: 20px" />
-    	<font-awesome-icon :icon="['far', 'moon']" v-else-if="currentMode === 'dark'" style="font-size: 18px" />
-		<font-awesome-icon :icon="['fas', 'magic']" v-else-if="currentMode === 'auto'" style="font-size: 18px" />
+		<v-icon name="ri/sun-line" v-if="currentMode === 'light'" />
+    	<v-icon name="ri/moon-line" v-else-if="currentMode === 'dark'" />
+		<v-icon name="fa/magic" v-else-if="currentMode === 'auto'" />
 	</a>
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
-import { faMagic } from '@fortawesome/free-solid-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
 import applyMode from './applyMode'
-
-library.add(faSun, faMoon, faMagic)
+// icons
+import 'oh-vue-icons/icons/ri/sun-line'
+import 'oh-vue-icons/icons/ri/moon-line'
+import 'oh-vue-icons/icons/fa/magic'
 
 let modeOptions = ['light', 'dark', 'auto']
 
 export default {
 	name: 'UserSettings',
-
 	data () {
 		return {
 			currentMode: 'auto'
 		}
 	},
-
-	components: {
-		FontAwesomeIcon,
-	},
-
 	computed: {
 		nextMode() {
 			const currentIndex = modeOptions.indexOf(this.currentMode)
@@ -40,7 +32,6 @@ export default {
 			return modeOptions[nextIndex]
 		}
 	},
-
 	mounted () {
 		// modePicker 开启时默认使用用户主动设置的模式
 		this.currentMode = localStorage.getItem('mode') || this.$themeConfig.mode || 'auto'
@@ -57,7 +48,6 @@ export default {
 
 		applyMode(this.currentMode)
 	},
-
 	methods: {
 		// switch to the next mode
 		toggleMode() {

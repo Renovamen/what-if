@@ -116,6 +116,6 @@ export default {
       color var(--text-color)
   .nav-item > a:not(.external)
     &:hover, &.router-link-active
-      margin-bottom -2px
+      padding-bottom 13px
       border-bottom 2px solid var(--accent-color)
 </style>

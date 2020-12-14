@@ -9,8 +9,8 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <font-awesome-icon icon="pencil-alt" style="font-size: 15px" />
-        {{ editLinkText }}
+        <v-icon name="fa/pencil-alt" />
+        <p>{{ editLinkText }}</p>
       </a>
       <OutboundLink />
     </div>
@@ -28,24 +28,15 @@
 <script>
 import isNil from 'lodash/isNil'
 import { endingSlashRE, outboundRE } from '../util'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
-
-library.add(faPencilAlt)
+// icon
+import 'oh-vue-icons/icons/fa/pencil-alt'
 
 export default {
   name: 'PageEdit',
-
-  components: {
-    FontAwesomeIcon
-  },
-
   computed: {
     lastUpdated () {
       return this.$page.lastUpdated
     },
-
     lastUpdatedText () {
       if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
         return this.$themeLocaleConfig.lastUpdated
@@ -55,7 +46,6 @@ export default {
       }
       return 'Last Updated'
     },
-
     editLink () {
       const showEditLink = isNil(this.$page.frontmatter.editLink)
         ? this.$site.themeConfig.editLinks
@@ -79,7 +69,6 @@ export default {
       }
       return null
     },
-
     editLinkText () {
       return (
         this.$themeLocaleConfig.editLinkText
@@ -88,7 +77,6 @@ export default {
       )
     }
   },
-
   methods: {
     createEditLink (repo, docsRepo, docsDir, docsBranch, path) {
       const bitbucket = /bitbucket.org/
@@ -139,15 +127,23 @@ export default {
   padding-top 1rem
   padding-bottom 1rem
   overflow auto
-
   .edit-link
     display inline-block
     a
       // color lighten($textColor, 25%)
       color var(--accent-color)
       margin-right 0.25rem
-      &:hover
-        text-decoration underline
+      .v-icon
+        color var(--accent-color)
+        display inline-block
+        width 19px
+        height 19px
+      p
+        vertical-align middle
+        display inline-block
+        margin 0
+        &:hover
+          text-decoration underline
   .last-updated
     float right
     font-size 0.9em
@@ -166,5 +162,4 @@ export default {
       font-size 0.8em
       float none
       text-align left
-
 </style>

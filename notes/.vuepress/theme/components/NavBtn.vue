@@ -3,28 +3,26 @@
     <ToggleMode />
 
     <a v-if="authorLink" :href="authorLink" rel="noopener noreferrer" target="_blank">
-      <font-awesome-icon icon="share-alt" style="font-size: 18px" class="blog" />
+      <v-icon name="fa/share-alt" scale="1.05" />
     </a>
 
     <a v-if="repoLink" :href="repoLink" rel="noopener noreferrer" target="_blank">
-      <font-awesome-icon :icon="['fab', repoLabel]" style="font-size: 20px" />
+      <v-icon :name="repoLabel" scale="1.2" />
     </a>
   </nav>
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faShareAlt } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faGitlab, faBitbucket } from '@fortawesome/free-brands-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
 import ToggleMode from '@theme/components/ToggleMode'
-
-library.add(faShareAlt, faGithub, faGitlab, faBitbucket)
+// icons
+import 'oh-vue-icons/icons/fa/share-alt'
+import 'oh-vue-icons/icons/fa/brands/gitlab'
+import 'oh-vue-icons/icons/fa/brands/github'
+import 'oh-vue-icons/icons/fa/brands/bitbucket'
 
 export default {
   components: {
-    ToggleMode,
-    FontAwesomeIcon
+    ToggleMode
   },
 
   computed: {
@@ -47,13 +45,12 @@ export default {
       if (this.$site.themeConfig.repoLabel) {
         return this.$site.themeConfig.repoLabel
       }
-
       const repoHost = this.repoLink.match(/^https?:\/\/[^/]+/)[0]
-      const platformIcons = ['github', 'gitlab', 'bitbucket']
+      const platformIcons = ['gitlab', 'github', 'bitbucket']
       for (let i = 0; i < platformIcons.length; i++) {
         const icon = platformIcons[i]
         if (new RegExp(icon, 'i').test(repoHost)) {
-          return icon
+          return `fa/brands/${icon}`
         }
       }
 
@@ -68,10 +65,10 @@ export default {
 .nav-buttons
   a
     width 25px
-	svg
+	.v-icon
     transition color .2s
     color var(--text-color)
-    margin-top 7px
+    vertical-align middle
     background-color transparent
     border 0
     &:hover
