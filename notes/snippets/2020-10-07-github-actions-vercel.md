@@ -66,6 +66,8 @@ gem 'jekyll-paginate', '~> 1.1.0'
 
 ## Node.js
 
+### npm
+
 所有能用 Node.js 搞定的东西都能用这个工作流处理：
 
 ```yaml
@@ -88,7 +90,7 @@ jobs:
 
       # Node.js 环境
       - name: Setup Node
-        uses: actions/setup-node@v2.1.0
+        uses: actions/setup-node@v2.1.2
         with:
           node-version: '12.x'
 
@@ -169,3 +171,55 @@ jobs:
 ```
 
 不过虽然作者在[表示](https://github.com/JamesIves/github-pages-deploy-action#additional-build-files-)在 `gh-pages` 分支手动 commit 一个 `CNAME` 之后，`CNAME` 不会在后面的部署中被清掉，但我不管怎么试都会被清掉，所以就没用了...大概是我的方式不太对...
+
+### yarn
+
+如果包管理工具用的 `yarn`：
+
+```yaml
+name: build and deploy
+
+# 检测 master 分支上的推送和 pr
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-and-deploy-vuepress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12'
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      
+      - name: Build
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+          cname: notebook.renovamen.ink
+```
