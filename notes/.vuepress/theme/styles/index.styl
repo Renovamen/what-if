@@ -195,15 +195,6 @@ th, td
 .icon.outbound
   display none !important
 
-/************* Katex overflow *************/
-.katex-display
-  ::-webkit-scrollbar
-    display none
-  .katex-html
-    overflow-x auto
-    overflow-y hidden
-    -webkit-overflow-scrolling touch
-
 /************* Styles for scrollbar *************/
 ::-webkit-scrollbar
   width 5px
@@ -217,7 +208,11 @@ th, td
   width 5px
   background-color var(--accent-color)
 
-
+/************* Katex scrollbar *************/
+.katex-display
+  ::-webkit-scrollbar
+    display none
+    
 @media (min-width: ($MQMobile + 1px))
   .theme-container.no-sidebar
     .sidebar

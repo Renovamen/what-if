@@ -19,6 +19,7 @@
     "vuepress": "^1.6.0"
   },
   "dependencies": {
+    "@renovamen/vuepress-plugin-katex": "^0.1.0",
     "@vuepress/plugin-active-header-links": "1.6.0",
     "@vuepress/plugin-nprogress": "1.6.0",
     "@vuepress/plugin-search": "1.6.0",
@@ -26,10 +27,9 @@
     "@vuepress/plugin-medium-zoom": "1.5.0",
     "vue-class-component": "^7.2.3",
     "vue-click-outside": "1.1.0",
-    "@liradb2000/markdown-it-katex": "^2.0.7",
     "md5": "2.2.1",
     "lodash": "^4.17.15",
-    "oh-vue-icons": "^0.1.2",
+    "oh-vue-icons": "^0.1.5",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2",
     "vuepress-plugin-container": "^2.0.2",

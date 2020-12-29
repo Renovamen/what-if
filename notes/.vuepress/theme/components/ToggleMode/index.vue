@@ -3,18 +3,14 @@
         :aria-label="'Toggle ' + nextMode" :title="'Toggle ' + nextMode"
         class="toggle-mode"
     >
-		<v-icon name="ri/sun-line" v-if="currentMode === 'light'" />
-    	<v-icon name="ri/moon-line" v-else-if="currentMode === 'dark'" />
-		<v-icon name="fa/magic" v-else-if="currentMode === 'auto'" />
+		<v-icon name="ri-sun-line" v-if="currentMode === 'light'" />
+    	<v-icon name="ri-moon-line" v-else-if="currentMode === 'dark'" />
+		<v-icon name="fa-magic" v-else-if="currentMode === 'auto'" />
 	</a>
 </template>
 
 <script>
 import applyMode from './applyMode'
-// icons
-import 'oh-vue-icons/icons/ri/sun-line'
-import 'oh-vue-icons/icons/ri/moon-line'
-import 'oh-vue-icons/icons/fa/magic'
 
 let modeOptions = ['light', 'dark', 'auto']
 

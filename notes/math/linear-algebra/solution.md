@@ -82,9 +82,7 @@ $$
       A x_p & = b \\
       A x_n & = 0
     \end{aligned}
-    \quad
-      \rightarrow{}
-    \quad
+    \quad \rightarrow{} \quad
     A(x_p+x_n)=b$
 
     即 $Ax=b$ 的解集为其特解加上零空间。对本例有：

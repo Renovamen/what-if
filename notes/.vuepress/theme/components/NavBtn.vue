@@ -3,7 +3,7 @@
     <ToggleMode />
 
     <a v-if="authorLink" :href="authorLink" rel="noopener noreferrer" target="_blank">
-      <v-icon name="fa/share-alt" scale="1.05" />
+      <v-icon name="fa-share-alt" scale="1.05" />
     </a>
 
     <a v-if="repoLink" :href="repoLink" rel="noopener noreferrer" target="_blank">
@@ -14,11 +14,6 @@
 
 <script>
 import ToggleMode from '@theme/components/ToggleMode'
-// icons
-import 'oh-vue-icons/icons/fa/share-alt'
-import 'oh-vue-icons/icons/fa/brands/gitlab'
-import 'oh-vue-icons/icons/fa/brands/github'
-import 'oh-vue-icons/icons/fa/brands/bitbucket'
 
 export default {
   components: {
@@ -50,7 +45,7 @@ export default {
       for (let i = 0; i < platformIcons.length; i++) {
         const icon = platformIcons[i]
         if (new RegExp(icon, 'i').test(repoHost)) {
-          return `fa/brands/${icon}`
+          return `fa-${icon}`
         }
       }
 

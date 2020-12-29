@@ -82,7 +82,8 @@ module.exports = (options, ctx) => {
           after: () => '</details>\n'
         }
       ],
-      ['smooth-scroll', enableSmoothScroll]
+      ['smooth-scroll', enableSmoothScroll],
+      '@renovamen/vuepress-plugin-katex'
     ]
   }
 }

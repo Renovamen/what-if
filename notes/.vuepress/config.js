@@ -3,7 +3,7 @@ module.exports = {
     description: "Renovamen's messy notebook.",
     head: [
         ['link', { rel: 'icon', href: '/favicon.svg' }],
-        ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css' }],
+        ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css' }],
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
     ],
     themeConfig: {
@@ -197,16 +197,7 @@ module.exports = {
                         'dl/misc'
                     ],
                 }
-            ],
-        },
-    },
-    markdown: {
-        // lineNumbers: true,
-        extendMarkdown: md => {
-            md.set({
-                html: true
-            })
-            md.use(require('@liradb2000/markdown-it-katex'))
+            ]
         }
     }
 }

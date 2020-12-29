@@ -9,7 +9,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <v-icon name="fa/pencil-alt" />
+        <v-icon name="fa-pencil-alt" />
         <p>{{ editLinkText }}</p>
       </a>
       <OutboundLink />
@@ -28,8 +28,6 @@
 <script>
 import isNil from 'lodash/isNil'
 import { endingSlashRE, outboundRE } from '../util'
-// icon
-import 'oh-vue-icons/icons/fa/pencil-alt'
 
 export default {
   name: 'PageEdit',
