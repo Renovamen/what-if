@@ -4,7 +4,7 @@
         class="toggle-mode"
     >
 		<v-icon name="ri-sun-line" v-if="currentMode === 'light'" />
-    	<v-icon name="ri-moon-line" v-else-if="currentMode === 'dark'" />
+    <v-icon name="ri-moon-line" v-else-if="currentMode === 'dark'" />
 		<v-icon name="fa-magic" v-else-if="currentMode === 'auto'" />
 	</a>
 </template>

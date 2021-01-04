@@ -1,6 +1,7 @@
 <template>
   <Common :sidebarItems="sidebarItems">
     <Home v-if="$page.frontmatter.home" />
+    
     <Page v-else :sidebar-items="sidebarItems">
       <template #top>
         <slot name="page-top" />
@@ -9,7 +10,11 @@
         <slot name="page-bottom" />
       </template>
     </Page>
-    <Footer v-if="$page.frontmatter.home" class="footer" />
+    
+    <Footer
+      v-if="$page.frontmatter.home"
+      class="footer"
+    />
   </Common>
 </template>
 

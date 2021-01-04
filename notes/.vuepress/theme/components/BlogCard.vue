@@ -1,5 +1,8 @@
 <template>
-  <div class="blog-card" @click="$router.push(item.path)">
+  <div
+    class="blog-card"
+    @click="$router.push(item.path)"
+  >
     <div class="blog-card__title">
       <router-link :to="item.path">{{ item.title }}</router-link>
     </div>

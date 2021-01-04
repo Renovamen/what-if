@@ -2,12 +2,12 @@ import VueIcon from 'oh-vue-icons/components/Icon'
 
 import {
   FaGithub, FaGitlab, FaBitbucket, FaShareAlt, FaPencilAlt,
-  RiSunLine, RiMoonLine, FaMagic
+  RiSunLine, RiMoonLine, FaMagic, RiMenuLine
 } from 'oh-vue-icons/icons'
 
 VueIcon.add([
   FaGithub, FaGitlab, FaBitbucket, FaShareAlt, FaPencilAlt,
-  RiSunLine, RiMoonLine, FaMagic
+  RiSunLine, RiMoonLine, FaMagic, RiMenuLine
 ])
 
 export default ({

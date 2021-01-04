@@ -2,12 +2,28 @@
   <nav class="nav-buttons">
     <ToggleMode />
 
-    <a v-if="authorLink" :href="authorLink" rel="noopener noreferrer" target="_blank">
-      <v-icon name="fa-share-alt" scale="1.05" />
+    <a
+      v-if="authorLink"
+      rel="noopener noreferrer"
+      target="_blank"
+      :href="authorLink"
+    >
+      <v-icon
+        name="fa-share-alt"
+        scale="1.05"
+      />
     </a>
 
-    <a v-if="repoLink" :href="repoLink" rel="noopener noreferrer" target="_blank">
-      <v-icon :name="repoLabel" scale="1.2" />
+    <a
+      v-if="repoLink"
+      rel="noopener noreferrer"
+      target="_blank"
+      :href="repoLink"
+    >
+      <v-icon
+        :name="repoLabel"
+        scale="1.2"
+      />
     </a>
   </nav>
 </template>

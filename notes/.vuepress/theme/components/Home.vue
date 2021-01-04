@@ -26,7 +26,8 @@
       <p class="description">
         Renovamen's messy notebook, maybe it is unsuitable for humans to read... 
         This notebook is powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a>, 
-        hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a> and <a href="https://vercel.com/" target="_blank">Vercel</a>.
+        hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a>
+        and <a href="https://vercel.com/" target="_blank">Vercel</a>.
       </p>
 
       <p

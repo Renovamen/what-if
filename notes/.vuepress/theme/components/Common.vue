@@ -1,12 +1,24 @@
 <template>
-    <div class="theme-container" :class="pageClasses"
-        @touchstart="onTouchStart" @touchend="onTouchEnd"
+    <div
+        class="theme-container"
+        :class="pageClasses"
+        @touchstart="onTouchStart"
+        @touchend="onTouchEnd"
     >
-        <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" />
+        <Navbar
+            v-if="shouldShowNavbar"
+            @toggle-sidebar="toggleSidebar"
+        />
 
-        <div class="sidebar-mask" @click="toggleSidebar(false)" />
+        <div
+            class="sidebar-mask"
+            @click="toggleSidebar(false)"
+        />
 
-        <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+        <Sidebar
+            :items="sidebarItems"
+            @toggle-sidebar="toggleSidebar"
+        >
             <template #top>
                 <slot name="sidebar-top" />
             </template>

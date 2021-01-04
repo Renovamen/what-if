@@ -5,7 +5,10 @@
     <Content class="theme-default-content" />
     <PageEdit />
 
-    <PageNav v-if="sidebarItems" v-bind="{ sidebarItems }" />
+    <PageNav
+      v-if="sidebarItems"
+      v-bind="{ sidebarItems }"
+    />
 
     <slot name="bottom" />
   </main>
