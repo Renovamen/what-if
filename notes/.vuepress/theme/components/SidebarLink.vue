@@ -97,7 +97,7 @@ function renderExternal (h, to, text) {
     class: {
       'sidebar-link': true
     }
-  }, [text, h('OutboundLink')])
+  }, text)
 }
 </script>
 

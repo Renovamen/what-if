@@ -137,7 +137,7 @@ $navbar-horizontal-padding = 1.5rem
       input
         width 12rem
         border-radius $borderRadius
-        background-color var(--background-color)
+        background-color transparent
         color var(--text-color)
         &:focus
           border 1px solid var(--accent-color)

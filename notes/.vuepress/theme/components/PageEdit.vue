@@ -12,7 +12,6 @@
         <v-icon name="fa-pencil-alt" />
         <p>{{ editLinkText }}</p>
       </a>
-      <OutboundLink />
     </div>
 
     <div

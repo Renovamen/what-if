@@ -17,8 +17,6 @@
           rel="noopener noreferrer"
         >
           {{ prev.title || prev.path }}
-
-          <OutboundLink />
         </a>
 
         <RouterLink
@@ -41,8 +39,6 @@
           rel="noopener noreferrer"
         >
           {{ next.title || next.path }}
-
-          <OutboundLink />
         </a>
 
         <RouterLink
