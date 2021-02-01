@@ -1,13 +1,13 @@
 <template>
-    <div class="blog-list-wrapper">
-        <div class="blog-list">
-            <BlogCard
-              v-for="(item) in getBlogs()"
-              :key="item.path"
-              :item="item"
-            />
-        </div>
+  <div class="blog-list-wrapper">
+    <div class="blog-list">
+      <BlogCard
+        v-for="(item) in getBlogs()"
+        :key="item.path"
+        :item="item"
+      />
     </div>
+  </div>
 </template>
 
 <script>
