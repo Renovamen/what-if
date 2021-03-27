@@ -4,10 +4,7 @@
 
     <slot name="top" />
 
-    <SidebarLinks
-      :depth="0"
-      :items="items"
-    />
+    <SidebarLinks :depth="0" :items="items" />
     <slot name="bottom" />
 
     <NavBtn />
@@ -15,12 +12,12 @@
 </template>
 
 <script>
-import SidebarLinks from '@theme/components/SidebarLinks.vue'
-import NavLinks from '@theme/components/NavLinks.vue'
-import NavBtn from '@theme/components/NavBtn.vue'
+import SidebarLinks from "@theme/components/SidebarLinks.vue";
+import NavLinks from "@theme/components/NavLinks.vue";
+import NavBtn from "@theme/components/NavBtn.vue";
 
 export default {
-  name: 'Sidebar',
+  name: "Sidebar",
 
   components: {
     SidebarLinks,
@@ -28,8 +25,13 @@ export default {
     NavBtn
   },
 
-  props: ['items']
-}
+  props: {
+    items: {
+      type: Array,
+      default: () => []
+    }
+  }
+};
 </script>
 
 <style lang="stylus">

@@ -14,13 +14,21 @@
 </template>
 
 <script>
-import Common from '@theme/components/Common.vue'
-import Footer from '@theme/components/Footer'
+import Common from "@theme/components/Common.vue";
+import Footer from "@theme/components/Footer";
 
 const emojiArray = [
-  '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(^_^)b', '(╯‵□′)╯',
-  '(=\'X\'=)', '(>_<)', '\\(°ˊДˋ°)/', 'ㄟ(▔▽▔)ㄏ'
-] 
+  "\\(o_o)/",
+  "(o^^)o",
+  "(˚Δ˚)b",
+  "(^-^*)",
+  "(^_^)b",
+  "(╯‵□′)╯",
+  "(='X'=)",
+  "(>_<)",
+  "\\(°ˊДˋ°)/",
+  "ㄟ(▔▽▔)ㄏ"
+];
 
 export default {
   components: {
@@ -29,11 +37,11 @@ export default {
   },
 
   methods: {
-    getEmoji () {
-      return emojiArray[Math.floor(Math.random() * emojiArray.length)] 
+    getEmoji() {
+      return emojiArray[Math.floor(Math.random() * emojiArray.length)];
     }
   }
-}
+};
 </script>
 
 <style lang="stylus">
@@ -41,14 +49,14 @@ export default {
   padding $navbarHeight 2rem 0
   height 100vh - $navbarHeight - 15.5rem
   .error-content
-    text-align center 
-    margin-top 12rem 
+    text-align center
+    margin-top 12rem
     h1
-      font-size 35px 
-      margin-bottom -15px 
+      font-size 35px
+      margin-bottom -15px
     .error-emoji
-      font-size 50px 
-      margin-bottom 10px 
+      font-size 50px
+      margin-bottom 10px
     a
       color var(--text-color)
       :hover

@@ -1,29 +1,53 @@
 {
   "name": "what-if",
-  "description": "Renovamen's notebook.",
   "version": "1.0.0",
-  "author": "Renovamen <renovamenzxh@gmail.com>",
+  "description": "Renovamen's notebook.",
   "homepage": "https://notebook.renovamen.ink",
+  "bugs": "https://github.com/Renovamen/what-if/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/Renovamen/what-if"
   },
-  "bugs": "https://github.com/Renovamen/what-if/issues",
   "license": "MIT",
+  "author": "Renovamen <renovamenzxh@gmail.com>",
   "scripts": {
     "dev": "vuepress dev notes . --host 0.0.0.0 --port 4000",
     "build": "vuepress build notes . --dest dist",
+    "lint": "eslint --ext .js,.vue notes/.vuepress",
+    "lint-fix": "eslint --fix --ext .js,.vue notes/.vuepress",
     "preview": "cd dist && http-server"
   },
-  "devDependencies": {
-    "vuepress": "^1.8.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix --ext .js,.vue notes/.vuepress"
+    ],
+    "package.json": [
+      "sort-package-json"
+    ]
   },
   "dependencies": {
     "@renovamen/vuepress-plugin-katex": "^0.1.0",
     "@vuepress/plugin-blog": "1.9.2",
     "markdown-it-chain": "^1.3.0",
-    "oh-vue-icons": "^0.1.7",
+    "oh-vue-icons": "^0.4.1",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-smooth-scroll": "^0.0.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.8.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "sort-package-json": "^1.49.0",
+    "vuepress": "^1.8.0"
   }
 }

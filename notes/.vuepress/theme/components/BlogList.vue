@@ -1,17 +1,13 @@
 <template>
   <div class="blog-list-wrapper">
     <div class="blog-list">
-      <BlogCard
-        v-for="(item) in getBlogs()"
-        :key="item.path"
-        :item="item"
-      />
+      <BlogCard v-for="item in getBlogs()" :key="item.path" :item="item" />
     </div>
   </div>
 </template>
 
 <script>
-import BlogCard from './BlogCard'
+import BlogCard from "./BlogCard";
 
 export default {
   components: {
@@ -19,10 +15,10 @@ export default {
   },
   methods: {
     getBlogs() {
-      return this.$pagination.pages
+      return this.$pagination.pages;
     }
-  },
-}
+  }
+};
 </script>
 
 <style lang="stylus">

@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="sidebar-button"
-    @click="$emit('toggle-sidebar')"
-  >
+  <div class="sidebar-button" @click="$emit('toggle-sidebar')">
     <v-icon name="ri-menu-line" />
   </div>
 </template>
@@ -17,7 +14,7 @@
   padding 0.6rem
   top 0.45rem
   left 0.8rem
-  .v-icon
+  .ov-icon
     display block
     width 1.5rem
     height 1.5rem

@@ -1,30 +1,27 @@
 <template>
-    <Common>
-        <div class="post-container">
-            <h1 class="title">{{ $page.title }}</h1>
-            <Page />
-        </div>
-        <Footer class="footer" />
-    </Common>
+  <Common>
+    <div class="post-container">
+      <h1 class="title">{{ $page.title }}</h1>
+      <Page />
+    </div>
+    <Footer class="footer" />
+  </Common>
 </template>
 
 <script>
-import Footer from '@theme/components/Footer'
-import Common from '@theme/components/Common.vue'
-import PageEdit from '@theme/components/PageEdit.vue'
-import Page from '@theme/components/Page.vue'
+import Footer from "@theme/components/Footer";
+import Common from "@theme/components/Common.vue";
+import Page from "@theme/components/Page.vue";
 
 export default {
-    name: 'Post',
-    components: {
-        Footer,
-        Common,
-        PageEdit,
-        Page
-    },
-}
+  name: "Post",
+  components: {
+    Footer,
+    Common,
+    Page
+  }
+};
 </script>
-
 
 <style lang="stylus">
 .post-container

@@ -1,15 +1,12 @@
 <template>
-  <div
-    class="theme-code-block"
-    :class="{ 'theme-code-block__active': active }"
-  >
+  <div class="theme-code-block" :class="{ 'theme-code-block__active': active }">
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CodeBlock',
+  name: "CodeBlock",
   props: {
     title: {
       type: String,
@@ -20,17 +17,17 @@ export default {
       default: false
     }
   }
-}
+};
 </script>
 
 <style scoped>
-  .theme-code-block {
-    display: none;
-  }
-  .theme-code-block__active {
-    display: block;
-  }
-  .theme-code-block > pre {
-    background-color: orange;
-  }
+.theme-code-block {
+  display: none;
+}
+.theme-code-block__active {
+  display: block;
+}
+.theme-code-block > pre {
+  background-color: orange;
+}
 </style>

@@ -1,28 +1,28 @@
 <template>
-    <Common>
-        <div class="title">
-            <h1>Snippets</h1>
-            <p style="opacity: .8">A space for storing these messy segments.</p>
-        </div>
-        <BlogList />
-        <Footer class="footer" />
-    </Common>
+  <Common>
+    <div class="title">
+      <h1>Snippets</h1>
+      <p style="opacity: 0.8">A space for storing these messy segments.</p>
+    </div>
+    <BlogList />
+    <Footer class="footer" />
+  </Common>
 </template>
 
 <script>
-import BlogList from '@theme/components/BlogList.vue'
-import Footer from '@theme/components/Footer'
-import Common from '@theme/components/Common.vue'
+import BlogList from "@theme/components/BlogList.vue";
+import Footer from "@theme/components/Footer";
+import Common from "@theme/components/Common.vue";
 
 export default {
-    name: 'PostIndex',
+  name: "PostIndex",
 
-    components: {
-        BlogList,
-        Common,
-        Footer
-    },
-}
+  components: {
+    BlogList,
+    Common,
+    Footer
+  }
+};
 </script>
 
 <style lang="stylus" scoped>

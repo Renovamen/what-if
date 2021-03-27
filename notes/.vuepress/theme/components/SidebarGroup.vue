@@ -14,17 +14,13 @@
       class="sidebar-heading clickable"
       :class="{
         open,
-        'active': isActive($route, item.path)
+        active: isActive($route, item.path)
       }"
       :to="item.path"
       @click.native="$emit('toggle')"
     >
       <span>{{ item.title }}</span>
-      <span
-        v-if="collapsable"
-        class="arrow"
-        :class="open ? 'down' : 'right'"
-      />
+      <span v-if="collapsable" class="arrow" :class="open ? 'down' : 'right'" />
     </RouterLink>
 
     <p
@@ -34,11 +30,7 @@
       @click="$emit('toggle')"
     >
       <span>{{ item.title }}</span>
-      <span
-        v-if="collapsable"
-        class="arrow"
-        :class="open ? 'down' : 'right'"
-      />
+      <span v-if="collapsable" class="arrow" :class="open ? 'down' : 'right'" />
     </p>
 
     <DropdownTransition>
@@ -55,30 +47,42 @@
 </template>
 
 <script>
-import { isActive } from '../util'
-import DropdownTransition from '@theme/components/DropdownTransition.vue'
+import { isActive } from "../util";
+import DropdownTransition from "@theme/components/DropdownTransition.vue";
 
 export default {
-  name: 'SidebarGroup',
+  name: "SidebarGroup",
 
   components: {
     DropdownTransition
   },
 
-  props: [
-    'item',
-    'open',
-    'collapsable',
-    'depth'
-  ],
+  props: {
+    item: {
+      type: Object,
+      default: () => {}
+    },
+    open: {
+      type: Boolean,
+      required: true
+    },
+    collapsable: {
+      type: Boolean,
+      default: false
+    },
+    depth: {
+      type: Number,
+      required: true
+    }
+  },
 
   // ref: https://vuejs.org/v2/guide/components-edge-cases.html#Circular-References-Between-Components
-  beforeCreate () {
-    this.$options.components.SidebarLinks = require('@theme/components/SidebarLinks.vue').default
+  beforeCreate() {
+    this.$options.components.SidebarLinks = require("@theme/components/SidebarLinks.vue").default;
   },
 
   methods: { isActive }
-}
+};
 </script>
 
 <style lang="stylus">
@@ -103,7 +107,7 @@ export default {
     & > .sidebar-group-items
       padding-left 1rem
       & > li > .sidebar-link
-        font-size: 0.95em 
+        font-size: 0.95em
         border-left none
   &.depth-2
     & > .sidebar-heading

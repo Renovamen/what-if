@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="dropdown-wrapper"
-    :class="{ open }"
-  >
+  <div class="dropdown-wrapper" :class="{ open }">
     <button
       class="dropdown-title"
       type="button"
@@ -10,9 +7,7 @@
       @click="handleDropdown"
     >
       <span class="title">{{ item.text }}</span>
-      <span
-        class="arrow down"
-      />
+      <span class="arrow down" />
     </button>
     <button
       class="mobile-dropdown-title"
@@ -21,17 +16,11 @@
       @click="setOpen(!open)"
     >
       <span class="title">{{ item.text }}</span>
-      <span
-        class="arrow"
-        :class="open ? 'down' : 'right'"
-      />
+      <span class="arrow" :class="open ? 'down' : 'right'" />
     </button>
 
     <DropdownTransition>
-      <ul
-        v-show="open"
-        class="nav-dropdown"
-      >
+      <ul v-show="open" class="nav-dropdown">
         <li
           v-for="(subItem, index) in item.items"
           :key="subItem.link || index"
@@ -41,10 +30,7 @@
             {{ subItem.text }}
           </h4>
 
-          <ul
-            v-if="subItem.type === 'links'"
-            class="dropdown-subitem-wrapper"
-          >
+          <ul v-if="subItem.type === 'links'" class="dropdown-subitem-wrapper">
             <li
               v-for="childSubItem in subItem.items"
               :key="childSubItem.link"
@@ -73,12 +59,12 @@
 </template>
 
 <script>
-import NavLink from '@theme/components/NavLink.vue'
-import DropdownTransition from '@theme/components/DropdownTransition.vue'
-import last from 'lodash/last'
+import NavLink from "@theme/components/NavLink.vue";
+import DropdownTransition from "@theme/components/DropdownTransition.vue";
+import last from "lodash/last";
 
 export default {
-  name: 'DropdownLink',
+  name: "DropdownLink",
 
   components: {
     NavLink,
@@ -87,35 +73,36 @@ export default {
 
   props: {
     item: {
+      type: Object,
       required: true
     }
   },
 
-  data () {
+  data() {
     return {
       open: false
-    }
+    };
   },
 
   computed: {
-    dropdownAriaLabel () {
-      return this.item.ariaLabel || this.item.text
+    dropdownAriaLabel() {
+      return this.item.ariaLabel || this.item.text;
     }
   },
 
   watch: {
-    $route () {
-      this.open = false
+    $route() {
+      this.open = false;
     }
   },
 
   methods: {
-    setOpen (value) {
-      this.open = value
+    setOpen(value) {
+      this.open = value;
     },
 
-    isLastItemOfArray (item, array) {
-      return last(array) === item
+    isLastItemOfArray(item, array) {
+      return last(array) === item;
     },
 
     /**
@@ -124,12 +111,12 @@ export default {
      * Use event.detail to detect tab and click from keyboard. Ref: https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail
      * The Tab + Click is UIEvent > KeyboardEvent, so the detail is 0.
      */
-    handleDropdown () {
-      const isTriggerByTab = event.detail === 0
-      if (isTriggerByTab) this.setOpen(!this.open)
+    handleDropdown() {
+      const isTriggerByTab = event.detail === 0;
+      if (isTriggerByTab) this.setOpen(!this.open);
     }
   }
-}
+};
 </script>
 
 <style lang="stylus">

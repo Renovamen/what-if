@@ -1,7 +1,7 @@
 <template>
-  <Common :sidebarItems="sidebarItems">
+  <Common :sidebar-items="sidebarItems">
     <Home v-if="$page.frontmatter.home" />
-    
+
     <Page v-else :sidebar-items="sidebarItems">
       <template #top>
         <slot name="page-top" />
@@ -10,23 +10,20 @@
         <slot name="page-bottom" />
       </template>
     </Page>
-    
-    <Footer
-      v-if="$page.frontmatter.home"
-      class="footer"
-    />
+
+    <Footer v-if="$page.frontmatter.home" class="footer" />
   </Common>
 </template>
 
 <script>
-import Home from '@theme/components/Home.vue'
-import Page from '@theme/components/Page.vue'
-import Common from '@theme/components/Common.vue'
-import Footer from '@theme/components/Footer'
-import { resolveSidebarItems } from '../util'
+import Home from "@theme/components/Home.vue";
+import Page from "@theme/components/Page.vue";
+import Common from "@theme/components/Common.vue";
+import Footer from "@theme/components/Footer";
+import { resolveSidebarItems } from "../util";
 
 export default {
-  name: 'Layout',
+  name: "Layout",
 
   components: {
     Home,
@@ -34,16 +31,16 @@ export default {
     Common,
     Footer
   },
-  
+
   computed: {
-    sidebarItems () {
+    sidebarItems() {
       return resolveSidebarItems(
         this.$page,
         this.$page.regularPath,
         this.$site,
         this.$localePath
-      )
-    },
-  },
-}
+      );
+    }
+  }
+};
 </script>

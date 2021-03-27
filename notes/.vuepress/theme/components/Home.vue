@@ -8,13 +8,10 @@
         v-if="data.heroImage"
         :src="$withBase(data.heroImage)"
         :alt="data.heroAlt || 'hero'"
-      >
+      />
 
-      <h1
-        v-if="data.heroText !== null"
-        id="main-title"
-      >
-        {{ data.heroText || $title || 'Hello' }}
+      <h1 v-if="data.heroText !== null" id="main-title">
+        {{ data.heroText || $title || "Hello" }}
       </h1>
 
       <!-- <p
@@ -24,27 +21,20 @@
         {{ data.tagline || $description || 'Welcome to your VuePress site' }}
       </p> -->
       <p class="description">
-        Renovamen's messy notebook, maybe it is unsuitable for humans to read... 
-        This notebook is powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a>, 
-        hosted by <a href="https://pages.github.com/" target="_blank">Github Pages</a>
-        and <a href="https://vercel.com/" target="_blank">Vercel</a>.
+        Renovamen's messy notebook, maybe it is unsuitable for humans to read...
+        This notebook is powered by
+        <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a>,
+        hosted by
+        <a href="https://pages.github.com/" target="_blank">Github Pages</a> and
+        <a href="https://vercel.com/" target="_blank">Vercel</a>.
       </p>
 
-      <p
-        v-if="data.actionText && data.actionLink"
-        class="action"
-      >
-        <NavLink
-          class="action-button"
-          :item="actionLink"
-        />
+      <p v-if="data.actionText && data.actionLink" class="action">
+        <NavLink class="action-button" :item="actionLink" />
       </p>
     </header>
 
-    <div
-      v-if="data.features && data.features.length"
-      class="features"
-    >
+    <div v-if="data.features && data.features.length" class="features">
       <div
         v-for="(feature, index) in data.features"
         :key="index"
@@ -60,26 +50,26 @@
 </template>
 
 <script>
-import NavLink from '@theme/components/NavLink.vue'
+import NavLink from "@theme/components/NavLink.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
 
   components: { NavLink },
 
   computed: {
-    data () {
-      return this.$page.frontmatter
+    data() {
+      return this.$page.frontmatter;
     },
 
-    actionLink () {
+    actionLink() {
       return {
         link: this.data.actionLink,
         text: this.data.actionText
-      }
+      };
     }
   }
-}
+};
 </script>
 
 <style lang="stylus">

@@ -1,10 +1,11 @@
 <template>
-    <div class="footer-wrapper">
-        <span>
-            Powered by <a target="blank" href="https://vuepress.vuejs.org">VuePress</a>,
-            crafted by <a target="blank" href="https://renovamen.ink">Renovamen</a>.
-        </span>
-    </div>
+  <div class="footer-wrapper">
+    <span>
+      Powered by
+      <a target="blank" href="https://vuepress.vuejs.org">VuePress</a>, crafted
+      by <a target="blank" href="https://renovamen.ink">Renovamen</a>.
+    </span>
+  </div>
 </template>
 
 <style lang="stylus" scoped>

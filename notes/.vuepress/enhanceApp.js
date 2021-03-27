@@ -1,19 +1,29 @@
-import VueIcon from 'oh-vue-icons/components/Icon'
+import OhVueIcon from "oh-vue-icons";
 
 import {
-  FaGithub, FaGitlab, FaBitbucket, FaShareAlt, FaPencilAlt,
-  RiSunLine, RiMoonLine, FaMagic, RiMenuLine
-} from 'oh-vue-icons/icons'
+  FaGithub,
+  FaGitlab,
+  FaBitbucket,
+  FaShareAlt,
+  FaPencilAlt,
+  RiSunLine,
+  RiMoonLine,
+  FaMagic,
+  RiMenuLine
+} from "oh-vue-icons/icons";
 
-VueIcon.add([
-  FaGithub, FaGitlab, FaBitbucket, FaShareAlt, FaPencilAlt,
-  RiSunLine, RiMoonLine, FaMagic, RiMenuLine
-])
+OhVueIcon.add(
+  FaGithub,
+  FaGitlab,
+  FaBitbucket,
+  FaShareAlt,
+  FaPencilAlt,
+  RiSunLine,
+  RiMoonLine,
+  FaMagic,
+  RiMenuLine
+);
 
-export default ({
-  Vue,
-  siteData,
-  isServer
-}) => {
-  Vue.component('v-icon', VueIcon)
-}
+export default ({ Vue, siteData, isServer }) => {
+  Vue.component("VIcon", OhVueIcon);
+};
