@@ -68,7 +68,7 @@ $$
 
 $$
 \begin{aligned}
-    p(\text{model} \mid w_1 \dots w_{i-1}) &= \lambda_1 × q_{ML}(\text{model} \mid w_{i-2} = \text{any}, w_{i-1} = \text{statistical}) \\
+  p(\text{model} \mid w_1 \dots w_{i-1}) &= \lambda_1 × q_{ML}(\text{model} \mid w_{i-2} = \text{any}, w_{i-1} = \text{statistical}) \\
     &+ \lambda_2 × q_{ML}(\text{model} \mid w_{i-1} = \text{statistical}) \\
     &+ \lambda_3 × q_{ML}(\text{model}) \\
     &+ \lambda_4 × q_{ML}(\text{model} \mid w_{i-2} = \text{any}) \\
@@ -83,7 +83,6 @@ $$
 但当要考虑的条件特别多时，实现这种方法会非常困难。而对数线性模型是一种更合适的能利用更多上下文信息的方法。
 
 
-
 ## POS Tagging
 
 考虑单词序列 $w_i \dots w_n$ 和其对应的标签序列 $t_1 \dots t_{i-1}$（$i<n$），我们的任务是对第 $i$ 个标签的条件分布进行建模，即：
@@ -93,7 +92,6 @@ P(T_i = t_i \mid T_1 = t_1 \dots T_{i-1} = t_{i-1}, W_1 = w_1 \dots W_n = w_n)
 $$
 
 词性标注也有很多对估计 $t_i$ 的分布有用的上下文信息，简单粗暴的魔改线性插值法依然会在要考虑的条件很多时面临困难，所以这时依然需要对数线性模型。
-
 
 
 ## 参考

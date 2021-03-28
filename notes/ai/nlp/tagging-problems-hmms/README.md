@@ -9,7 +9,6 @@ title: 介绍
 假设我们有训练集 $(x^{(i)},y^{(i)}),i = 1...m$，其中 $x^{(i)}$ 为句子 $x_1^{(i)}...x_{n_i}^{(i)}$， $y^{(i)}$ 为标签序列 $y_1^{(i)}...y_{n_i}^{(i)}$。即 $x^{(i)}_j$ 是第 $i$ 个训练句子的第 $j$ 个单词，$y^{(i)}$ 是它的标签。那么标注问题就是从该训练集中学习出一个能把这些句子映射到其标签序列的函数。
 
 
-
 ## 参考
 
 1. [**Tagging Problems, and Hidden Markov Models (Notes)**. *Michael Collins*. Columbia University.](http://www.cs.columbia.edu/~mcollins/hmms-spring2013.pdf)

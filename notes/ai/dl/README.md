@@ -6,15 +6,15 @@ My messy notes of Deep Learning. Source Markdown files are hosted [here](https:/
 
 - Deep Learning (Andrew Ng): [Coursera](https://www.coursera.org/specializations/deep-learning), [网易云课堂](https://study.163.com/provider/2001053000/index.htm)
     
-    - Notes:
+  - Notes:
 
-      - [Notes from Coursera Deep Learning courses by Andrew Ng](https://www.slideshare.net/TessFerrandez/notes-from-coursera-deep-learning-courses-by-andrew-ng) ([Tess Ferrandez](https://twitter.com/tessferrandez)) ([机器之心的注释](https://zhuanlan.zhihu.com/p/34346816))
-      - [bighuang624/Andrew-Ng-Deep-Learning-notes](https://github.com/bighuang624/Andrew-Ng-Deep-Learning-notes)
-      - [fengdu78/deeplearning_ai_books](https://github.com/fengdu78/deeplearning_ai_books)
+    - [Notes from Coursera Deep Learning courses by Andrew Ng](https://www.slideshare.net/TessFerrandez/notes-from-coursera-deep-learning-courses-by-andrew-ng) ([Tess Ferrandez](https://twitter.com/tessferrandez)) ([机器之心的注释](https://zhuanlan.zhihu.com/p/34346816))
+    - [bighuang624/Andrew-Ng-Deep-Learning-notes](https://github.com/bighuang624/Andrew-Ng-Deep-Learning-notes)
+    - [fengdu78/deeplearning_ai_books](https://github.com/fengdu78/deeplearning_ai_books)
 
-    - Assignments:
+  - Assignments:
 
-      - [JudasDie/deeplearning.ai](https://github.com/JudasDie/deeplearning.ai)
+    - [JudasDie/deeplearning.ai](https://github.com/JudasDie/deeplearning.ai)
 
 ## Books
 

@@ -9,7 +9,6 @@ title: 9. 线性相关性、基、维数
 $v_1,\ v_2,\ \cdots,\ v_n$ 是 $m \times n$ 矩阵 $A$ 的列向量：
 
 - 如果 $A$ 零空间中有且仅有 $0$ 向量，则各向量线性无关，$\text{rank}(A)=n$。
-
 - 如果存在非零向量 $c$ 使得 $Ac=0$，则存在线性相关向量，$\text{rank}(A)\lt n$。
 
 
@@ -50,7 +49,7 @@ x_1=
   -1 \\
   1 \\
   0
-\end{bmatrix}，
+\end{bmatrix},
 x_2=
 \begin{bmatrix}
   -1 \\

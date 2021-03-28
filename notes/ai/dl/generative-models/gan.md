@@ -11,6 +11,6 @@
 
 - [Generative Adversarial Networks - The Story So Far](https://blog.floydhub.com/gans-story-so-far/)
 
-    一篇讲 GAN 发展史的文章（2019.6）
+  一篇讲 GAN 发展史的文章（2019.6）
 
 - [Generative Adversarial Network](http://speech.ee.ntu.edu.tw/~tlkagk/courses_MLDS17.html) (李宏毅)

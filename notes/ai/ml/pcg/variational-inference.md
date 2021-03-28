@@ -45,8 +45,8 @@ $$
 
 $$
 \begin{aligned}
-    q^\ast(z) &= \arg \min_{q(z) \in Q} (\log p(x) - \text{ELBO}(q,x)) \\
-        &= \arg \max_{q(z) \in Q} \text{ELBO}(q,x)
+  q^\ast(z) &= \arg \min_{q(z) \in Q} (\log p(x) - \text{ELBO}(q,x)) \\
+            &= \arg \max_{q(z) \in Q} \text{ELBO}(q,x)
 \end{aligned}
 $$
 
@@ -61,10 +61,10 @@ $$
 
 $$
 \begin{aligned}
-    \text{KL}(q(z) \| p(z \mid x)) &= - \sum_z q(z) \log \frac{p(z \mid x)}{q(z)} \\
-        &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log p(z \mid x)] \\
-        &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log \frac{p(x,z)}{p(x)}] \\
-        &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log p(x,z)] + \log p(x)
+  \text{KL}(q(z) \| p(z \mid x)) &= - \sum_z q(z) \log \frac{p(z \mid x)}{q(z)} \\
+    &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log p(z \mid x)] \\
+    &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log \frac{p(x,z)}{p(x)}] \\
+    &= \mathbb{E}_{q(z)}[\log q(z)] - \mathbb{E}_{q(z)}[\log p(x,z)] + \log p(x)
 \end{aligned}
 $$
 
@@ -72,8 +72,8 @@ $$
 
 $$
 \begin{aligned}
-    \text{ELBO}(q,x) &= \log p(x) - \text{KL}(q(z) \| p(z \mid x)) \\
-        &= \mathbb{E}_{q(z)}[\log p(x,z)] - \mathbb{E}_{q(z)}[\log q(z)]
+  \text{ELBO}(q,x) &= \log p(x) - \text{KL}(q(z) \| p(z \mid x)) \\
+    &= \mathbb{E}_{q(z)}[\log p(x,z)] - \mathbb{E}_{q(z)}[\log q(z)]
 \end{aligned}
 $$
 
@@ -81,14 +81,15 @@ $$
 
 $$
 \begin{aligned}
-    \theta_{t+1} &= \arg \max_\theta \sum_z p_{\theta_t}(z \mid x) \log p_\theta(x,z) \\
-        &= \arg \max_\theta \mathbb{E}_{p_{\theta_t}(z \mid x)}[\log p_\theta(x,z)]
+  \theta_{t+1} &= \arg \max_\theta \sum_z p_{\theta_t}(z \mid x) \log p_\theta(x,z) \\
+    &= \arg \max_\theta \mathbb{E}_{p_{\theta_t}(z \mid x)}[\log p_\theta(x,z)]
 \end{aligned}
 $$
 
 可以看到变分推断中的 ELBO 相比 EM 算法中的 ELBO 大概多了 $- \mathbb{E}_{q(z)}[\log q(z)]$ 这一项。这是因为 EM 算法中 $q(z)$ 是常数项，而在变分推断中并不是。
 
 btw，$- \mathbb{E}_{q(z)}[\log q(z)]$ 就是 $q(z)$ 的熵，可以表示为 $H[q(z)]$。
+
 
 ## 平均场分布族
 
@@ -104,9 +105,9 @@ $$
 
 $$
 \begin{aligned}
-    \text{ELBO}(q,x) &= \int q(z) \log \frac{p(x,z)}{q(z)} dz \\
-        &= \int q(z) (\log p(x,z) - \log q(z)) dz \\
-        &= \underbrace{\int \prod_{m=1}^M q_m(z_m) \log p(x,z) dz}_{\text{part1}} - \underbrace{\int \prod_{m=1}^M q_m(z_m) \sum_{m=1}^M \log q_m(z_m) dz}_{\text{part2}} \\
+  \text{ELBO}(q,x) &= \int q(z) \log \frac{p(x,z)}{q(z)} dz \\
+  &= \int q(z) (\log p(x,z) - \log q(z)) dz \\
+  &= \underbrace{\int \prod_{m=1}^M q_m(z_m) \log p(x,z) dz}_{\text{part1}} - \underbrace{\int \prod_{m=1}^M q_m(z_m) \sum_{m=1}^M \log q_m(z_m) dz}_{\text{part2}} \\
 \end{aligned}
 $$
 
@@ -120,9 +121,9 @@ $$
 
 $$
 \begin{aligned}
-    \text{part1} &= \int q_j(z_j) \left ( \int \dots \int_{z_{m \ne j}} \prod_{m \ne j}^M q_m(z_m) \log p(x,z) \prod_{m \ne j}^M dz_m \right ) dz_j \\
-        &= \int q_j(z_j) \left ( \int \dots \int_{z_{m \ne j}} \log p(x,z) \prod_{m \ne j}^M q_m(z_m) dz_m \right ) dz_j \\
-        &= \int q_j(z_j) \left ( \int \prod_{m \ne j}^M q_m(z_m) \log p(x,z) dz_m \right ) dz_j
+  \text{part1} &= \int q_j(z_j) \left ( \int \dots \int_{z_{m \ne j}} \prod_{m \ne j}^M q_m(z_m) \log p(x,z) \prod_{m \ne j}^M dz_m \right ) dz_j \\
+    &= \int q_j(z_j) \left ( \int \dots \int_{z_{m \ne j}} \log p(x,z) \prod_{m \ne j}^M q_m(z_m) dz_m \right ) dz_j \\
+    &= \int q_j(z_j) \left ( \int \prod_{m \ne j}^M q_m(z_m) \log p(x,z) dz_m \right ) dz_j
 \end{aligned}
 $$
 
@@ -140,15 +141,14 @@ $$
 \text{part1} = \int q_j(z_j) \log \overline{p}(x, z_j) dz_j
 $$
 
-
 对于 part2：
 
 $$
 \begin{aligned}
-    \text{part2} &= \int_{z_1} \dots \int_{z_M} \prod_{m=1}^M q_m(z_m) \sum_{m=1}^M \log q_m(z_m) dz_1 \dots dz_M \\
-        &= \int_{z_1} \dots \int_{z_M} [\log q_1(z_1) + \dots \log q_M(z_M)] (q_1(z_1) \dots q_M(z_M)) dz_1 \dots dz_M \\
-        &= \int_{z_1} q_1(z_1) \log q_1(z_1) dz_1 + \dots + \int_{z_M} q_M(z_M) \log q_M(z_M) dz_M \\
-        &= \sum_{m=1}^M \left( \int_{z_m} q_m(z_m) \log q_m(z_m) dz_m \right )
+  \text{part2} &= \int_{z_1} \dots \int_{z_M} \prod_{m=1}^M q_m(z_m) \sum_{m=1}^M \log q_m(z_m) dz_1 \dots dz_M \\
+    &= \int_{z_1} \dots \int_{z_M} [\log q_1(z_1) + \dots \log q_M(z_M)] (q_1(z_1) \dots q_M(z_M)) dz_1 \dots dz_M \\
+    &= \int_{z_1} q_1(z_1) \log q_1(z_1) dz_1 + \dots + \int_{z_M} q_M(z_M) \log q_M(z_M) dz_M \\
+    &= \sum_{m=1}^M \left( \int_{z_m} q_m(z_m) \log q_m(z_m) dz_m \right )
 \end{aligned}
 $$
 
@@ -162,15 +162,15 @@ $$
 
 现在 $\text{ELBO}(q,x)$ 可以写为：
 
-
 $$
 \begin{aligned}
-    \text{ELBO}(q,x) &= \text{part1} - \text{part2}\\
-        &= \int q_j(z_j) \log \overline{p}(x, z_j) dz_j - \int q_j(z_j) \log q_j(z_j) dz_j + \text{const} \\
-        &= \int q_j(z_j) \log \frac{\overline{p}(x, z_j)}{q_j(z_j)} dz_j + \text{const} \\[1em]
-        & \rarr - \text{KL} (q_j(z_j) \| \overline{p}(x, z_j)) + \text{const}
+  \text{ELBO}(q,x) &= \text{part1} - \text{part2}\\
+    &= \int q_j(z_j) \log \overline{p}(x, z_j) dz_j - \int q_j(z_j) \log q_j(z_j) dz_j + \text{const} \\
+    &= \int q_j(z_j) \log \frac{\overline{p}(x, z_j)}{q_j(z_j)} dz_j + \text{const} \\[1em]
+    & \rarr - \text{KL} (q_j(z_j) \| \overline{p}(x, z_j)) + \text{const}
 \end{aligned}
 $$
+
 
 ## 坐标上升法
 
@@ -182,7 +182,6 @@ $$
 q_j^*(z_j) = \overline{p}(x, z_j) \propto \exp(\mathbb{E}_{q_{-j}}[\log p(x,z)])
 $$
 
-
 可以用**坐标上升法（Coordinate Ascent Variational Inference，CAVI）**来迭代优化每个 $q_j^*(z_j)$（同时会假设其他隐变量固定不变）。坐标上升法流程为：
 
 ![cavi](./img/cavi.png)
@@ -191,6 +190,7 @@ $$
 ## 其他
 
 我们通常会选择一些比较简单的分布 $q(z)$ 来近似 $p(z \mid x)$。但当 $p(z \mid x)$ 比较复杂时，往往很难用简单的 $q(z)$ 去近似。这时可以用神经网络的强大拟合能力来近似 $p(z \mid x)$，这种思想被应用在了[变分自编码器中](/ai/dl/generative-models/vae/)。
+
 
 ## 参考
 

@@ -8,17 +8,17 @@
 
 1. 通过一个线性变化得到**净激活值（net activation）**$z \in \Reals$，即该神经元所获得的输入 $x$ 的加权和：
 
-    $$
-    z = \sum_{d=1}^D w_d x_d + b = w^{\top}x + b
-    $$
+  $$
+  z = \sum_{d=1}^D w_d x_d + b = w^{\top}x + b
+  $$
 
-    其中，$w = [w_1, w_2, \dots, w_D] \in \Reals^D$ 是 $D$ 维的权重向量，$b \in \Reals$ 是偏置。
+  其中，$w = [w_1, w_2, \dots, w_D] \in \Reals^D$ 是 $D$ 维的权重向量，$b \in \Reals$ 是偏置。
 
 2. 净激活值 $z$ 在经过一个**非线性函数** $f(\cdot)$（**[激活函数，activation function](/ai/dl/fnn/activation-function/)**）后，得到**激活值（activation）**$a$：
 
-    $$
-    a = f(z)
-    $$
+  $$
+  a = f(z)
+  $$
 
 
 
@@ -28,17 +28,14 @@
 
 - **前馈网络**：每一层中的神经元接收前一层神经元的输出，并输出到下一层神经元，整个网络中的信息朝一个方向传播，在模型的输出和模型本身之间没有反馈（feedback）连接。
 
-    - 前馈神经网络（Feedforward Neural Network，FNN）
-
-    - 卷积神经网络（Convolutional Neural Networ，CNN）
+  - 前馈神经网络（Feedforward Neural Network，FNN）
+  - 卷积神经网络（Convolutional Neural Networ，CNN）
 
 - **记忆网络**：神经元不但可以接收其他神经元的信息，也可以接收自己的历史信息。神经元具有记忆功能，在不同的时刻具有不同的状态。信息传播可以是单向或双向传递。
 
-    - 循环神经网络（Recurrent Neural Network，RNN）
-    
-    - 玻尔兹曼机（Boltzmann Machine，BM）
-    
-    - 受限玻尔兹曼机（Restricted Boltzmann Machine，RBM）
+  - 循环神经网络（Recurrent Neural Network，RNN）
+  - 玻尔兹曼机（Boltzmann Machine，BM）
+  - 受限玻尔兹曼机（Restricted Boltzmann Machine，RBM）
 
 - **图网络**：定义在图结构数据上的神经网络，图中每个节点都由一个或一组神经元构成。节点之间的连接可以是有向或无向的，每个节点可以接收来自相邻节点或自身的信息。
 

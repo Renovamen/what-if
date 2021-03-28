@@ -62,10 +62,7 @@ $$
 \Rightarrow v \rightarrow +\infty
 $$
 
-
-
 这时不管其他样本的条件概率怎么样，$L(v)$ 都会最大。这样估计出来的参数在测试集上的表现会很差（过拟合），它会由“训练集 $\text{any statistical}$ 的后面一定会跟着 $\text{model}$”的现象而直接得出 $P(W_i = \text{model} \mid W_{i-1}, W_{i-2} = \text{any, statistical})) = 1$ 的结论。
-
 
 
 ## 正则化（Regularization）

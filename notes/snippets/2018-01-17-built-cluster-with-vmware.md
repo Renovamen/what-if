@@ -17,14 +17,14 @@ Final Project of 2018 Fall Distributed Systems
 
 - 虚拟机：
 
-    - https://blog.csdn.net/Myuhua/article/details/81215209
-        
-        在 VMware Fusion 上装 CentOS 7 和配网络之类的东西。配完一台之后，剩下几台直接复制镜像然后改一下 IP 就可以。
+  - [https://blog.csdn.net/Myuhua/article/details/81215209](https://blog.csdn.net/Myuhua/article/details/81215209)
+
+    在 VMware Fusion 上装 CentOS 7 和配网络之类的东西。配完一台之后，剩下几台直接复制镜像然后改一下 IP 就可以。
 
 - Mac 远程连接 Linux 异常修复：   
-    - https://blog.csdn.net/wd2014610/article/details/79945424
+  - [https://blog.csdn.net/wd2014610/article/details/79945424](https://blog.csdn.net/wd2014610/article/details/79945424)
 
 - CentOS 7 配 Python 3 环境（我也忘了到底是看哪个配好的了）：
-    - https://www.cnblogs.com/JahanGu/p/7452527.html
-    - https://www.cnblogs.com/simuhunluo/p/7704765.html
-    - https://blog.csdn.net/qq_36288025/article/details/82534508
+  - [https://www.cnblogs.com/JahanGu/p/7452527.html](https://www.cnblogs.com/JahanGu/p/7452527.html)
+  - [https://www.cnblogs.com/simuhunluo/p/7704765.html](https://www.cnblogs.com/simuhunluo/p/7704765.html)
+  - [https://blog.csdn.net/qq_36288025/article/details/82534508](https://blog.csdn.net/qq_36288025/article/details/82534508)

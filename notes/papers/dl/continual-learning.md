@@ -2,16 +2,13 @@
 
 Literatures of Continual Learning (持续学习, also called Lifelong / Incremental / Cumulative Learning).
 
+
 ## Other Awesome Lists
 
 - [ContinualAI Wiki](https://wiki.continualai.org/index.html)
-
 - [optimass/continual_learning_papers](https://github.com/optimass/continual_learning_papers)
-
 - [xialeiliu/Awesome-Incremental-Learning](https://github.com/xialeiliu/Awesome-Incremental-Learning)
-
 - [prprbr/awesome-lifelong-continual-learning](https://github.com/prprbr/awesome-lifelong-continual-learning)
-
 - [floodsung/Lifelong-Learning-Paper-List](https://github.com/floodsung/Lifelong-Learning-Paper-List)
 
 
@@ -21,19 +18,21 @@ Literatures of Continual Learning (持续学习, also called Lifelong / Incremen
 
 - [CVPR 2020 Tutorial - Towards Annotation-Efficient Learning: Few-Shot, Self-Supervised, and Incremental Learning Approaches](https://annotation-efficient-learning.github.io/)
 
+
 ## Surveys
 
 - **Continual Lifelong Learning with Neural Networks: A Review.** *German I. Parisi, et al.* Neural Networks 2019. [[Paper]](https://arxiv.org/pdf/1802.07569.pdf)
-
-    > A survey on different approaches (regularization / dynamic architectures / rehearsal) for continual learning.
+  
+  > A survey on different approaches (regularization / dynamic architectures / rehearsal) for continual learning.
 
 - **Three Scenarios for Continual Learning.** *Gido M. van de Ven and Andreas S. Tolias.* arXiv 2019. [[Paper]](https://arxiv.org/pdf/1904.07734.pdf) [[Code]](https://github.com/GMvandeVen/continual-learning)
 
-    > A survey on three different scenarios (task / domain / class) for continual learning.
+  > A survey on three different scenarios (task / domain / class) for continual learning.
 
 - **Continual Learning: A Comparative Study on How to Defy Forgetting in Classification Tasks.** *Matthias De Lange, et al.* arXiv 2019. [[Paper]](https://arxiv.org/pdf/1909.08383.pdf)
 
 - **Continual Learning for Robotics: Definition, Framework, Learning Strategies, Opportunities and Challenges.** *Timothée Lesort, et al.* Inf. Fusion 2020. [[Paper]](https://www.sciencedirect.com/science/article/pii/S1566253519307377)
+
 
 ## Theses
 
@@ -251,17 +250,10 @@ Increase in network capacity that handles new tasks without affecting learned ne
 ## Workshops
 
 - [Continual Learning and Deep Networks Workshop, NIPS 2016](https://sites.google.com/site/cldlnips2016/submissions)
-
 - [Continuous and Open-Set Learning Workshop, CVPR 2017](https://erodner.github.io/continuouslearningcvpr2017/)
-
 - [First Lifelong Machine Learning Workshop, ICML 2017](https://rlabstraction2016.wixsite.com/icml-2017)
-
 - [Second Lifelong Machine Learning Workshop, ICML 2018](https://sites.google.com/view/llarla2018/home)
-
 - [Continual learning Workshop, NeurIPS 2018](https://sites.google.com/view/continual2018)
-
 - [Third Lifelong Machine Learning Workshop, RLDM 2019](https://sites.google.com/view/llarla/home)
-
 - [Workshop on Continual Learning, ICML 2020](https://sites.google.com/view/cl-icml/organizers?authuser=0)
-
 - [4th Lifelong Machine Learning Workshop, ICML 2020](https://lifelongml.github.io/)

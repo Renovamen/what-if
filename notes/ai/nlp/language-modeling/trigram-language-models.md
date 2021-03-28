@@ -3,7 +3,6 @@
 **三元（Trigram）语言模型**是马尔科夫模型在语言建模问题上的直接应用。本节讨论三元模型的基本定义、**极大似然估计**和优缺点。
 
 
-
 ## 基本定义
 
 按照二阶马尔科夫模型：
@@ -59,7 +58,6 @@ $$
 那么现在的关键问题就是该如何通过训练集估计出模型的参数 $q(w \mid u,v)$。其中 $w$ 可能是 $\mathcal{V} \cup \{\text{STOP}\}$ 中的任何元素，$u,v$ 可能是 $\mathcal{V} \cup \{*\}$ 中的任何元素，所以模型的参数会有 $|\mathcal{V}|^3$ 个，这个数字很可能非常庞大。
 
 
-
 ## 极大似然估计
 
 定义 $c(u,v,w)$ 为三元组  $(u, v, w)$ 在训练集中出现的次数，如 $c(\text{the, dog, barks})$ 为单词序列 *the dog barks* 在训练集中出现的次数。定义 $c(u,v)$ 为二元组 $(u,v)$ 在训练集中出现的次数。对任意 $w,u,v$，它的**极大似然估计**（Maximum-likelihood Parameter Estimates）为：
@@ -82,7 +80,6 @@ $$
 [后面](/ai/nlp/language-modeling/smoothed-estimation-of-trigram-models/)我们会讨论该如何改进参数估计方法来解决这些问题，但现在我们先讨论该如何评估一个语言模型的好坏。
 
 
-
 ## 困惑度
 
 **语言模型评估指标：困惑度（Perplexity）**
@@ -93,7 +90,7 @@ $$
 
 我们可以用语言模型测出每个测试句子 $x^{(i)}$ 出现的概率 $p(x^{(i)})$。一个容易想到的评估指标是该模型测出的所有测试句子出现的概率 $\prod_{i=1}^m p(x^{(i)})$，毕竟质量越高的模型处理测试句子的能力越强。
 
-<br>
+&nbsp;
 
 模型在测试集上的 **perplexity**（困惑度）是这个指标的变形。
 
@@ -118,41 +115,39 @@ $$
 perplexity 是一个正数，perplexity **越小**，模型处理测试句子的能力就越强。
 
 
-
 ### 其他
 
 1. 如果令：
 
-    $$
-    t=\sqrt[M]{\prod_{i=1}^m p(x^{(i)})} = \sqrt[M] {\prod_{i=1}^m \prod_{j=1}^{n_i}q(x_j^{(i)} \mid x_j^{(i-2)},x_j^{(i-1)})}
-    $$
+  $$
+  t=\sqrt[M]{\prod_{i=1}^m p(x^{(i)})} = \sqrt[M] {\prod_{i=1}^m \prod_{j=1}^{n_i}q(x_j^{(i)} \mid x_j^{(i-2)},x_j^{(i-1)})}
+  $$
 
-    则有：
+  则有：
 
-    $$
-    \text{perplexity}=\frac{1}{t}
-    $$
+  $$
+  \text{perplexity}=\frac{1}{t}
+  $$
 
-    可以看到 $t$ 为所有参数 $q(x_j^{(i)} \mid x_j^{(i-2)},x_j^{(i-1)})$ 的几何平均数（Geometric Mean）。例如一个模型的 perplexity 是 100，则 $t=0.01$，也就是它的所有参数的几何平均数为 0.01。
+  可以看到 $t$ 为所有参数 $q(x_j^{(i)} \mid x_j^{(i-2)},x_j^{(i-1)})$ 的几何平均数（Geometric Mean）。例如一个模型的 perplexity 是 100，则 $t=0.01$，也就是它的所有参数的几何平均数为 0.01。
 
 2. 如果模型对某个测试集中的三元组 $u,v,w$ 估计出的参数 $q(w \mid u,v)=0$，则它的 perplexity 就会为 $\infty$。所以如果我们要用 perplexity 来作为模型评估指标的话，就一定要避免把参数估计为 0。
 
 3. 论文 [A Bit of Progress in Language Modeling (Goodman, 2001)](http://www-labs.iro.umontreal.ca/~felipe/IFT6285-Automne2019/resources-2011/Articles/goodman2001.pdf) 是一篇写了几乎所有和 N 元模型（N-Gram）有关的东西的综述。它用 $|\mathcal{V}|=50,000$ 的英语数据集评估了一元（Unigram）、二元（Bigram）和 三元（Trigram）模型。
    
-   其中二元模型中每个单词只依赖于它的前一个单词：
+  其中二元模型中每个单词只依赖于它的前一个单词：
 
-   $$
-   p(x_1 ... x_n)=\prod_{i=1}^n q(x_i \mid x_{i-1})
-   $$
+  $$
+  p(x_1 ... x_n)=\prod_{i=1}^n q(x_i \mid x_{i-1})
+  $$
 
-   一元模型中每个单词之间相互独立：
+  一元模型中每个单词之间相互独立：
 
-   $$
-   p(x_1 ... x_n)=\prod_{i=1}^n q(x_i)
-   $$
+  $$
+  p(x_1 ... x_n)=\prod_{i=1}^n q(x_i)
+  $$
 
-   结果为三元模型的 perplexity 大概为 74，二元模型为 137，一元模型为 955。可以看到三元模型的效果比一元模型和二元模型要好很多。
-
+  结果为三元模型的 perplexity 大概为 74，二元模型为 137，一元模型为 955。可以看到三元模型的效果比一元模型和二元模型要好很多。
 
 
 ## 优缺点

@@ -12,7 +12,6 @@ $f(x,y) \in \Reals^d$ 是表示 $(x,y)$ 的特征向量，向量中的 $f_k(x,y)
 前三个特征 $f_1,f_2,f_3$ 与三元模型中的一元、二元、三元特征类似，特征 $f_4 \mid f_8$ 则考虑了[其他的信息](/ai/nlp/log-linear-models/)。
 
 
-
 ## 特征模板
 
 上例中，前三个特征指向的是特定的 unigram，bigram 或 trigram。而**特征模板（feature template）**可以用来生成考虑了训练集中所有 unigram，bigram 或 trigram 的特征集。
@@ -24,8 +23,8 @@ $f(x,y) \in \Reals^d$ 是表示 $(x,y)$ 的特征向量，向量中的 $f_k(x,y)
 $$
 f_{N(u,v,w)}(x,y) = 
 \begin{cases}
-   1 &\text{if } y=w,w_{i-2}=u,w_{i-1}=v \\
-   0 &\text{otherwise}
+  1 &\text{if } y=w,w_{i-2}=u,w_{i-1}=v \\
+  0 &\text{otherwise}
 \end{cases}
 $$
 
@@ -52,8 +51,8 @@ $$
 $$
 f_{N(v,w)}(x,y) = 
 \begin{cases}   
-1 &\text{if } y=w,w_{i-1}=v \\   
-0 &\text{otherwise}
+  1 &\text{if } y = w, w_{i-1} = v \\   
+  0 &\text{otherwise}
 \end{cases}
 $$
 
@@ -68,8 +67,8 @@ $$
 $$
 f_{N(w)}(x,y) = 
 \begin{cases}   
-1 &\text{if } y=w \\   
-0 &\text{otherwise}
+  1 &\text{if } y = w \\   
+  0 &\text{otherwise}
 \end{cases}
 $$
 
@@ -112,13 +111,12 @@ $$
 $$
 f_{N(suff4=v,w)}(x,y) = 
 \begin{cases}   
-1 &\text{if } y=w \text{ and } suff4(x)=v \\   
-0 &\text{otherwise}
+  1 &\text{if } y=w \text{ and } suff4(x)=v \\   
+  0 &\text{otherwise}
 \end{cases}
 $$
 
 其中 $N(suff4=v,w)$ 是将训练集中的 $(v,w)$ 映射到一个唯一整数的的函数（映射值不能与其他特征模板重复）。
-
 
 
 ## 特征的稀疏性

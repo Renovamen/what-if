@@ -24,8 +24,8 @@ $$
 
 $$
 \begin{aligned}
-   L(y, f(x; \theta)) &= -y^{\top} \log f(x; \theta) \\
-                      &= - \sum_{c=1}^C y_c \log f_c(x; \theta)
+  L(y, f(x; \theta)) &= -y^{\top} \log f(x; \theta) \\
+                     &= - \sum_{c=1}^C y_c \log f_c(x; \theta)
 \end{aligned}
 $$
 

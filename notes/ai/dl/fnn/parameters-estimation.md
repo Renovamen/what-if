@@ -30,10 +30,10 @@ $$
 
 $$
 \begin{aligned}
-   w^{(l)} &\leftarrow w^{(l)} - \alpha \cdot \frac{\partial J(w,b)}{\partial w^{(l)}} \\
-           &= w^{(l)} - \alpha ( \frac{1}{N} \sum_{n=1}^N (\frac{\partial L(y^{(n)}, \hat{y}^{(n)})}{\partial w^{(l)}}) + \lambda w^{(l)} ) \\
-    b^{(l)} &\leftarrow b^{(l)} - \alpha \cdot \frac{\partial J(w,b)}{\partial b^{(l)}} \\
-           &= b^{(l)} - \alpha ( \frac{1}{N} \sum_{n=1}^N \frac{\partial L(y^{(n)}, \hat{y}^{(n)})}{\partial b^{(l)}})
+  w^{(l)} &\leftarrow w^{(l)} - \alpha \cdot \frac{\partial J(w,b)}{\partial w^{(l)}} \\
+          &= w^{(l)} - \alpha ( \frac{1}{N} \sum_{n=1}^N (\frac{\partial L(y^{(n)}, \hat{y}^{(n)})}{\partial w^{(l)}}) + \lambda w^{(l)} ) \\
+  b^{(l)} &\leftarrow b^{(l)} - \alpha \cdot \frac{\partial J(w,b)}{\partial b^{(l)}} \\
+          &= b^{(l)} - \alpha ( \frac{1}{N} \sum_{n=1}^N \frac{\partial L(y^{(n)}, \hat{y}^{(n)})}{\partial b^{(l)}})
 \end{aligned}
 $$
 
@@ -57,31 +57,31 @@ $\delta^{(l)}$ 表示了第 $l$ 层神经元对最终代价的影响，也间接
 
 1. 计算输出层的误差项 $\delta^{(L)}$：
 
-    $$
-    \delta^{(L)} = \nabla_a J \odot \sigma'(z^{(L)}) \tag{\text{BP1}}
-    $$
+  $$
+  \delta^{(L)} = \nabla_a J \odot \sigma'(z^{(L)}) \tag{\text{BP1}}
+  $$
 
-    $\nabla_a J$ 是一个向量，它的第 $i$ 个元素为 $\frac{\partial J}{\partial a^{(L)}_i}$。$\nabla_a J$ 可以理解为代价函数随输出的激活值的变化而变化的速度，$\sigma'(z^{(L)})$ 可以理解为在 $z^{(L)}$ 处激活函数 $\sigma$ 变化的速度。
+  $\nabla_a J$ 是一个向量，它的第 $i$ 个元素为 $\frac{\partial J}{\partial a^{(L)}_i}$。$\nabla_a J$ 可以理解为代价函数随输出的激活值的变化而变化的速度，$\sigma'(z^{(L)})$ 可以理解为在 $z^{(L)}$ 处激活函数 $\sigma$ 变化的速度。
 
 2. 使用下一层的误差项 $\delta^{(l+1)}$ 来计算当前层的误差项 $\delta^{(l)}$：
 
-    $$
-    \delta^{(l)} = ((w^{(l+1)})^{\top} \delta^{(l+1)}) \odot \sigma'(z^{(l)}) \tag{\text{BP2}}
-    $$
+  $$
+  \delta^{(l)} = ((w^{(l+1)})^{\top} \delta^{(l+1)}) \odot \sigma'(z^{(l)}) \tag{\text{BP2}}
+  $$
 
-    这就是**误差的反向传播**。反向传播的含义就是：第 $l$ 层的某个神经元的误差项 = 所有与该神经元相连的第 $l + 1$ 层的神经元的误差项的权重和 * 该神经元激活函数的梯度。
+  这就是**误差的反向传播**。反向传播的含义就是：第 $l$ 层的某个神经元的误差项 = 所有与该神经元相连的第 $l + 1$ 层的神经元的误差项的权重和 * 该神经元激活函数的梯度。
 
 3. 计算偏置 $b$ 的梯度：
 
-    $$
-    \frac{\partial J}{\partial b^{(l)}} = \delta^{(l)} \tag{\text{BP3}}
-    $$
+  $$
+  \frac{\partial J}{\partial b^{(l)}} = \delta^{(l)} \tag{\text{BP3}}
+  $$
 
 3. 计算权重 $w$ 的梯度：
 
-    $$
-    \frac{\partial J}{\partial w^{(l)}} = \delta^{(l)} (a^{(l-1)})^{\top} \tag{\text{BP4}}
-    $$
+  $$
+  \frac{\partial J}{\partial w^{(l)}} = \delta^{(l)} (a^{(l-1)})^{\top} \tag{\text{BP4}}
+  $$
 
 然后就是按梯度下降法，用算出来的梯度去更新参数。
 
@@ -105,8 +105,8 @@ $$
 
 $$
 \begin{aligned}
-    \frac{\partial a^{(l)}}{\partial z^{(l)}} &= \frac{\partial \sigma (z^{(l)})}{\partial z^{(l)}} \\
-        &= \text{diag} (\sigma' (z^{(l)})) \qquad \in \Reals^{M_l \times M_l}
+  \frac{\partial a^{(l)}}{\partial z^{(l)}} &= \frac{\partial \sigma (z^{(l)})}{\partial z^{(l)}} \\
+                                            &= \text{diag} (\sigma' (z^{(l)})) \qquad \in \Reals^{M_l \times M_l}
 \end{aligned}
 $$
 
@@ -116,10 +116,10 @@ $\text{diag} (\sigma' (z^{(l)}))$ 表示一个对角线元素全为 $\sigma' (z^
 
 $$
 \begin{aligned}
-    \delta^{(l)} &=  \frac{\partial J}{\partial z^{(l)}} \\
-        &= \frac{\partial J}{\partial z^{(l+1)}} \cdot \frac{\partial z^{(l+1)}}{\partial a^{(l)}} \cdot \frac{\partial a^{(l)}}{\partial z^{(l)}} \\[1em]
-        &= \delta^{(l+1)} \cdot (w^{(l+1)})^{\top} \cdot \text{diag} (\sigma' (z^{(l)})) \\[0.8em]
-        &= ((w^{(l+1)})^{\top} \delta^{(l+1)}) \odot \sigma'(z^{(l)}) \qquad \in \Reals^{M_l}
+  \delta^{(l)} &= \frac{\partial J}{\partial z^{(l)}} \\
+  &= \frac{\partial J}{\partial z^{(l+1)}} \cdot \frac{\partial z^{(l+1)}}{\partial a^{(l)}} \cdot \frac{\partial a^{(l)}}{\partial z^{(l)}} \\[1em]
+  &= \delta^{(l+1)} \cdot (w^{(l+1)})^{\top} \cdot \text{diag} (\sigma' (z^{(l)})) \\[0.8em]
+  &= ((w^{(l+1)})^{\top} \delta^{(l+1)}) \odot \sigma'(z^{(l)}) \qquad \in \Reals^{M_l}
 \end{aligned}
 $$
 
@@ -145,9 +145,9 @@ $$
 
 $$
 \begin{aligned}
-    \frac{\partial z^{(l)}}{\partial w_{ij}^{(l)}} &= \left [ \frac{\partial z_1^{(l)}}{\partial w_{ij}^{(l)}}, \dots, \frac{\partial z_i^{(l)}}{\partial w_{ij}^{(l)}}, \dots, \frac{\partial z_{M_l}^{(l)}}{\partial w_{ij}^{(l)}}  \right ] \\
-        &= \left [ 0, \dots, \frac{\partial (w_{i:}^{(l)} a^{(l-1)} + b_i^{(l)})}{\partial w_{ij}^{(l)}}, \dots, 0  \right ] \\
-        &= \left [ 0, \dots, a_j^{(l-1)}, \dots, 0  \right ] \qquad \in \Reals^{1 \times M_l}
+  \frac{\partial z^{(l)}}{\partial w_{ij}^{(l)}} &= \left [ \frac{\partial z_1^{(l)}}{\partial w_{ij}^{(l)}}, \dots, \frac{\partial z_i^{(l)}}{\partial w_{ij}^{(l)}}, \dots, \frac{\partial z_{M_l}^{(l)}}{\partial w_{ij}^{(l)}}  \right ] \\
+  &= \left [ 0, \dots, \frac{\partial (w_{i:}^{(l)} a^{(l-1)} + b_i^{(l)})}{\partial w_{ij}^{(l)}}, \dots, 0  \right ] \\
+  &= \left [ 0, \dots, a_j^{(l-1)}, \dots, 0  \right ] \qquad \in \Reals^{1 \times M_l}
 \end{aligned}
 $$
 
@@ -157,9 +157,9 @@ $$
 
 $$
 \begin{aligned}
-    \frac{\partial J}{\partial w_{ij}^{(l)}} &= \frac{\partial J}{\partial z^{(l)}} \cdot \frac{\partial z^{(l)}}{\partial w_{ij}^{(l)}} \\
-        &=  \left [ \delta_1^{(l)}, \dots, \delta_i^{(l)}, \dots, \delta_{M_l}^{(l)} \right ] \left [ 0, \dots, a_j^{(l-1)}, \dots, 0  \right ] \\
-        &= \delta_i^{(l)} a_j^{(l-1)}
+  \frac{\partial J}{\partial w_{ij}^{(l)}} &= \frac{\partial J}{\partial z^{(l)}} \cdot \frac{\partial z^{(l)}}{\partial w_{ij}^{(l)}} \\
+  &=  \left [ \delta_1^{(l)}, \dots, \delta_i^{(l)}, \dots, \delta_{M_l}^{(l)} \right ] \left [ 0, \dots, a_j^{(l-1)}, \dots, 0  \right ] \\
+  &= \delta_i^{(l)} a_j^{(l-1)}
 \end{aligned}
 $$
 
@@ -167,7 +167,7 @@ $$
 
 $$
 \begin{aligned}
-    \left [ \frac{\partial J}{\partial w^{(l)}} \right ]_{ij} &= \left [ \delta^{(l)} (a^{(l-1)})^{\top} \right ]_{ij} \\
-    \Rightarrow \frac{\partial J}{\partial w^{(l)}} &= \delta^{(l)} (a^{(l-1)})^{\top} \qquad \in \Reals^{M_l \times M_{l-1}}
+  \left [ \frac{\partial J}{\partial w^{(l)}} \right ]_{ij} &= \left [ \delta^{(l)} (a^{(l-1)})^{\top} \right ]_{ij} \\
+  \Rightarrow \frac{\partial J}{\partial w^{(l)}} &= \delta^{(l)} (a^{(l-1)})^{\top} \qquad \in \Reals^{M_l \times M_{l-1}}
 \end{aligned}
 $$

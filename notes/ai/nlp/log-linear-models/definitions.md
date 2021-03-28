@@ -8,7 +8,7 @@
 
 在[词性标注](/ai/nlp/tagging-problems-hmms/)中， $\mathcal{Y}$ 是标签集合 $\mathcal{T}$，$\mathcal{X}$ 是上下文 $⟨w_1w_2 \dots w_n, t_1t_2 \dots t_{i-1}⟩$ 的集合（$n \geq 1, w_i \in \mathcal{V}, i \in \{1 \dots n\}, t_j \in \mathcal{T}, j \in \{1 \dots (i-1)\}$）。
 
-<br>
+&nbsp;
 
 **定义 3.1（对数线性模型）：**
 
@@ -27,7 +27,6 @@ p(y \mid x;v) = \frac{\exp (v \cdot f(x,y))}{\sum_{y' \in \mathcal{Y}} \exp(v \c
 $$
 
 其中，$\exp(x) = e^x$，$v \cdot f(x,y) = \sum_{k=1}^d v_kf_k(x,y)$ 是 $v$ 和 $f(x,y)$ 的内积（inner product）。$p(y \mid x;v)$ 可以被理解为：当参数为 $v$ 时，在给定 $x$ 的条件下 $y$ 的概率。
-
 
 
 ## 模型形式
@@ -52,7 +51,7 @@ $$
 $$
 \begin{aligned}	
 	\log p(y \mid x;v) &= v \cdot f(x,y) - \log \sum_{y' \in \mathcal{Y}} \exp (v \cdot f(x,y')) \\
-	&= v \cdot f(x,y) - g(x)
+	  &= v \cdot f(x,y) - g(x)
 \end{aligned} \tag{3.2}
 $$
 

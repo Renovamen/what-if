@@ -8,7 +8,6 @@ readme: true
 My messy notes of statistical NLP. Source Markdown files are hosted [here](https://github.com/Renovamen/what-if/tree/master/ai/nlp).
 
 
-
 ## Resource
 
 - [Notes for Statistical NLP (Michael Collins, Columbia University)](http://www.cs.columbia.edu/~mcollins/)

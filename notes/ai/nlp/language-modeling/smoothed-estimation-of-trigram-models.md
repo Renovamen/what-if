@@ -3,7 +3,6 @@
 极大似然估计会导致稀疏数据的问题，即使训练集非常大，很多 $c(u,v,w)$ 和 $c(u,v)$ 也会很小，甚至为 0。因此本节将讨论用于缓和数据稀疏问题的**平滑估计**（Smoothed Estimation），它的核心思想依赖于 lower-order statistical estimates，即用一元和二元模型的估计去平滑三元模型的估计。本节将讨论两种常用方法：**线性插值**（Linear Interpolation）和 **Discounting Methods**，以及与**装桶**（Bucketing）结合的线性插值。
 
 
-
 ## 线性插值
 
 定义三元、二元和一元模型的极大似然估计为：
@@ -81,7 +80,6 @@ $\lambda_1$ 会随着 $c(u, v)$ 的增大而增大，$\lambda_2$ 会随着 $c(v)
 这种决定参数的方式非常粗糙，而且一般情况下并不是最优的。但它足够简单，且有较好的实际应用效果。
 
 
-
 ## Discounting Methods
 
 先考虑一下二元模型的估计，目标是对任意 $w \in \mathcal{V} \cup \{\text{STOP}\}$，$v \in \mathcal{V} \cup \{*\}$，估计出 $q(w \mid v)$。
@@ -149,8 +147,8 @@ $$
 $$
 q_D(w \mid v)= 
 \begin{cases}
-   \frac{c^*(v,w)}{c(v)} & \text{if } w \in \mathcal{A}(v) \\
-   \alpha(v) \times \frac{q_{ML}(w)}{\sum_{w \in \mathcal{B}(v)}q_{ML}(w)} & \text{if } w \in \mathcal{B}(v)
+  \frac{c^*(v,w)}{c(v)} & \text{if } w \in \mathcal{A}(v) \\
+  \alpha(v) \times \frac{q_{ML}(w)}{\sum_{w \in \mathcal{B}(v)}q_{ML}(w)} & \text{if } w \in \mathcal{B}(v)
 \end{cases}
 $$
 
@@ -197,7 +195,6 @@ $
 $q_D (w \mid u,v)$ 会随着 $\beta$ 的变化而变化，一般我们会尝试一系列可能的 $\beta$ 值，如 $\{0.1,0.2,...,0.9\}$，对每个 $\beta$ 值都计算一遍 development data 上的 log-likelihood，最后选择能最大化 development data 上的 log-likelihood 的 $\beta$。
 
 
-
 ## 线性插值 + bucketing
 
 线性插值模型中参数估计的定义为：
@@ -214,15 +211,15 @@ $$
 
 $$
 \begin{aligned}
-   \Pi(u,v)=1 & \quad \text{if } 100 \leq c(u,v) \\
-   \Pi(u,v)=2 & \quad \text{if } 50 \leq c(u,v) < 100 \\
-   \Pi(u,v)=3 & \quad \text{if } 20 \leq c(u,v) < 50 \\
-   \Pi(u,v)=4 & \quad \text{if } 10 \leq c(u,v) < 20 \\
-   \Pi(u,v)=5 & \quad \text{if } 5 \leq c(u,v) < 10 \\
-   \Pi(u,v)=6 & \quad \text{if } 2 \leq c(u,v) < 5 \\
-   \Pi(u,v)=7 & \quad \text{if } c(u,v) = 1 \\
-   \Pi(u,v)=8 & \quad \text{if } c(u,v) = 0 \text{ and } c(v) > 0 \\
-   \Pi(u,v)=9 & \quad \text{otherwise}
+  \Pi(u,v)=1 & \quad \text{if } 100 \leq c(u,v) \\
+  \Pi(u,v)=2 & \quad \text{if } 50 \leq c(u,v) < 100 \\
+  \Pi(u,v)=3 & \quad \text{if } 20 \leq c(u,v) < 50 \\
+  \Pi(u,v)=4 & \quad \text{if } 10 \leq c(u,v) < 20 \\
+  \Pi(u,v)=5 & \quad \text{if } 5 \leq c(u,v) < 10 \\
+  \Pi(u,v)=6 & \quad \text{if } 2 \leq c(u,v) < 5 \\
+  \Pi(u,v)=7 & \quad \text{if } c(u,v) = 1 \\
+  \Pi(u,v)=8 & \quad \text{if } c(u,v) = 0 \text{ and } c(v) > 0 \\
+  \Pi(u,v)=9 & \quad \text{otherwise}
 \end{aligned}
 $$
 

@@ -6,14 +6,15 @@ title: 参数学习：最大似然
 
 如果图模型中不含**隐变量（latent variable）**，即所有变量都是可观测的，那么网络参数一般可以直接通过**最大似然**来进行估计。
 
+
 ## 贝叶斯网络
 
 给定 $N$ 个训练样本 $D=\{x^{(n)}\}^N_{n=1}$，其对数似然函数为：
 
 $$
 \begin{aligned}
-    L(D; \theta) &= \frac{1}{N} \sum_{n=1}^N \log p_{\theta}(x^{(n)}) \\
-        &= \frac{1}{N} \sum_{n=1}^N \sum_{k=1}^K \log p_{\theta_k}(x_k^{(n)} \mid x_{\pi_k}^{(n)})
+  L(D; \theta) &= \frac{1}{N} \sum_{n=1}^N \log p_{\theta}(x^{(n)}) \\
+    &= \frac{1}{N} \sum_{n=1}^N \sum_{k=1}^K \log p_{\theta_k}(x_k^{(n)} \mid x_{\pi_k}^{(n)})
 \end{aligned}
 $$
 
@@ -24,5 +25,6 @@ $$
 $$
 \theta_k = \arg \max \sum_{n=1}^N \log p_{\theta_k}(x_k^{(n)} \mid x_{\pi_k}^{(n)})
 $$
+
 
 ## 马尔可夫随机场

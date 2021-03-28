@@ -4,8 +4,8 @@
 
 - 连续且可导（允许少数点上不可导）的非线性函数
 
-    - 可导的激活函数可以直接利用数值优化的方法来学习网络参数
-    - 使用线性激活函数或不使用激活函数都跟标准逻辑回归没有区别，无论神经网络有多少层，输出都是输入的线性组合
+  - 可导的激活函数可以直接利用数值优化的方法来学习网络参数
+  - 使用线性激活函数或不使用激活函数都跟标准逻辑回归没有区别，无论神经网络有多少层，输出都是输入的线性组合
 
 - 激活函数及其导函数要尽量简单，以提高网络计算效率
 - 激活函数的导函数的值域要在一个合适的区间内，否则会影响训练的效率和稳定性
@@ -57,8 +57,8 @@ $$
 \text{ReLU}(x) = \max (0, x) =
 
 \begin{cases}
-   x &x \ge 0 \\
-   0 &x < 0
+  x &x \ge 0 \\
+  0 &x < 0
 \end{cases}
 $$
 
@@ -66,8 +66,8 @@ $$
 \text{ReLU}' (x) = 
 
 \begin{cases}
-   1 &x \ge 0 \\
-   0 &x < 0
+  1 &x \ge 0 \\
+  0 &x < 0
 \end{cases}
 $$
 
@@ -83,8 +83,8 @@ ReLU 函数在 $x > 0$ 时导数为 1，在一定程度上缓解了梯度消失�
 
 - **死亡 ReLU 问题（dying ReLU problem）**：如果梯度太大或学习率太大，可能会在反向传播的时候让偏置 $b$ 被更新成一个很小的负数，从而导致对于接下来所有的训练样本，神经元的净激活值都小于 0（[解释](https://liam.page/2018/11/30/vanishing-gradient-of-ReLU-due-to-unusual-input/)）。而当输入小于 0 时，ReLU 函数的梯度一直为 0，导致该神经元的参数永远无法更新（[解释](https://www.zhihu.com/question/67151971)）。
 
-    - [cs231n](https://cs231n.github.io/neural-networks-1/#actfun) 上说有 40% 的概率死掉
-    - [这里](https://www.quora.com/What-is-the-dying-ReLU-problem-in-neural-networks)似乎说还能复活...
+  - [cs231n](https://cs231n.github.io/neural-networks-1/#actfun) 上说有 40% 的概率死掉
+  - [这里](https://www.quora.com/What-is-the-dying-ReLU-problem-in-neural-networks)似乎说还能复活...
 
 ## Leaky ReLU
 
@@ -94,8 +94,8 @@ $$
 \text{Leaky ReLU}(x) = \max (0, x) + \gamma \min (0, x) =
 
 \begin{cases}
-   x &x \ge 0 \\
-   \gamma x &x < 0
+  x &x \ge 0 \\
+  \gamma x &x < 0
 \end{cases}
 $$
 
@@ -103,8 +103,8 @@ $$
 \text{Leaky ReLU}'(x) = 
 
 \begin{cases}
-   1 &x \ge 0 \\
-   \gamma &x < 0
+  1 &x \ge 0 \\
+  \gamma &x < 0
 \end{cases}
 $$
 

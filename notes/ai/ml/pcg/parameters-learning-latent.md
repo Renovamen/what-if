@@ -10,6 +10,7 @@ title: 参数学习：EM 算法
 
 ![latent variable](./img/latent-variable.png)
 
+
 ## 边缘似然
 
 令 $X$ 为可观测变量集合，$Z$ 为隐变量集合。由于隐变量不可观测，因此一般改用边缘分布（也就是显变量的分布）的最大似然为目标函数。
@@ -26,9 +27,9 @@ $$
 
 $$
 \begin{aligned}
-    L(D; \theta) &= \frac{1}{N} \sum_{n=1}^N \log p_{\theta}(x^{(n)}) \\
-        &= \frac{1}{N} \sum_{n=1}^N \log \sum_z p_{\theta}(x^{(n)}, z) \\
-        &= \frac{1}{N} \sum_{n=1}^N \log \sum_z p_\theta(x^{(n)} \mid z) p_\theta(z)
+  L(D; \theta) &= \frac{1}{N} \sum_{n=1}^N \log p_{\theta}(x^{(n)}) \\
+    &= \frac{1}{N} \sum_{n=1}^N \log \sum_z p_{\theta}(x^{(n)}, z) \\
+    &= \frac{1}{N} \sum_{n=1}^N \log \sum_z p_\theta(x^{(n)} \mid z) p_\theta(z)
 \end{aligned}
 $$
 
@@ -39,10 +40,10 @@ $$
 
 $$
 \begin{aligned}
-    \log p_\theta(x) &= \log \sum_z q(z) \frac{p_\theta(x,z)}{q(z)} \\
-        &= \log \mathbb{E}_{q(z)} [ \frac{p_\theta(x,z)}{q(z)}] \geq \mathbb{E}_{q(z)} [ \log \frac{p_\theta(x,z)}{q(z)}] \qquad \text{（詹森不等式）}\\
-        &= \sum_z q(z) \log \frac{p_\theta(x,z)}{q(z)} \\
-        &\triangleq \text{ELBO}_\theta(q,x)
+  \log p_\theta(x) &= \log \sum_z q(z) \frac{p_\theta(x,z)}{q(z)} \\
+    &= \log \mathbb{E}_{q(z)} [ \frac{p_\theta(x,z)}{q(z)}] \geq \mathbb{E}_{q(z)} [ \log \frac{p_\theta(x,z)}{q(z)}] \qquad \text{（詹森不等式）}\\
+    &= \sum_z q(z) \log \frac{p_\theta(x,z)}{q(z)} \\
+    &\triangleq \text{ELBO}_\theta(q,x)
 \end{aligned}
 $$
 
@@ -107,16 +108,17 @@ EM 算法具体分为 E 步（expectation step）和 M 步（maximization step�
 
 2. M 步：固定 $q_{t+1} (z)$，找到一组参数使得证据下界 $\text{ELBO}_{\theta_t}(q_{t+1},x)$ 最大，即：
 
-    $$
-    \begin{aligned}
-        \theta_{t+1} &= \arg \max_\theta \text{ELBO}_\theta(q_{t+1},x) \\
-            &= \arg \max_\theta \sum_z q_{t+1}(z) \log \frac{p_\theta(x,z)}{q_{t+1}(z)} \\
-            &= \arg \max_\theta \sum_z p_{\theta_t}(z \mid x) \log  \frac{p_\theta(x,z)}{p_{\theta_t}(z \mid x)} \\
-            &= \arg \max_\theta \sum_z p_{\theta_t}(z \mid x) \log p_\theta(x,z)
-    \end{aligned}
-    $$
+  $$
+  \begin{aligned}
+    \theta_{t+1} &= \arg \max_\theta \text{ELBO}_\theta(q_{t+1},x) \\
+      &= \arg \max_\theta \sum_z q_{t+1}(z) \log \frac{p_\theta(x,z)}{q_{t+1}(z)} \\
+      &= \arg \max_\theta \sum_z p_{\theta_t}(z \mid x) \log  \frac{p_\theta(x,z)}{p_{\theta_t}(z \mid x)} \\
+      &= \arg \max_\theta \sum_z p_{\theta_t}(z \mid x) \log p_\theta(x,z)
+  \end{aligned}
+  $$
 
-    $\theta_t$ 为上一时刻的参数，$p_{\theta_t}(z \mid x)$ 是 $z$ 的后验分布。
+  $\theta_t$ 为上一时刻的参数，$p_{\theta_t}(z \mid x)$ 是 $z$ 的后验分布。
+
 
 ## 从 KL 散度来理解
 
@@ -178,12 +180,12 @@ $$
 
 KL 散度一定 $\geq 0$，且当且仅当 $q(z) = p_\theta(z \mid x)$ 时，$\text{KL}(q(z) \| p_\theta(z \mid x)) = 0$，从而使得 $\text{ELBO}_\theta(q,x) = \log p_\theta(x)$。
 
-
 所以 $\text{ELBO}_\theta(q,x)$ 为 $\log p_\theta(x)$ 的一个下界。因此当逐步提高这个下界时，相当于增大了 $\log p_\theta(x)$，所以要对 ELBO 求期望最大化：
 
 $$
 \hat{\theta} = \arg \max_\theta \text{ELBO}_\theta(q, x)
 $$
+
 
 ## 收敛性证明
 
