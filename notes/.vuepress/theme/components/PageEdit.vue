@@ -123,8 +123,8 @@ export default {
       .ov-icon
         color var(--accent-color)
         display inline-block
-        width 19px
-        height 19px
+        width 18px
+        height 18px
       p
         vertical-align middle
         display inline-block
