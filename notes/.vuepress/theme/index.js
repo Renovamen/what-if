@@ -87,7 +87,13 @@ module.exports = (options, ctx) => {
         }
       ],
       ["smooth-scroll", enableSmoothScroll],
-      "@renovamen/vuepress-plugin-katex"
+      "@renovamen/vuepress-plugin-katex",
+      [
+        "@renovamen/vuepress-plugin-md-plus",
+        {
+          footnote: true
+        }
+      ]
     ],
 
     chainMarkdown(config) {

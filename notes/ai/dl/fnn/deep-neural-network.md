@@ -26,7 +26,7 @@
 
 ## 更容易泛化到测试集
 
-论文 [[1]](#goodfellow-2014) 中的实验表明，增加卷积网络层中参数的数量，但不增加它们的深度，在提升测试集性能方面几乎没有效果：
+论文[^1]中的实验表明，增加卷积网络层中参数的数量，但不增加它们的深度，在提升测试集性能方面几乎没有效果：
 
 ![dnn test](./img/dnn-test.png)
 
@@ -35,6 +35,4 @@
 
 ## 引用
 
-<div id="goodfellow-2014"></div>
-
-1. [Multi-digit Number Recognition from Street View Imagery using Deep Convolutional Neural Networks](https://arxiv.org/pdf/1312.6082.pdf). *Ian J. Goodfellow, et al.* ICLR 2014. 
+[^1]: [Multi-digit Number Recognition from Street View Imagery using Deep Convolutional Neural Networks](https://arxiv.org/pdf/1312.6082.pdf). *Ian J. Goodfellow, et al.* ICLR 2014. 

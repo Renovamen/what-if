@@ -193,7 +193,7 @@ th, td
       top 0
 
 
-/************* Styles for scrollbar *************/
+/* --------- Scrollbar --------- */
 ::-webkit-scrollbar
   width 5px
   height 5px
@@ -206,16 +206,19 @@ th, td
   width 5px
   background-color var(--accent-color)
 
-/************* Katex scrollbar *************/
+/* --------- KaTeX scrollbar --------- */
 .katex-display
   ::-webkit-scrollbar
     display none
-    
+
+/* --------- Footnotes --------- */
+hr.footnotes-sep
+  display none
+
 @media (min-width: ($MQMobile + 1px))
   .theme-container.no-sidebar
     .sidebar
       display none
-
     .page
       padding-left 0
 
