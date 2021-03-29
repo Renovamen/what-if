@@ -37,6 +37,10 @@ module.exports = {
             link: "/ai/dl/"
           },
           {
+            text: "Reinforcement Learning",
+            link: "/ai/rl/"
+          },
+          {
             text: "Statistical NLP",
             link: "/ai/nlp/"
           }
@@ -106,6 +110,17 @@ module.exports = {
           title: "生成模型",
           collapsable: false,
           children: ["generative-models/vae", "generative-models/gan"]
+        }
+      ],
+      "/ai/rl/": [
+        {
+          title: "基础",
+          collapsable: false,
+          children: [
+            "basic/key-concepts",
+            "basic/mdp",
+            "basic/bellman-equations"
+          ]
         }
       ],
       "/ai/nlp/": [
