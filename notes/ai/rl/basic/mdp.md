@@ -43,9 +43,9 @@ $$
 
 - $\mathcal{S}$：状态空间（state space），即状态的有限集
 - $\mathcal{A}$：动作空间（action space），即动作的有限集
-- $P$：状态转移概率
-- $R$：奖励函数
-- $\gamma$：折扣因子
+- $P$：[状态转移概率](/ai/rl/basic/key-concepts.html#状态转移概率与奖励函数)
+- $R$：[奖励函数](/ai/rl/basic/key-concepts.html#状态转移概率与奖励函数)
+- $\gamma$：[折扣因子](/ai/rl/basic/key-concepts.html#回报与折扣)
 
 所以马尔科夫决策过程的状态转移概率是包含了动作这一项的，也就是[之前](/ai/rl/basic/key-concepts.html#状态转移概率与奖励函数)所说的：
 

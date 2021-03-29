@@ -2,7 +2,7 @@
 
 ## 神经元
 
-![neuron](./img/neuron.png)
+<img src="./img/neuron.png" width="370px" alt="neuron" />
 
 神经网络的基本单元是**人工神经元（artificial neuron）**，**简称神经元（neuron）**。假设一个神经元接收 $D$ 个输入 $x = [x_1, x_2, \dots, x_D]$，那么该神经元输出值的计算分为两步：
 
@@ -49,7 +49,7 @@
 
 **前馈神经网络**（Feedforward Neural Network，FNN）可以看做是由多层的逻辑回归模型（连续的非线性函数）组成。每一层的神经元可以接收前一层神经元的信号，并产生信号输出到下一层。第 0 层称为输入层，最后一层称为输出层，其他中间层称为隐藏层。整个网络中无反馈，信号从输入层单向传播到输出层：
 
-![fnn](./img/fnn.png)
+<img src="./img/fnn.png" width="500px" alt="fnn" />
 
 一些符号表示为：
 

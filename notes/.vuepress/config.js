@@ -119,8 +119,14 @@ module.exports = {
           children: [
             "basic/key-concepts",
             "basic/mdp",
-            "basic/bellman-equations"
+            "basic/bellman-equations",
+            "basic/dp"
           ]
+        },
+        {
+          title: "基于值函数的方法",
+          collapsable: false,
+          children: ["value-based/mc", "value-based/td"]
         }
       ],
       "/ai/nlp/": [
