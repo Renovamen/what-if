@@ -114,7 +114,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist # build 输出文件夹
-          cname: notebook.renovamen.ink  # 如果用了自定义域名，在这里设置
+          cname: note.zxh.io  # 如果用了自定义域名，在这里设置
 ```
 
 其中 [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) 是一个别人写好的 action，能把指定路径的文件推到 `gh-pages` 分支。
@@ -221,5 +221,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
-          cname: notebook.renovamen.ink
+          cname: note.zxh.io
 ```

@@ -3,7 +3,7 @@
     <span>
       Powered by
       <a target="blank" href="https://vuepress.vuejs.org">VuePress</a>, crafted
-      by <a target="blank" href="https://renovamen.ink">Renovamen</a>.
+      by <a target="blank" href="https://zxh.io">Renovamen</a>.
     </span>
   </div>
 </template>

@@ -23,7 +23,7 @@ module.exports = {
     editLinkText: "Edit this page on Github",
     lastUpdated: "Last Updated",
     author: "Renovamen",
-    authorLink: "https://renovamen.ink",
+    authorLink: "https://zxh.io",
     nav: [
       {
         text: "Stupid AI",
