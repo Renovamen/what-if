@@ -59,6 +59,10 @@ module.exports = {
           }
         ]
       },
+      // {
+      //   text: "Dev",
+      //   link: "/dev/"
+      // },
       {
         text: "Papers",
         link: "/papers/"
@@ -185,6 +189,13 @@ module.exports = {
           title: "信息论",
           collapsable: false,
           children: ["divergence"]
+        }
+      ],
+      "/dev/": [
+        {
+          title: "基础",
+          collapsable: false,
+          children: ["basic/computer-network", "basic/os"]
         }
       ],
       "/papers/": [
