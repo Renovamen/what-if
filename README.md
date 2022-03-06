@@ -1,10 +1,13 @@
 # What if?
 
-My messy notebook, built with [VuePress](https://vuepress.vuejs.org/). Maybe it is unsuitable for humans to read.
+My messy notebook, built with [VuePress 2](https://v2.vuepress.vuejs.org/). Maybe it is unsuitable for humans to read.
 
-I built this notebook with [Gridsome](https://gridsome.org/) formerly (see it on [`gridsome`](https://github.com/Renovamen/what-if/tree/gridsome) branch). I love and appreciate Gridsome, however, I had to suffer from some problems due to its bugs when using it. Finally, I realized that I just need a light and simple notebook, so I move to VuePress.
+See this notebook here: [note.zxh.io](https://note.zxh.io/)
 
-See this notebook [here](https://note.zxh.io/).
+Formerly, it was built with:
+
+- [Gridsome](https://gridsome.org/): [[code]](https://github.com/Renovamen/what-if/tree/gridsome)
+- [VuePress 1](https://vuepress.vuejs.org/): [[code]](https://github.com/Renovamen/what-if/tree/vuepress1)
 
 
 &nbsp;
@@ -12,12 +15,19 @@ See this notebook [here](https://note.zxh.io/).
 ## Usage
 
 ```bash
-# install dependencies
-yarn install
+# Install dependencies
+yarn
 
-# serve with hot reload
-yarn dev  # vuepress dev notes
+# Serve with hot reload
+yarn dev
 
-# build for production with minification
-yarn build  # vuepress build notes
+# Build for production with minification
+yarn build
 ```
+
+
+&nbsp;
+
+## License
+
+[MIT](LICENSE)
