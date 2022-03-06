@@ -2,13 +2,12 @@
 import AutoLink from "@theme/AutoLink.vue";
 import NavbarDropdown from "@theme/NavbarDropdown.vue";
 import { useRouteLocale, useSiteLocaleData } from "@vuepress/client";
-import { isLinkHttp, isString } from "@vuepress/shared";
+import { isString } from "@vuepress/shared";
 import { computed } from "vue";
 import type { ComputedRef } from "vue";
 import { useRouter } from "vue-router";
 import type { NavbarGroup, NavbarItem, ResolvedNavbarItem } from "../../shared";
 import { useNavLink, useThemeLocaleData } from "../composables";
-import { resolveRepoType } from "../utils";
 
 /**
  * Get navbar config of select language dropdown
@@ -74,46 +73,6 @@ const useNavbarSelectLanguage = (): ComputedRef<ResolvedNavbarItem[]> => {
   });
 };
 
-/**
- * Get navbar config of repository link
- */
-const useNavbarRepo = (): ComputedRef<ResolvedNavbarItem[]> => {
-  const themeLocale = useThemeLocaleData();
-
-  const repo = computed(() => themeLocale.value.repo);
-  const repoType = computed(() =>
-    repo.value ? resolveRepoType(repo.value) : null
-  );
-
-  const repoLink = computed(() => {
-    if (repo.value && !isLinkHttp(repo.value)) {
-      return `https://github.com/${repo.value}`;
-    }
-
-    return repo.value;
-  });
-
-  const repoLabel = computed(() => {
-    if (!repoLink.value) return null;
-    if (themeLocale.value.repoLabel) return themeLocale.value.repoLabel;
-    if (repoType.value === null) return "Source";
-    return repoType.value;
-  });
-
-  return computed(() => {
-    if (!repoLink.value || !repoLabel.value) {
-      return [];
-    }
-
-    return [
-      {
-        text: repoLabel.value,
-        link: repoLink.value
-      }
-    ];
-  });
-};
-
 const resolveNavbarItem = (
   item: NavbarItem | NavbarGroup | string
 ): ResolvedNavbarItem => {
@@ -138,11 +97,9 @@ const useNavbarConfig = (): ComputedRef<ResolvedNavbarItem[]> => {
 
 const navbarConfig = useNavbarConfig();
 const navbarSelectLanguage = useNavbarSelectLanguage();
-const navbarRepo = useNavbarRepo();
 const navbarLinks = computed(() => [
   ...navbarConfig.value,
-  ...navbarSelectLanguage.value,
-  ...navbarRepo.value
+  ...navbarSelectLanguage.value
 ]);
 </script>
 

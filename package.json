@@ -1,12 +1,10 @@
 {
   "name": "what-if",
   "private": true,
-  "description": "Renovamen's notebook.",
-  "license": "MIT",
-  "author": "Renovamen <renovamenzxh@gmail.com>",
   "scripts": {
     "dev": "vuepress dev notes --clean-cache",
     "build": "vuepress build notes --clean-cache --dest dist",
+    "serve": "anywhere -h localhost -d dist",
     "lint": "eslint --ext .js,.ts,.vue ."
   },
   "dependencies": {
@@ -16,6 +14,7 @@
     "oh-vue-icons": "^1.0.0-rc2"
   },
   "devDependencies": {
+    "anywhere": "^1.5.0",
     "eslint": "^8.10.0",
     "eslint-config-vuepress": "^3.5.0",
     "eslint-config-vuepress-typescript": "^2.5.0",

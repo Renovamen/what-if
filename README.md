@@ -24,10 +24,3 @@ yarn dev
 # Build for production with minification
 yarn build
 ```
-
-
-&nbsp;
-
-## License
-
-[MIT](LICENSE)

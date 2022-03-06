@@ -1,11 +1,15 @@
 import { defineClientAppEnhance } from "@vuepress/client";
+import { addIcons, OhVueIcon } from "oh-vue-icons";
 import { h } from "vue";
 import Badge from "./components/global/Badge.vue";
 import CodeGroup from "./components/global/CodeGroup";
 import CodeGroupItem from "./components/global/CodeGroupItem.vue";
 import { useScrollPromise } from "./composables";
+import icons from "./icons";
 
 import "./styles/index.scss";
+
+addIcons(...icons);
 
 export default defineClientAppEnhance(({ app, router }) => {
   app.component("Badge", Badge);
@@ -28,4 +32,7 @@ export default defineClientAppEnhance(({ app, router }) => {
     await useScrollPromise().wait();
     return scrollBehavior(...args);
   };
+
+  // icons
+  app.component("VIcon", OhVueIcon);
 });

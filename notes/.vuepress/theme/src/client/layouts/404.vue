@@ -50,12 +50,12 @@ const getEmoji = (): string =>
 
 .not-found {
   height: 100%;
+  padding: 0 1rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
-  text-align: center;
 
   a,
   h1 {
