@@ -31,7 +31,7 @@ export const DEFAULT_LOCALE_OPTIONS: DefaultThemeLocaleOptions = {
     `That's a Four-Oh-Four.`,
     `Looks like we've got some broken links.`
   ],
-  backToHome: "Take me home",
+  backToHome: "$ cd /home/",
 
   // a11y
   openInNewWindow: "open in new window",
