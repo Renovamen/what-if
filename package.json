@@ -6,7 +6,7 @@
   "author": "Renovamen <renovamenzxh@gmail.com>",
   "scripts": {
     "dev": "vuepress dev notes --clean-cache",
-    "build": "vuepress build notes --clean-cache",
+    "build": "vuepress build notes --clean-cache --dest dist",
     "lint": "eslint --ext .js,.ts,.vue ."
   },
   "dependencies": {
