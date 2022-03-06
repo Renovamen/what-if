@@ -1,0 +1,1 @@
+const e={key:"v-0dcf22bb",path:"/math/information-theory/",title:"\u4FE1\u606F\u8BBA\uFF08Information Theory\uFF09",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"References",slug:"references",children:[]}],git:{updatedTime:1646541559e3},filePathRelative:"math/information-theory/README.md"};export{e as data};

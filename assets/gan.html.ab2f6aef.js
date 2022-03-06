@@ -1,0 +1,1 @@
+const e={key:"v-840c5044",path:"/ai/dl/generative-models/gan.html",title:"\u751F\u6210\u5BF9\u6297\u7F51\u7EDC",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u53C2\u8003",slug:"\u53C2\u8003",children:[]}],git:{updatedTime:1646541559e3},filePathRelative:"ai/dl/generative-models/gan.md"};export{e as data};
