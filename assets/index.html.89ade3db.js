@@ -1,1 +1,0 @@
-const e={key:"v-7501d042",path:"/ai/ml/",title:"Machine Learning",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"Courses",slug:"courses",children:[]},{level:2,title:"Books",slug:"books",children:[]},{level:2,title:"References",slug:"references",children:[]}],git:{updatedTime:1646546847e3},filePathRelative:"ai/ml/README.md"};export{e as data};
