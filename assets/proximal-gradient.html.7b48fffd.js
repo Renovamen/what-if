@@ -1,0 +1,1 @@
+const t={key:"v-2702a0b6",path:"/ai/ml/optimization/proximal-gradient.html",title:"\u8FD1\u7AEF\u68AF\u5EA6\u4E0B\u964D",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u53C2\u8003",slug:"\u53C2\u8003",children:[]}],git:{updatedTime:1646546847e3},filePathRelative:"ai/ml/optimization/proximal-gradient.md"};export{t as data};

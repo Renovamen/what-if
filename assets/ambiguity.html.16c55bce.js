@@ -1,1 +1,0 @@
-const t={key:"v-42156d87",path:"/ai/nlp/pcfgs/ambiguity.html",title:"\u6B67\u4E49\uFF08Ambiguity\uFF09",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1646542011e3},filePathRelative:"ai/nlp/pcfgs/ambiguity.md"};export{t as data};
