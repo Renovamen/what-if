@@ -1,0 +1,1 @@
+const e={key:"v-40b961be",path:"/math/linear-algebra/",title:"\u8D44\u6E90",lang:"en-US",frontmatter:{title:"\u8D44\u6E90"},excerpt:"",headers:[{level:2,title:"References",slug:"references",children:[]}],git:{updatedTime:1646542011e3},filePathRelative:"math/linear-algebra/README.md"};export{e as data};
