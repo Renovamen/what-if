@@ -76,7 +76,7 @@ Some papers about image aesthetic assessment (图像美感评估), know more abo
 - **A Framework for Photo-quality Assessment and Enhancement Based on Visual
 Aesthetics.** *Subhabrata Bhattacharya, et al.* ACM MM 2010. [[Paper]](http://www.cs.cmu.edu/~rahuls/pub/mm2010-rahuls.pdf)
 
- **A Holistic Approach to Aesthetic Enhancement of Photographs.** *Subhabrata Bhattacharya, et al.* TOMCCAP 2011. [[Paper]](http://www.cs.cmu.edu/~rahuls/pub/tomccap2011-rahuls.pdf)
+  **A Holistic Approach to Aesthetic Enhancement of Photographs.** *Subhabrata Bhattacharya, et al.* TOMCCAP 2011. [[Paper]](http://www.cs.cmu.edu/~rahuls/pub/tomccap2011-rahuls.pdf)
 
 
 #### Regional Features

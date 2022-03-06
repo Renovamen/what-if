@@ -1,4 +1,5 @@
 ---
+layout: Home
 home: true
 heroText: What if?
 ---

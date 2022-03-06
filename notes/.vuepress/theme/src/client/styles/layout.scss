@@ -57,8 +57,30 @@
   display: none;
 }
 
+.footer {
+  padding: 1rem 2.5rem;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 14px;
+  color: var(--c-text-quote);
+
+  a {
+    color: var(--c-text-quote);
+    font-weight: 400;
+    &:hover {
+      color: var(--c-text-accent);
+    }
+  }
+}
+
 .theme-container {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .page-content {
+    flex: 1;
+  }
 
   &.sidebar-open {
     .sidebar-mask {
@@ -150,6 +172,10 @@ h6 {
 
   a:hover {
     text-decoration: underline;
+  }
+
+  li p {
+    margin: 5px 0;
   }
 
   img {
