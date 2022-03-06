@@ -1,0 +1,33 @@
+@import '_variables';
+
+@mixin content_wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+
+  @media (max-width: $MQNarrow) {
+    padding: 2rem;
+  }
+
+  @media (max-width: $MQMobileNarrow) {
+    padding: 1.5rem;
+  }
+}
+
+@mixin dropdown_wrapper {
+  transition: height 0.1s ease-out;
+  overflow: hidden;
+}
+
+@mixin hideScrollbar() {
+  // Chrome, Safari
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  // IE
+  -ms-overflow-style: none;
+  // Firefox
+  scrollbar-width: none;
+}

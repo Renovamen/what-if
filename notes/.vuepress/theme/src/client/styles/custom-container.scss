@@ -1,0 +1,73 @@
+.custom-container {
+  transition: color var(--t-color), border-color var(--t-color),
+    background-color var(--t-color);
+
+  .custom-container-title {
+    font-weight: 600;
+    &:not(:only-child) {
+      margin-bottom: -0.4rem;
+    }
+  }
+
+  &.tip,
+  &.warning,
+  &.danger {
+    padding: 0.1rem 1.5rem;
+    border-left-width: 0.5rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+  }
+
+  &.tip {
+    border-color: var(--c-tip);
+    background-color: var(--c-tip-bg);
+
+    .custom-container-title {
+      color: var(--c-tip-title);
+    }
+  }
+
+  &.warning {
+    border-color: var(--c-warning);
+    background-color: var(--c-warning-bg);
+
+    .custom-container-title {
+      color: var(--c-warning-title);
+    }
+  }
+
+  &.danger {
+    border-color: var(--c-danger);
+    background-color: var(--c-danger-bg);
+
+    .custom-container-title {
+      color: var(--c-danger-title);
+    }
+  }
+
+  &.details {
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    margin: 1.6em 0;
+    padding: 1.6em;
+    background-color: var(--c-details-bg);
+
+    h4 {
+      margin-top: 0;
+    }
+
+    figure,
+    p {
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    summary {
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}

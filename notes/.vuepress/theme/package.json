@@ -1,0 +1,5 @@
+{
+  "name": "vuepress-theme-what-if",
+  "version": "0.1.0",
+  "main": "src/node/index.ts"
+}

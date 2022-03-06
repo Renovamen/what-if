@@ -1,0 +1,38 @@
+html.dark {
+  // brand colors
+  --c-brand: #74b3eb;
+
+  // background colors
+  --c-bg: #2d3746;
+  --c-bg-light: #313d4e;
+  --c-bg-lighter: #404d61;
+
+  // text colors
+  --c-text: rgba(255, 255, 255, .8);
+  --c-text-quote: #8B8B8B;
+
+  // border colors
+  --c-border: #3e4c5a;
+  --c-border-dark: #34404c;
+
+  // custom container colors
+  --c-tip: #318a62;
+  --c-warning: #ceab00;
+  --c-warning-title: #ceac03;
+  --c-danger: #940000;
+  --c-danger-title: #610000;
+
+  // code blocks vars
+  --code-hl-bg-color: #363b46;
+}
+
+// plugin-docsearch
+html.dark .DocSearch {
+  --docsearch-logo-color: var(--c-text);
+  --docsearch-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
+  --docsearch-key-shadow: inset 0 -2px 0 0 #282d55, inset 0 0 1px 1px #51577d,
+    0 2px 2px 0 rgba(3, 4, 9, 0.3);
+  --docsearch-key-gradient: linear-gradient(-225deg, #444950, #1c1e21);
+  --docsearch-footer-shadow: inset 0 1px 0 0 rgba(73, 76, 106, 0.5),
+    0 -4px 8px 0 rgba(0, 0, 0, 0.2);
+}
