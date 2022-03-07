@@ -1,1 +1,0 @@
-const e={key:"v-11f5510e",path:"/ai/nlp/tagging-problems-hmms/",title:"\u4ECB\u7ECD",lang:"en-US",frontmatter:{title:"\u4ECB\u7ECD"},excerpt:"",headers:[{level:2,title:"\u53C2\u8003",slug:"\u53C2\u8003",children:[]}],git:{updatedTime:1646547374e3},filePathRelative:"ai/nlp/tagging-problems-hmms/README.md"};export{e as data};
