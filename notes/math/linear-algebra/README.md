@@ -2,10 +2,9 @@
 title: 资源
 ---
 
-# Notes of Linear Algebra
+# Linear Algebra
 
-Messy notes of Linear Algebra. Source Markdown files are hosted on [here](https://github.com/Renovamen/what-if/tree/master/math/linear-algebra).
-
+Messy notes of Linear Algebra.
 
 ## References
 

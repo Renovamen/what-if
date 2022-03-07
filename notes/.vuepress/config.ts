@@ -21,8 +21,11 @@ module.exports = {
 
   themeConfig: {
     logo: "/favicon.svg",
+
     repo: "Renovamen/what-if",
     docsDir: "notes",
+    docsBranch: "master",
+
     author: "Renovamen",
     authorLink: "https://zxh.io",
 
