@@ -1,7 +1,8 @@
 ---
-title: Github Actions
 date: 2020-10-07
 ---
+
+# Github Actions
 
 记录一些 Github Actions 自动化部署工作流。
 

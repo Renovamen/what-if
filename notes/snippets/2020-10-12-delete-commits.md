@@ -1,7 +1,8 @@
 ---
-title: Delete Commit History
 date: 2020-10-12
 ---
+
+# Delete Commit History
 
 保留代码但删除 Github 上的提交历史记录的方法。
 

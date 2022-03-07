@@ -1,4 +1,5 @@
 import type { Page, Theme, ThemeConfig } from "@vuepress/core";
+import { createPage } from "@vuepress/core";
 import { fs, path } from "@vuepress/utils";
 import type {
   DefaultThemeLocaleOptions,
@@ -76,6 +77,17 @@ export const defaultTheme: Theme<DefaultThemeOptions> = (
       page.data.filePathRelative = page.filePathRelative;
       // save title into route meta to generate navbar and sidebar
       page.routeMeta.title = page.title;
+    },
+
+    async onInitialized(app) {
+      const snippetsPage = await createPage(app, {
+        path: "/snippets/",
+        frontmatter: {
+          title: "Snippets",
+          layout: "Snippets"
+        }
+      });
+      app.pages.push(snippetsPage);
     },
 
     plugins: [

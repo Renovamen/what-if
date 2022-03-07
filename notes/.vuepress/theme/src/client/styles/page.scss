@@ -33,6 +33,10 @@
     margin-right: 0.25rem;
     color: var(--c-text-accent);
 
+    .ov-icon {
+      vertical-align: -0.1rem;
+    }
+
     a {
       color: var(--c-text-accent) !important;
       &:hover {

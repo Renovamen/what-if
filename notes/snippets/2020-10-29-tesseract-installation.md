@@ -1,8 +1,8 @@
 ---
-title: Install Tesseract OCR on Mac
 date: 2020-10-29
 ---
 
+# Install Tesseract OCR on Mac
 
 在 Mac 上安装 Tesseract 的踩坑记录。
 

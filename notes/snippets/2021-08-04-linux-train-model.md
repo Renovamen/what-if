@@ -1,7 +1,8 @@
 ---
-title: How to Train Your Models
 date: 2021-08-04
 ---
+
+# How to Train Your Models
 
 Linux 炼丹
 

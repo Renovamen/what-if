@@ -1,7 +1,8 @@
 ---
-title: Edit Git Commit
 date: 2021-03-28
 ---
+
+# Edit Git Commit
 
 修改已经提交过的 git commit 的日期和描述（或别的什么东西）。
 

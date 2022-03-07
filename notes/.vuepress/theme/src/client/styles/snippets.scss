@@ -1,0 +1,71 @@
+@import '_variables';
+
+.snippets-title {
+  margin: calc(var(--navbar-height) + 50px) auto 60px;
+  text-align: center;
+}
+
+.snippets-title h1 {
+  margin: 10px;
+}
+
+.snippets-title p {
+  font-size: 1.1rem;
+  margin: 10px;
+}
+
+.snippets {
+  max-width: 55%;
+  margin: 0 auto 100px;
+}
+
+.snippet-card {
+  position: relative;
+  margin: 0 auto 20px;
+  padding: 25px 45px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  border: 1px solid var(--c-border);
+  box-sizing: border-box;
+  transition: all .3s;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .3s, box-shadow .3s, transform .3s, border-color .3s;
+
+  > * {
+    pointer-events: auto;
+  }
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-3px);
+  }
+
+  .title {
+    position: relative;
+    line-height: 46px;
+    display: inline-block;
+
+    a {
+      color: var(--c-text);
+      font-weight: 600;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (max-width: $MQNarrow) {
+  .snippets {
+    max-width: 90%;
+    margin-bottom: 50px
+  }
+
+  .snippet-card {
+    padding: 30px 20px 10px;
+    .title {
+      font-size: 1.3rem;
+      line-height: 28px;
+    }
+  }
+}
