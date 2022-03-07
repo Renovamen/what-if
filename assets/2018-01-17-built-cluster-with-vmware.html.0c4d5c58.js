@@ -1,0 +1,3 @@
+const e={key:"v-72639f83",path:"/snippets/2018-01-17-built-cluster-with-vmware.html",title:"Built a Cluster on Mac with VMware Fusion",lang:"en-US",frontmatter:{date:"2018-01-17T00:00:00.000Z"},excerpt:`<h1 id="built-a-cluster-on-mac-with-vmware-fusion" tabindex="-1"><a class="header-anchor" href="#built-a-cluster-on-mac-with-vmware-fusion" aria-hidden="true">#</a> Built a Cluster on Mac with VMware Fusion</h1>
+<p>Final Project of 2018 Fall Distributed Systems</p>
+`,headers:[{level:2,title:"Misc",slug:"misc",children:[]},{level:2,title:"Progress",slug:"progress",children:[]}],git:{updatedTime:1646637151e3},filePathRelative:"snippets/2018-01-17-built-cluster-with-vmware.md"};export{e as data};

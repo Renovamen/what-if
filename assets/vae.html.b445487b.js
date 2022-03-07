@@ -1,0 +1,1 @@
+const e={key:"v-76604950",path:"/ai/dl/generative-models/vae.html",title:"\u53D8\u5206\u81EA\u7F16\u7801\u5668",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u53C2\u8003",slug:"\u53C2\u8003",children:[]}],git:{updatedTime:1646637151e3},filePathRelative:"ai/dl/generative-models/vae.md"};export{e as data};

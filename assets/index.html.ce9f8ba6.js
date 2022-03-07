@@ -1,1 +1,0 @@
-const e={key:"v-b843798a",path:"/ai/nlp/pcfgs/",title:"\u4ECB\u7ECD",lang:"en-US",frontmatter:{title:"\u4ECB\u7ECD"},excerpt:"",headers:[{level:2,title:"\u53C2\u8003",slug:"\u53C2\u8003",children:[]}],git:{updatedTime:1646631765e3},filePathRelative:"ai/nlp/pcfgs/README.md"};export{e as data};

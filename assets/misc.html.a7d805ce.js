@@ -1,0 +1,1 @@
+const e={key:"v-14acd096",path:"/papers/dl/misc.html",title:"Misc",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"Changepoint Detection",slug:"changepoint-detection",children:[]}],git:{updatedTime:1646637151e3},filePathRelative:"papers/dl/misc.md"};export{e as data};

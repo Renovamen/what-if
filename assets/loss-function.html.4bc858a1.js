@@ -1,1 +1,0 @@
-const t={key:"v-9765c134",path:"/ai/ml/basic-ml/loss-function.html",title:"\u635F\u5931\u51FD\u6570",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u4EA4\u53C9\u71B5\u635F\u5931",slug:"\u4EA4\u53C9\u71B5\u635F\u5931",children:[]}],git:{updatedTime:1646631765e3},filePathRelative:"ai/ml/basic-ml/loss-function.md"};export{t as data};
