@@ -1,0 +1,1 @@
+const e={key:"v-7501ae79",path:"/ai/dl/",title:"Deep Learning",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"Courses",slug:"courses",children:[]},{level:2,title:"Books",slug:"books",children:[]},{level:2,title:"References",slug:"references",children:[]}],git:{updatedTime:1646631765e3},filePathRelative:"ai/dl/README.md"};export{e as data};

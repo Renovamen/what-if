@@ -1,0 +1,1 @@
+const e={key:"v-88772e96",path:"/ai/nlp/pcfgs/pcfgs.html",title:"\u6982\u7387\u4E0A\u4E0B\u6587\u65E0\u5173\u6587\u6CD5\uFF08Probabilistic Context-Free Grammars\uFF0CPCFGs\uFF09",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1646631765e3},filePathRelative:"ai/nlp/pcfgs/pcfgs.md"};export{e as data};

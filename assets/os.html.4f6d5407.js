@@ -1,1 +1,0 @@
-const e={key:"v-6a6ac241",path:"/dev/basic/os.html",title:"\u64CD\u4F5C\u7CFB\u7EDF",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:164655111e4},filePathRelative:"dev/basic/os.md"};export{e as data};
