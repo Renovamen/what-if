@@ -1,15 +1,33 @@
 import { defineClientAppEnhance } from "@vuepress/client";
 import { addIcons, OhVueIcon } from "oh-vue-icons";
+import {
+  FaPencilAlt,
+  RiGithubLine,
+  RiMoonLine,
+  RiShareLine,
+  RiSunLine,
+  SiBitbucket,
+  SiGitee,
+  SiGitlab
+} from "oh-vue-icons/icons";
 import { h } from "vue";
 import Badge from "./components/global/Badge.vue";
 import CodeGroup from "./components/global/CodeGroup";
 import CodeGroupItem from "./components/global/CodeGroupItem.vue";
 import { useScrollPromise } from "./composables";
-import icons from "./icons";
 
 import "./styles/index.scss";
 
-addIcons(...icons);
+addIcons(
+  FaPencilAlt,
+  RiSunLine,
+  RiMoonLine,
+  RiShareLine,
+  RiGithubLine,
+  SiGitee,
+  SiGitlab,
+  SiBitbucket
+);
 
 export default defineClientAppEnhance(({ app, router }) => {
   app.component("Badge", Badge);

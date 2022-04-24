@@ -10,6 +10,13 @@ const themeLocale = useThemeLocaleData();
 const enableDarkMode = computed(() => themeLocale.value.darkMode);
 const authorLink = computed(() => themeLocale.value.authorLink);
 
+const ICON_MAP = {
+  github: "ri-github-line",
+  gitee: "si-gitee",
+  gitlab: "si-gitlab",
+  bitbucket: "si-bitbucket"
+};
+
 /**
  * Get navbar config of repository link
  */
@@ -38,8 +45,8 @@ const useNavbarRepo = () => {
 
   const repoIcon = computed(() => {
     if (!repoLabel.value) return null;
-    if (repoLabel.value === "Source") return "github";
-    return repoLabel.value.toLowerCase();
+    if (repoLabel.value === "Source") return ICON_MAP.github;
+    return ICON_MAP[repoLabel.value.toLowerCase()];
   });
 
   return computed(() => {
@@ -73,7 +80,7 @@ const navbarRepo = useNavbarRepo();
       target="_blank"
       :href="authorLink"
     >
-      <VIcon name="share" />
+      <VIcon name="ri-share-line" />
     </a>
     <ToggleDarkModeButton v-if="enableDarkMode" />
   </div>

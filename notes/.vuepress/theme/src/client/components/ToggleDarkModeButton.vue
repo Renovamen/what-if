@@ -15,7 +15,7 @@ const toggleDarkMode = (): void => {
     :title="themeLocale.toggleDarkMode"
     @click="toggleDarkMode"
   >
-    <VIcon v-show="!isDarkMode" focusable="false" name="sun" />
-    <VIcon v-show="isDarkMode" focusable="false" name="moon" />
+    <VIcon v-show="!isDarkMode" focusable="false" name="ri-sun-line" />
+    <VIcon v-show="isDarkMode" focusable="false" name="ri-moon-line" />
   </button>
 </template>
