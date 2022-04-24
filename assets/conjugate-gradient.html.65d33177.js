@@ -1,0 +1,1 @@
+const t={key:"v-4a976058",path:"/ai/ml/optimization/conjugate-gradient.html",title:"\u5171\u8F6D\u68AF\u5EA6\u4E0B\u964D",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u53C2\u8003",slug:"\u53C2\u8003",children:[]}],git:{updatedTime:1650833248e3},filePathRelative:"ai/ml/optimization/conjugate-gradient.md"};export{t as data};

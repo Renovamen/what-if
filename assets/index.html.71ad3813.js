@@ -1,1 +1,0 @@
-const e={key:"v-2b38b46b",path:"/ai/nlp/",title:"Statistical NLP",lang:"en-US",frontmatter:{catagory:"NLP",readme:!0},excerpt:"",headers:[{level:2,title:"Resource",slug:"resource",children:[]}],git:{updatedTime:1646637151e3},filePathRelative:"ai/nlp/README.md"};export{e as data};

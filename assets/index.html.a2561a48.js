@@ -1,0 +1,1 @@
+const e={key:"v-0bd95aac",path:"/ai/nlp/language-modeling/",title:"\u4ECB\u7ECD",lang:"en-US",frontmatter:{title:"\u4ECB\u7ECD"},excerpt:"",headers:[{level:2,title:"\u5B9A\u4E49",slug:"\u5B9A\u4E49",children:[]},{level:2,title:"\u53C2\u8003",slug:"\u53C2\u8003",children:[]}],git:{updatedTime:1650833248e3},filePathRelative:"ai/nlp/language-modeling/README.md"};export{e as data};
