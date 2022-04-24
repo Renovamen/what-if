@@ -1,0 +1,1 @@
+const e={key:"v-7445cd33",path:"/dev/",title:"Dev",lang:"en-US",frontmatter:{catagory:"Dev",readme:!0},excerpt:"",headers:[{level:2,title:"Github \u4ED3\u5E93",slug:"github-\u4ED3\u5E93",children:[]},{level:2,title:"\u535A\u5BA2",slug:"\u535A\u5BA2",children:[]}],git:{updatedTime:1650833985e3},filePathRelative:"dev/README.md"};export{e as data};
