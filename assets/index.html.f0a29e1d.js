@@ -1,0 +1,1 @@
+const t={key:"v-14f0dace",path:"/math/",title:"Mathematics",lang:"en-US",frontmatter:{catagory:"Math",readme:!0},excerpt:"",headers:[],git:{updatedTime:1650833392e3},filePathRelative:"math/README.md"};export{t as data};

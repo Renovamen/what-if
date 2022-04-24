@@ -1,3 +1,0 @@
-const e={key:"v-4fd47c02",path:"/snippets/2021-08-04-linux-train-model.html",title:"How to Train Your Models",lang:"en-US",frontmatter:{date:"2021-08-04T00:00:00.000Z"},excerpt:`<h1 id="how-to-train-your-models" tabindex="-1"><a class="header-anchor" href="#how-to-train-your-models" aria-hidden="true">#</a> How to Train Your Models</h1>
-<p>Linux \u70BC\u4E39</p>
-`,headers:[{level:2,title:"\u5E38\u7528\u547D\u4EE4",slug:"\u5E38\u7528\u547D\u4EE4",children:[]},{level:2,title:"\u540E\u53F0\u8FD0\u884C",slug:"\u540E\u53F0\u8FD0\u884C",children:[]}],git:{updatedTime:1650833248e3},filePathRelative:"snippets/2021-08-04-linux-train-model.md"};export{e as data};
